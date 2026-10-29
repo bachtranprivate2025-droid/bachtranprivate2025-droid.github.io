@@ -1,0 +1,534 @@
+{
+ "groups": [
+  {
+   "name": "Ngân hàng",
+   "tickers": [
+    "ABB",
+    "ACB",
+    "CTG",
+    "EIB",
+    "HDB",
+    "KLB",
+    "MSB",
+    "NAB",
+    "NVB",
+    "OCB",
+    "TCB",
+    "TPB",
+    "VAB",
+    "VIB",
+    "VPB",
+    "VCB"
+   ],
+   "etf": [
+    "KBE",
+    "XLF"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Chứng khoán",
+   "tickers": [
+    "AAS",
+    "BSI",
+    "CTS",
+    "HCM",
+    "ORS",
+    "TCX",
+    "VDS"
+   ],
+   "etf": [
+    "IAI"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Bảo hiểm",
+   "tickers": [
+    "ABI",
+    "BMI"
+   ],
+   "etf": [
+    "KIE"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "BĐS dân cư",
+   "tickers": [
+    "DIG",
+    "HDC",
+    "HTN",
+    "LDG",
+    "PDR",
+    "QCG",
+    "TCH",
+    "VIC",
+    "VRE",
+    "DXS",
+    "SJS"
+   ],
+   "etf": [
+    "CBOE:ITB",
+    "VNQ"
+   ],
+   "comm": [],
+   "note": "Tương quan yếu, chủ yếu xét ngành VN"
+  },
+  {
+   "name": "BĐS KCN",
+   "tickers": [
+    "BCM",
+    "IDC",
+    "IJC",
+    "KBC",
+    "SZC"
+   ],
+   "etf": [
+    "CBOE:IYT"
+   ],
+   "comm": [],
+   "note": "KCN ăn theo FDI/chuỗi cung ứng; ETF chỉ tham khảo"
+  },
+  {
+   "name": "Xây dựng · hạ tầng",
+   "tickers": [
+    "C4G",
+    "CDC",
+    "CII",
+    "CTD",
+    "CTI",
+    "DPG",
+    "EVG",
+    "HID",
+    "VC7",
+    "HUT",
+    "TV2",
+    "GEL",
+    "DLG",
+    "VCG"
+   ],
+   "etf": [
+    "CBOE:PAVE"
+   ],
+   "comm": [
+    "-HRC1!"
+   ],
+   "note": "HUT trước đây ghép nhầm bông → đổi PAVE"
+  },
+  {
+   "name": "Thép",
+   "tickers": [
+    "HSG",
+    "NKG",
+    "VGS",
+    "SHI"
+   ],
+   "etf": [
+    "XLB",
+    "SLX"
+   ],
+   "comm": [
+    "HRC1!"
+   ],
+   "note": "Quặng sắt giảm = biên lợi nhuận tốt hơn"
+  },
+  {
+   "name": "VLXD · đá · xi măng · gạch",
+   "tickers": [
+    "DGT",
+    "HDA",
+    "HT1",
+    "KSB",
+    "SCL",
+    "VGC"
+   ],
+   "etf": [
+    "XLB",
+    "CBOE:PAVE"
+   ],
+   "comm": [
+    "-NCF1!"
+   ],
+   "note": "Than là chi phí đầu vào xi măng (tăng = bất lợi)"
+  },
+  {
+   "name": "Hóa chất · phân bón",
+   "tickers": [
+    "CSV",
+    "DCM",
+    "LAS",
+    "DDV"
+   ],
+   "etf": [
+    "XLB"
+   ],
+   "comm": [
+    "UFV1!"
+   ],
+   "note": "Urê cho DCM; DAP CBOT ít giao dịch nên không dùng"
+  },
+  {
+   "name": "Dầu nhờn · hóa dầu",
+   "tickers": [
+    "PLC"
+   ],
+   "etf": [
+    "XLE"
+   ],
+   "comm": [
+    "BRN1!"
+   ],
+   "note": ""
+  },
+  {
+   "name": "Nhựa · bao bì",
+   "tickers": [
+    "AAA",
+    "APH",
+    "NTP"
+   ],
+   "etf": [
+    "XLB"
+   ],
+   "comm": [
+    "-BRN1!"
+   ],
+   "note": "Hạt nhựa theo giá dầu (chi phí đầu vào)"
+  },
+  {
+   "name": "Cao su",
+   "tickers": [
+    "DPR",
+    "HII",
+    "TRC"
+   ],
+   "etf": [
+    "XLB"
+   ],
+   "comm": [
+    "TF1!"
+   ],
+   "note": "Cao su SGX TSR20"
+  },
+  {
+   "name": "Giấy",
+   "tickers": [
+    "DHC",
+    "HHP"
+   ],
+   "etf": [
+    "XLB",
+    "WOOD"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Dầu khí",
+   "tickers": [
+    "PVD",
+    "GAS"
+   ],
+   "etf": [
+    "XLE",
+    "OIH"
+   ],
+   "comm": [
+    "BRN1!",
+    "NG1!"
+   ],
+   "note": "PVD dùng OIH; GAS dùng XLE + Brent + khí"
+  },
+  {
+   "name": "Vận tải dầu · khí",
+   "tickers": [
+    "PVP"
+   ],
+   "etf": [
+    "BOAT"
+   ],
+   "comm": [
+    "BRN1!"
+   ],
+   "note": ""
+  },
+  {
+   "name": "Điện",
+   "tickers": [
+    "NT2",
+    "QTP"
+   ],
+   "etf": [
+    "XLU"
+   ],
+   "comm": [
+    "NG1!",
+    "NCF1!"
+   ],
+   "note": "NT2 theo khí; QTP không chấm hàng hóa (than TKV trong nước, chi phí nhiên liệu chuyển vào giá bán EVN)"
+  },
+  {
+   "name": "Thiết bị điện · điện tử",
+   "tickers": [
+    "GEE",
+    "NAG"
+   ],
+   "etf": [
+    "GRID",
+    "XLY"
+   ],
+   "comm": [
+    "HG1!"
+   ],
+   "note": "GEE dùng GRID; NAG dùng XLY"
+  },
+  {
+   "name": "Cảng · logistics",
+   "tickers": [
+    "DXP",
+    "GMD",
+    "PHP",
+    "VSC",
+    "MHC"
+   ],
+   "etf": [
+    "AMEX:SEA",
+    "CBOE:IYT",
+    "AMEX:BOAT"
+   ],
+   "comm": [],
+   "note": "ETF vận tải biển/hàng hóa + cảng niêm yết khu vực (COSCO Ports, ICTSI, Hutchison Port)",
+   "peers": [
+    "HKEX:1199",
+    "PSE:ICT",
+    "SGX:NS8U"
+   ]
+  },
+  {
+   "name": "Vận tải biển",
+   "tickers": [
+    "HAH",
+    "VOS"
+   ],
+   "etf": [
+    "BOAT",
+    "BDRY"
+   ],
+   "comm": [],
+   "note": "HAH container (BOAT), VOS hàng rời (BDRY)",
+   "peers": [
+    "NYSE:ZIM",
+    "XETR:HLAG",
+    "OMXCOP:MAERSK_B"
+   ]
+  },
+  {
+   "name": "Hàng không · sân bay",
+   "tickers": [
+    "VJC",
+    "ACV"
+   ],
+   "etf": [
+    "JETS"
+   ],
+   "comm": [
+    "-BRN1!"
+   ],
+   "note": "Dầu tăng là bất lợi cho VJC",
+   "peers": []
+  },
+  {
+   "name": "Chuyển phát",
+   "tickers": [
+    "VTP"
+   ],
+   "etf": [
+    "CBOE:IYT"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Bán lẻ · phân phối",
+   "tickers": [
+    "MWG",
+    "FRT",
+    "DGW",
+    "PET",
+    "PSD"
+   ],
+   "etf": [
+    "XRT",
+    "XLY"
+   ],
+   "comm": [],
+   "note": "DGW/PSD có thể thêm XLK"
+  },
+  {
+   "name": "Thực phẩm · tiêu dùng",
+   "tickers": [
+    "MCH",
+    "MSN",
+    "LIX",
+    "TLG",
+    "VNM"
+   ],
+   "etf": [
+    "XLP"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Đường",
+   "tickers": [
+    "QNS"
+   ],
+   "etf": [
+    "XLP"
+   ],
+   "comm": [
+    "SB1!"
+   ],
+   "note": ""
+  },
+  {
+   "name": "Thủy sản · nông nghiệp",
+   "tickers": [
+    "ANV",
+    "CMX",
+    "IDI",
+    "HAG"
+   ],
+   "etf": [
+    "MOO"
+   ],
+   "comm": [],
+   "note": "Cá tra không có hợp đồng tương lai"
+  },
+  {
+   "name": "Chăn nuôi heo",
+   "tickers": [
+    "DBC",
+    "BAF"
+   ],
+   "etf": [
+    "MOO"
+   ],
+   "comm": [
+    "HE1!"
+   ],
+   "note": ""
+  },
+  {
+   "name": "May mặc",
+   "tickers": [
+    "TNG",
+    "VGT",
+    "GIL",
+    "TCM",
+    "MSH"
+   ],
+   "etf": [
+    "XRT"
+   ],
+   "comm": [
+    "-CT1!"
+   ],
+   "note": "Bông là chi phí đầu vào"
+  },
+  {
+   "name": "Dược · y tế",
+   "tickers": [
+    "DCL",
+    "FIT",
+    "TNH",
+    "CVN"
+   ],
+   "etf": [
+    "XLV",
+    "XPH",
+    "IHI"
+   ],
+   "comm": [],
+   "note": "CVN dùng IHI"
+  },
+  {
+   "name": "Khoáng sản · than",
+   "tickers": [
+    "MSR",
+    "NBC"
+   ],
+   "etf": [
+    "REMX",
+    "XME"
+   ],
+   "comm": [
+    "NCF1!"
+   ],
+   "note": "MSR dùng REMX; NBC dùng than Newcastle"
+  },
+  {
+   "name": "Máy móc · ô tô",
+   "tickers": [
+    "VEA"
+   ],
+   "etf": [
+    "XLY"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Giải trí · truyền thông",
+   "tickers": [
+    "VPL",
+    "YEG"
+   ],
+   "etf": [
+    "PEJ",
+    "XLC"
+   ],
+   "comm": [],
+   "note": "VPL dùng PEJ; YEG dùng XLC"
+  },
+  {
+   "name": "Tài chính tiêu dùng",
+   "tickers": [
+    "EVF"
+   ],
+   "etf": [
+    "XLF"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Viễn thông · dịch vụ kỹ thuật",
+   "tickers": [
+    "MFS"
+   ],
+   "etf": [
+    "XLC"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Nước sạch",
+   "tickers": [
+    "BWE"
+   ],
+   "etf": [
+    "PHO",
+    "XLU"
+   ],
+   "comm": [],
+   "note": "PHO = Invesco Water Resources ETF"
+  }
+ ]
+}
