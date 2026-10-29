@@ -48,7 +48,8 @@
    "name": "Bảo hiểm",
    "tickers": [
     "ABI",
-    "BMI"
+    "BMI",
+    "BVH"
    ],
    "etf": [
     "KIE"
@@ -85,7 +86,8 @@
     "IDC",
     "IJC",
     "KBC",
-    "SZC"
+    "SZC",
+    "PXL"
    ],
    "etf": [
     "CBOE:IYT"
@@ -109,7 +111,8 @@
     "TV2",
     "GEL",
     "DLG",
-    "VCG"
+    "VCG",
+    "BCE"
    ],
    "etf": [
     "CBOE:PAVE"
@@ -144,7 +147,8 @@
     "HT1",
     "KSB",
     "SCL",
-    "VGC"
+    "VGC",
+    "BCC"
    ],
    "etf": [
     "XLB",
@@ -189,7 +193,8 @@
    "tickers": [
     "AAA",
     "APH",
-    "NTP"
+    "NTP",
+    "VTZ"
    ],
    "etf": [
     "XLB"
@@ -204,7 +209,8 @@
    "tickers": [
     "DPR",
     "HII",
-    "TRC"
+    "TRC",
+    "GVR"
    ],
    "etf": [
     "XLB"
@@ -312,7 +318,8 @@
    "name": "Vận tải biển",
    "tickers": [
     "HAH",
-    "VOS"
+    "VOS",
+    "PVT"
    ],
    "etf": [
     "BOAT",
@@ -461,7 +468,8 @@
    "name": "Khoáng sản · than",
    "tickers": [
     "MSR",
-    "NBC"
+    "NBC",
+    "TVD"
    ],
    "etf": [
     "REMX",

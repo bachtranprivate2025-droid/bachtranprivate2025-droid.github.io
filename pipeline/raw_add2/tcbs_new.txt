@@ -42,3 +42,11 @@ VCG 2.8 3.4 4.2 3 3.2 2.2 1
 VNM 2.6 2.3 4.6 3 2.8 2.1 1
 NTP 2.9 2.4 4.2 3 3.7 3 1
 MFS None 2.3 5 3.5 1.4 None None
+VTZ None None None None None None None
+BVH None None None None None None None
+BCC None None None None None None None
+BCE None None None None None None None
+PXL None None None None None None None
+PVT None None None None None None None
+GVR None None None None None None None
+TVD None None None None None None None

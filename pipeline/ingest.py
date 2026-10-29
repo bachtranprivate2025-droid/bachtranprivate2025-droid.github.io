@@ -69,6 +69,11 @@ for f in fl:
     if key == "nn": ST["nnAsof"] = max(ST["nnAsof"], d)
     else: ST["tdAsof"] = max(ST["tdAsof"], d)
 
+# 3b) Dòng tiền theo mã (flows_get_stock_flow) — dùng khi thêm mã mới
+for t, ser in IN.get("stockflow", {}).items():
+    for d, (a, b) in ser.items():
+        ST["nn"].setdefault(t, {})[d] = a; ST["td"].setdefault(t, {})[d] = b
+
 # 4) Quote ETF / hàng hóa -> conf/quotes2.json
 q = {k: [v["close"], v.get("SMA20"), v.get("SMA50"), v.get("Perf.1M"), v.get("change"), v.get("description")]
      for k, v in IN["tv"].items() if k in SYMS["syms"] and "SMA20" in v}

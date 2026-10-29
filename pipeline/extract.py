@@ -31,7 +31,7 @@ for f in logs:
         try: walk(json.loads(line))
         except Exception: pass
 
-out = {"bars": {}, "flows": [], "tv": {}}
+out = {"bars": {}, "flows": [], "tv": {}, "stockflow": {}}
 for i, (name, inp) in uses.items():
     if i not in res or not isinstance(res[i], str): continue
     try: d = json.loads(res[i])
@@ -42,6 +42,9 @@ for i, (name, inp) in uses.items():
     elif name.endswith("flows_top_net") and "items" in d:
         out["flows"].append({"in": inp, "period_from": d.get("period_from"), "period_to": d.get("period_to"),
                              "items": [[x["ticker"], x["net_bil"]] for x in d["items"]]})
+    elif name.endswith("flows_get_stock_flow") and d.get("series"):
+        m = out["stockflow"].setdefault(d["ticker"], {})
+        for x in d["series"]: m[x["date"]] = [x.get("foreign_net_bil") or 0.0, x.get("prop_net_bil") or 0.0]
     elif name.endswith("get-symbol-data-batch") and isinstance(d.get("data"), dict):
         out["tv"].update(d["data"])
 os.makedirs(os.path.join(HERE, "inbox"), exist_ok=True)

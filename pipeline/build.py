@@ -252,6 +252,8 @@ def tcbs_cmp(f, caps, tc):
 
 # ---------- rows ----------
 TICKERS = sorted(LISTS)
+TECH_ONLY = set(json.load(open(RUN + "conf/tech_only.json"))) if os.path.exists(RUN + "conf/tech_only.json") else set()
+LABS = sorted({x for v in LISTS.values() for x in v} - {"Stage 2-2", "Stage 1-2 (Emerging)", "Stage 0-1 (W-D MA10)"})
 ratings = {t: TC[t]["stockRating"] for t in TICKERS}
 def tc_rank(t):
     r = ratings[t]
@@ -285,6 +287,11 @@ def make_new(t):
             bm["relative"] = {k: (None if sec[k] is None else sec[k] - bm["index"][k]) for k in ("d1", "w1", "m1")}
         tmpl["icbComparison"]["sector"] = {"d1": sec["d1"], "w1": sec["w1"]}
         tmpl["icbStrength"] = None
+    if s.get("icbnone"):  # ICB4 không có mã mẫu cùng ngành và chưa kéo chỉ số ngành: không mượn số ngành
+        tmpl["icbStrength"] = None
+        if tmpl.get("icbBenchmark"):
+            tmpl["icbBenchmark"]["sector"] = {"d1": None, "w1": None, "m1": None}
+            tmpl["icbBenchmark"]["relative"] = {"d1": None, "w1": None, "m1": None}
     st = tmpl.get("icbComparison")
     if st:
         st["stock"] = {"d1": pct(s["c0"], s["c1"]), "w1": pct(s["c0"], s["c5"])}
@@ -353,6 +360,10 @@ for t in TICKERS:
     refresh(r, t)
     r["tcbs"] = TC[t]; r["tcbsRank"] = tc_rank(t); r["tcbsCmp"] = tcbs_cmp(r["f"], r["caps"], TC[t])
     r["fundView"] = fund_view(t); r["insiderView"] = insider_view(t); r["consView"] = cons_view(t); r["ssiView"] = ssi_view(t)
+    if t in TECH_ONLY:  # mã chỉ cập nhật kỹ thuật
+        na = dict(head="⚪ Chưa kéo", line="Mã chỉ cập nhật kỹ thuật", last="")
+        r["fundView"] = dict(na, asof=""); r["insiderView"] = na; r["consView"] = None; r["ssiView"] = None
+        r["techOnly"] = True
     rows.append(r)
 
 meta = copy.deepcopy(base["meta"]); meta["reportDate"] = ASOF; meta["revisionDate"] = datetime.date.today().isoformat(); meta["tdAsof"] = TD_ASOF; meta["weekly"] = WK; meta["flowDates"] = FLOW_DATES
@@ -587,13 +598,13 @@ rep('coverage+"/85"', 'coverage+"/"+rows.length')
 rep('["Quote snapshot","85/85"]', '["Quote snapshot",rows.length+"/"+rows.length]')
 rep('["F / NN-TD","85/85"]', '["F / NN-TD",rows.length+"/"+rows.length]')
 rep("Báo cáo 3 danh mục · 23/10/2026</h1>", "Báo cáo 4 watchlist · @D0Y@</h1>")
-rep("Stage 0-1 (W-D MA10) — 85 mã unique, 19 mã giao nhau.", "Stage 0-1 (W-D MA10) · VN RVOL (28/10) · RVOL TEST vni (26/10) · RVOL 25/10 · Bổ sung anh thêm (LDG, VC7, QCG, CTI, NAG, CMX, CII) — "+str(len(rows))+" mã unique, "+str(data["overlap"])+" mã nằm ở từ 2 list trở lên.")
+rep("Stage 0-1 (W-D MA10) — 85 mã unique, 19 mã giao nhau.", "Stage 0-1 (W-D MA10) · " + " · ".join(LABS) + " — "+str(len(rows))+" mã unique, "+str(data["overlap"])+" mã nằm ở từ 2 list trở lên." + (" " + str(len(TECH_ONLY)) + " mã chỉ cập nhật kỹ thuật (" + ", ".join(sorted(TECH_ONLY)) + "): F, TCBS, SSI, quỹ, nội bộ, CTCK, tin để trống." if TECH_ONLY else ""))
 rep("nếu có trong ba Stage list.", "nếu có trong 4 watchlist.")
 rep("(85-coverage)", "(rows.length-coverage)")
 rep('85/85 mã</span>', str(len(rows))+"/"+str(len(rows))+' mã</span>')
 rep("cho cả 85 mã", "cho cả "+str(len(rows))+" mã")
 rep('selected.length+"/85 mã"', 'selected.length+"/"+rows.length+" mã"')
-rep("<option>Stage 0-1 (W-D MA10)</option></select>", "<option>Stage 0-1 (W-D MA10)</option><option>VN RVOL (28/10)</option><option>RVOL TEST vni</option><option>RVOL 25/10</option><option>Bổ sung (anh thêm)</option></select>")
+rep("<option>Stage 0-1 (W-D MA10)</option></select>", "<option>Stage 0-1 (W-D MA10)</option>" + "".join("<option>" + x + "</option>" for x in LABS) + "</select>")
 rep("FinLens · chốt 23/10/2026<br>1D so 22/10 · 1W so 16/10", "FinLens · chốt 26/10/2026<br>1D so 23/10 · 1W so 19/10")
 rep("Chốt 23/10 · so 22/10, 16/10, 24/09/2026", "Chốt 26/10 · so 23/10, 19/10, 25/09/2026")
 rep("cùng ngày: 23/10 so 22/10 và 16/10;", "cùng ngày: 26/10 so 23/10 và 19/10;")
