@@ -260,7 +260,9 @@ def tc_rank(t):
     return None if r is None else 1 + sum(1 for x in ratings.values() if x is not None and x > r)
 
 def make_new(t):
-    s = NEW[t]; tmpl = copy.deepcopy(BASE[s["tmpl"]])  # mã mới: mượn dữ liệu ngành ICB4 của mã cùng ngành
+    s = NEW[t]; _tm = s["tmpl"]
+    while _tm not in BASE and _tm in NEW: _tm = NEW[_tm]["tmpl"]   # mã mẫu cũng là mã mới: lần về mã gốc
+    tmpl = copy.deepcopy(BASE[_tm])  # mã mới: mượn dữ liệu ngành ICB4 của mã cùng ngành
     pct = lambda a, b: (a / b - 1) * 100
     tmpl.update({
         "t": t, "exchange": s["exchange"], "industry": s["industry"], "icb": s["icb"],

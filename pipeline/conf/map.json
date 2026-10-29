@@ -18,7 +18,13 @@
     "VAB",
     "VIB",
     "VPB",
-    "VCB"
+    "VCB",
+    "BID",
+    "LPB",
+    "MBB",
+    "SHB",
+    "SSB",
+    "STB"
    ],
    "etf": [
     "KBE",
@@ -36,7 +42,15 @@
     "HCM",
     "ORS",
     "TCX",
-    "VDS"
+    "VDS",
+    "DSE",
+    "FTS",
+    "SSI",
+    "VCI",
+    "VCK",
+    "VIX",
+    "VND",
+    "VPX"
    ],
    "etf": [
     "IAI"
@@ -70,7 +84,15 @@
     "VIC",
     "VRE",
     "DXS",
-    "SJS"
+    "SJS",
+    "DXG",
+    "KDH",
+    "KOS",
+    "NLG",
+    "NVL",
+    "TAL",
+    "VHM",
+    "VPI"
    ],
    "etf": [
     "CBOE:ITB",
@@ -87,7 +109,8 @@
     "IJC",
     "KBC",
     "SZC",
-    "PXL"
+    "PXL",
+    "SIP"
    ],
    "etf": [
     "CBOE:IYT"
@@ -112,7 +135,10 @@
     "GEL",
     "DLG",
     "VCG",
-    "BCE"
+    "BCE",
+    "CTR",
+    "HHV",
+    "PC1"
    ],
    "etf": [
     "CBOE:PAVE"
@@ -128,7 +154,8 @@
     "HSG",
     "NKG",
     "VGS",
-    "SHI"
+    "SHI",
+    "HPG"
    ],
    "etf": [
     "XLB",
@@ -165,7 +192,8 @@
     "CSV",
     "DCM",
     "LAS",
-    "DDV"
+    "DDV",
+    "DPM"
    ],
    "etf": [
     "XLB"
@@ -194,7 +222,8 @@
     "AAA",
     "APH",
     "NTP",
-    "VTZ"
+    "VTZ",
+    "BMP"
    ],
    "etf": [
     "XLB"
@@ -210,7 +239,8 @@
     "DPR",
     "HII",
     "TRC",
-    "GVR"
+    "GVR",
+    "PHR"
    ],
    "etf": [
     "XLB"
@@ -237,7 +267,9 @@
    "name": "Dầu khí",
    "tickers": [
     "PVD",
-    "GAS"
+    "GAS",
+    "BSR",
+    "PLX"
    ],
    "etf": [
     "XLE",
@@ -266,7 +298,10 @@
    "name": "Điện",
    "tickers": [
     "NT2",
-    "QTP"
+    "QTP",
+    "HDG",
+    "POW",
+    "REE"
    ],
    "etf": [
     "XLU"
@@ -281,7 +316,8 @@
    "name": "Thiết bị điện · điện tử",
    "tickers": [
     "GEE",
-    "NAG"
+    "NAG",
+    "GEX"
    ],
    "etf": [
     "GRID",
@@ -382,7 +418,10 @@
     "MSN",
     "LIX",
     "TLG",
-    "VNM"
+    "VNM",
+    "KDC",
+    "PAN",
+    "SBT"
    ],
    "etf": [
     "XLP"
@@ -409,7 +448,8 @@
     "ANV",
     "CMX",
     "IDI",
-    "HAG"
+    "HAG",
+    "VHC"
    ],
    "etf": [
     "MOO"
@@ -537,6 +577,40 @@
    ],
    "comm": [],
    "note": "PHO = Invesco Water Resources ETF"
+  },
+  {
+   "name": "Công nghệ thông tin",
+   "tickers": [
+    "CMG",
+    "FPT"
+   ],
+   "etf": [
+    "XLK"
+   ],
+   "comm": [],
+   "note": "XLK = Technology Select Sector SPDR"
+  },
+  {
+   "name": "Trang sức · bán lẻ",
+   "tickers": [
+    "PNJ"
+   ],
+   "etf": [
+    "XRT"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Bia · đồ uống",
+   "tickers": [
+    "SAB"
+   ],
+   "etf": [
+    "XLP"
+   ],
+   "comm": [],
+   "note": ""
   }
  ]
 }
