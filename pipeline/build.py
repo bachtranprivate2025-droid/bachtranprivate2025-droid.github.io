@@ -513,6 +513,48 @@ for r in rows:
     e = EARN.get(r["t"])
     if e: r["earn"] = e; r["earnScore"] = round(e["score"], 3)
     else: r["earnScore"] = -99
+
+# ---- Lịch sự kiện: cổ tức / quyền (FinLens dividends_upcoming + tin) + hạn BCTC quý ----
+import datetime as _dt
+EVJ = json.load(open(RUN + "conf/events.json")) if os.path.exists(RUN + "conf/events.json") else {"items": [], "asof": ""}
+BC = WK.get("bctc", {})
+_d = lambda x: _dt.date.fromisoformat(x)
+KIND = {"cash": ("evCash", "Cổ tức tiền"), "stock": ("evStock", "Cổ tức CP"), "rights": ("evRights", "Quyền mua (pha loãng)")}
+EVTOP = []
+for r in rows:
+    ev = []
+    for x in sorted((x for x in EVJ["items"] if x["t"] == r["t"]), key=lambda x: x["ex"] or "9"):
+        c, lab = KIND.get(x["kind"], ("evCash", x["kind"]))
+        x = dict(x, terms=(x.get("terms") or "").replace("thưởng CP ", ""))
+        import re as _re
+        _rd = _re.search(r"(đợt \d+/\d{4}|năm \d{4})", x.get("title") or "")
+        txt = lab + (" " + _rd.group(1) if _rd else "") + " " + (x["terms"] or "") + (" (" + f"{x['yld']:.2f}".replace(".", ",") + "%)" if x.get("yld") else "")
+        if not x["ex"]:
+            when = "chưa rõ ngày GDKHQ"
+        else:
+            n = (_d(x["ex"]) - _d(ASOF)).days
+            when = (f"GDKHQ hôm nay {dm(x['ex'])} — giá tham chiếu đã điều chỉnh" if n == 0 else f"GDKHQ {dm(x['ex'])} (còn {n} ngày)" if n > 0 else f"đã GDKHQ {dm(x['ex'])}")
+        pay = (" · trả " + dmy(x["pay"])) if x.get("pay") else ""
+        ev.append({"c": c, "t": "📅 " + when + ": " + txt + pay, "src": x.get("src", ""), "title": x.get("title", "")})
+        if x["ex"] and 0 <= (_d(x["ex"]) - _d(ASOF)).days <= 30 or not x["ex"]:
+            EVTOP.append({"t": r["t"], "ex": x["ex"], "s": (dm(x["ex"]) if x["ex"] else "chưa rõ ngày") + " " + lab + " " + (x["terms"] or "")})
+    E = r.get("earn")
+    if BC:
+        if E and E.get("q3"):
+            ev.append({"c": "evBctc", "t": "✅ BCTC " + BC["q"] + ": đã có số (TCBS)", "src": "", "title": ""})
+        else:
+            nr = (_d(BC["rieng"]) - _d(ASOF)).days; nh = (_d(BC["hopnhat"]) - _d(ASOF)).days
+            ev.append({"c": "evBctc", "t": "⏳ BCTC " + BC["q"] + ": hạn " + dm(BC["rieng"]) + (f" (còn {nr} ngày)" if nr >= 0 else " (đã quá)") + " riêng lẻ · " + dm(BC["hopnhat"]) + (f" (còn {nh} ngày)" if nh >= 0 else " (đã quá)") + " hợp nhất", "src": "", "title": ""})
+    r["events"] = ev
+_m = {}
+for x in EVTOP:
+    k = (x["t"], x["s"])
+    if k in _m: _m[k]["n"] += 1
+    else: _m[k] = dict(x, n=1)
+EVTOP = [dict(x, s=x["s"] + (f" ×{x['n']} đợt" if x["n"] > 1 else "")) for x in _m.values()]
+EVTOP.sort(key=lambda x: x["ex"] or "9")
+data["eventsMeta"] = {"asof": EVJ.get("asof"), "top": EVTOP, "next": BC.get("next", "")}
+
 data["earnMeta"] = dict(asof="2026-10-28", vniW=VNIW, n=len(rows), out=sum(1 for r in rows if r.get("earn", {}).get("q3")))
 blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 lines[111] = PRE + blob + "</script>"
@@ -621,7 +663,8 @@ rep("Smart money = NN + TD; không cộng nhóm tổ chức trong nước của 
 SETUP_JS = r'''if(!window.__rotSort){window.__rotSort=1;const go=th=>{const t=th.closest("table"),b=t.tBodies[0],c=+th.dataset.c,txt=c===0,cur=th.dataset.s||"",st=txt?(cur===""?"a":cur==="a"?"d":""):(cur===""?"d":cur==="d"?"a":"");t.querySelectorAll("th.rsrt").forEach(h=>{h.dataset.s="";h.querySelector(".sar").textContent="⇅";});th.dataset.s=st;th.querySelector(".sar").textContent=st==="d"?"↓":st==="a"?"↑":"⇅";const R=[...b.rows];R.sort((x,y)=>{if(!st)return x.dataset.i-y.dataset.i;const a=x.cells[c].dataset.v,z=y.cells[c].dataset.v;if(a===""&&z!=="")return 1;if(z===""&&a!=="")return -1;const na=parseFloat(a),nz=parseFloat(z);const r=(isNaN(na)||isNaN(nz))?String(a).localeCompare(String(z),"vi"):na-nz;return st==="d"?-r:r;});R.forEach(r=>b.appendChild(r));};document.addEventListener("click",e=>{const th=e.target.closest&&e.target.closest("th.rsrt");if(th)go(th);});document.addEventListener("keydown",e=>{const th=e.target.closest&&e.target.closest("th.rsrt");if(th&&(e.key==="Enter"||e.key===" ")){e.preventDefault();go(th);}});}
 const pct=x=>x==null?"–":x>=9?"gấp "+num(x+1,0)+" lần":(x>=0?"+":"−")+num(Math.abs(x*100),0)+"%";
 const bn=x=>x==null?"–":num(x,0);
-const earnCell=r=>{const E=r.earn;if(!E)return '<td class="earn"><div class="note">TCBS: không có số quý</div></td>';
+const evHtml=r=>(r.events&&r.events.length)?'<div class="evbox"><div class="evh">Lịch sự kiện</div>'+r.events.map(e=>'<div class="ev '+e.c+'"'+(e.title||e.src?' title="'+esc((e.title||'')+(e.src?' · nguồn '+e.src:''))+'"':'')+'>'+esc(e.t)+'</div>').join('')+'</div>':'';
+const earnCell=r=>{const E=r.earn;if(!E)return '<td class="earn"><div class="note">TCBS: không có số quý</div>'+evHtml(r)+'</td>';
  const st=E.q3?'<span class="etag eOut">Đã ra Q3/26</span>':'<span class="etag eWait">⏳ Chưa ra Q3 · số '+E.q+'</span>';
  const s=E.series||[],mx=Math.max(1,...s.map(x=>Math.abs(x||0))),W=120,H=34,bw=W/s.length-4;
  const bars=s.map((x,i)=>{const h=Math.max(1,Math.abs(x||0)/mx*(H/2-2)),y=(x||0)>=0?H/2-h:H/2;return '<rect x="'+(i*(bw+4))+'" y="'+y+'" width="'+bw+'" height="'+h+'" class="'+((x||0)<0?'eNeg':i===s.length-1?'eLast':'eBar')+'"><title>'+E.sq[i]+': LNST '+bn(x)+' tỷ</title></rect>';}).join("");
@@ -632,7 +675,7 @@ const earnCell=r=>{const E=r.earn;if(!E)return '<td class="earn"><div class="not
  '<div class="note">'+rv+': '+bn(E.rev)+' tỷ · YoY '+pct(E.ryoy)+' · QoQ '+pct(E.rqoq)+'</div>'+
  '<div class="note">TTM 4 quý: '+bn(E.ttm)+' tỷ · YoY '+pct(E.tyoy)+'</div>'+
  '<div class="note">Tăng tốc: '+(E.accel?'<b class="up">có</b>':'không')+' ('+E.qp+' '+pct(E.prev)+' → '+E.q+' '+pct(E.yoy)+')</div>'+
- (E.react?'<div class="note">'+esc(E.react.lbl)+' · 1W '+(E.react.w>0?'+':'')+num(E.react.w,1)+'% (VNINDEX +'+num(DATA.earnMeta.vniW,1)+'%) · 28/10 '+num(E.react.d1,1)+'%</div>':'')+'</td>';};
+ (E.react?'<div class="note">'+esc(E.react.lbl)+' · 1W '+(E.react.w>0?'+':'')+num(E.react.w,1)+'% (VNINDEX +'+num(DATA.earnMeta.vniW,1)+'%) · 28/10 '+num(E.react.d1,1)+'%</div>':'')+evHtml(r)+'</td>';};
 const earnSummary=()=>{const R=rows.filter(r=>r.earn),out=R.filter(r=>r.earn.q3),wait=R.length-out.length;
  const up=out.filter(r=>r.earn.adj===1).sort((a,b)=>b.earnScore-a.earnScore),dn=out.filter(r=>r.earn.adj===-1).sort((a,b)=>(a.earn.yoy??-9)-(b.earn.yoy??-9)),sell=out.filter(r=>r.earn.react&&r.earn.react.k==="sell"),strongNoAcc=out.filter(r=>r.earn.ep===0&&(r.earn.yoy||0)>=0.25);
  const L=(a,f)=>a.length?a.map(f).join(" · "):'<span class="note">chưa có mã</span>';
@@ -642,7 +685,7 @@ const earnSummary=()=>{const R=rows.filter(r=>r.earn),out=R.filter(r=>r.earn.q3)
  '<div style="margin:4px 0">🟡 <b>Tăng mạnh nhưng chậm lại</b>: '+L(strongNoAcc,r=>'<b>'+r.t+'</b> <span class="note">'+pct(r.earn.prev)+' → '+pct(r.earn.yoy)+'</span>')+'</div>'+
  '<div style="margin:4px 0">⚠️ <b>Bán theo tin</b>: '+L(sell,r=>'<b>'+r.t+'</b> <span class="note">LNST '+pct(r.earn.yoy)+', 1W '+(r.earn.react.w>0?'+':'')+num(r.earn.react.w,1)+'%</span>')+'</div>'+
  '<div style="margin:4px 0">🔴 <b>CB −1</b>: '+L(dn,r=>'<b>'+r.t+'</b> <span class="note">'+(r.earn.np<0?'lỗ':pct(r.earn.yoy))+'</span>')+'</div>'+
- '<div class="note" style="margin:4px 0">⏳ Chưa ra Q3 nhưng Q2 tăng mạnh + tăng tốc (theo dõi khi công bố): '+L(wq,r=>'<b>'+r.t+'</b>')+'</div></div>';};
+ '<div class="note" style="margin:4px 0">⏳ Chưa ra Q3 nhưng Q2 tăng mạnh + tăng tốc (theo dõi khi công bố): '+L(wq,r=>'<b>'+r.t+'</b>')+'</div>'+(()=>{const M=DATA.eventsMeta||{},T=M.top||[];return '<div style="margin:4px 0">📅 <b>Cổ tức / quyền 30 ngày tới</b> <span class="note">(FinLens dividends + tin, chốt '+(M.asof||'').split('-').reverse().slice(0,2).join('/')+'; mua TRƯỚC ngày GDKHQ mới được hưởng, ngày GDKHQ giá tham chiếu điều chỉnh giảm)</span>: '+(T.length?T.map(x=>'<b>'+x.t+'</b> <span class="note">'+esc(x.s)+'</span>').join(' · '):'<span class="note">không có</span>')+'</div><div class="note">'+esc(M.next||'')+'</div>';})()+'</div>';};
 function setupGrade(r){
   const s=r.rs30||{},v=r.rvolStats||{},r63=r.r63??0,nn=r.foreign??0,td=r.prop??0,sum=nn+td,last=((r.seriesNN||[])[0]||0)+((r.seriesTD||[])[0]||0),miss=[];
   let RS;
@@ -735,7 +778,7 @@ rep('<th class="setup">Hạng setup TA</th>', '<th class="setup">Hạng setup TA
 rep("+setupCell(r)+", "+setupCell(r)+earnCell(r)+")
 rep('<option value="liqScore">', '<option value="earnScore">KQKD quý (đã ra Q3, tăng mạnh + tăng tốc trước)</option><option value="liqScore">')
 rep("+setupSummary()+", "+setupSummary()+earnSummary()+")
-rep("</style>", "th.earn,td.earn{min-width:230px;width:230px}.etag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:3px;margin-bottom:3px}.eOut{background:#1d3a2a;color:#9fe3b9}.eWait{background:#2a2a2a;color:#bbb}.elab{font-size:12px;margin:2px 0}.esvg{display:block;margin:3px 0}.eBar{fill:#5a7fa8}.eLast{fill:var(--yellow)}.eNeg{fill:var(--red)}\n</style>")
+rep("</style>", ".evbox{margin-top:6px;padding-top:5px;border-top:1px dashed #444}.evh{font-size:11px;color:#aaa;margin-bottom:2px}.ev{font-size:11.5px;line-height:1.35;margin:1px 0}.evCash{color:#9fe3b9}.evStock{color:#f3d58a}.evRights{color:#f5a3a3}.evBctc{color:#bbb}th.earn,td.earn{min-width:230px;width:230px}.etag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:3px;margin-bottom:3px}.eOut{background:#1d3a2a;color:#9fe3b9}.eWait{background:#2a2a2a;color:#bbb}.elab{font-size:12px;margin:2px 0}.esvg{display:block;margin:3px 0}.eBar{fill:#5a7fa8}.eLast{fill:var(--yellow)}.eNeg{fill:var(--red)}\n</style>")
 sys.path.insert(0, RUN + "q3"); import legend as _lg
 rep("<h2>3. Bảng phân tích ", _lg.LEGEND + "<h2>3. Bảng phân tích ")
 rep("</style>", _lg.LCSS + "\n</style>")

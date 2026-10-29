@@ -30,6 +30,11 @@ Mọi lệnh chạy từ gốc repo `bachtranprivate2025-droid.github.io`. Kết
 Chạy lại các bước kéo đầy đủ như bản 26–28/10 (signals_screen RS, quality_scan F, TCBS getGeneralRating, SSI FA,
 fund_stock_ownership, insider, research consensus, news, market_sector_strength + chỉ số ngành ICB4, Fialda L2 qua browser),
 ghi vào các file `raw_add2/`, `raw2610_add2/`, `fialda/l2rot.json`, rồi sửa ngày trong `conf/weekly.json`.
+
+Lịch sự kiện (cột KQKD): FinLens `dividends_upcoming` symbols = toàn bộ `lists121.json`, days_ahead=120, limit=50 (1 lệnh) +
+FinLens `news_search` event_type=dividend, news_type=company_specific, days=14, limit=50 để bắt mã FinLens dividends còn thiếu
+(thêm tay vào `EXTRA` trong `events.py`, xóa khi FinLens đã có). Chạy `extract.py <tag>` rồi `events.py pipeline/inbox/<tag>.json`.
+Hạn BCTC quý sửa trong `conf/weekly.json` → `bctc` khi sang mùa mới.
 Sau đó chạy nhịp hằng ngày.
 
 ## Nhịp quý

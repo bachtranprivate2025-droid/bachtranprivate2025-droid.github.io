@@ -1,0 +1,105 @@
+{
+ "asof": "2026-10-29",
+ "items": [
+  {
+   "t": "ANV",
+   "ex": "2026-10-29",
+   "pay": "2026-12-15",
+   "kind": "cash",
+   "terms": "500đ/CP",
+   "yld": 2.96,
+   "title": "Cổ tức đợt 2/2025 bằng tiền, tỷ lệ 500đ/CP",
+   "src": "FinLens"
+  },
+  {
+   "t": "ANV",
+   "ex": "2026-10-29",
+   "pay": "2026-12-15",
+   "kind": "cash",
+   "terms": "500đ/CP",
+   "yld": 2.96,
+   "title": "Cổ tức đợt 1/2026 bằng tiền, tỷ lệ 500đ/CP",
+   "src": "FinLens"
+  },
+  {
+   "t": "NT2",
+   "ex": "2026-10-29",
+   "pay": "2026-11-16",
+   "kind": "cash",
+   "terms": "1.000đ/CP",
+   "yld": 4.37,
+   "title": "Cổ tức đợt 1/2025 bằng tiền, tỷ lệ 1.000đ/CP",
+   "src": "FinLens"
+  },
+  {
+   "t": "TCB",
+   "ex": "2026-10-29",
+   "pay": "2027-01-30",
+   "kind": "stock",
+   "terms": "thưởng CP 100:50",
+   "yld": null,
+   "title": "Cổ tức năm 2025 bằng cổ phiếu, tỷ lệ 100:50",
+   "src": "FinLens"
+  },
+  {
+   "t": "MSR",
+   "ex": "2026-10-30",
+   "pay": "2026-11-06",
+   "kind": "cash",
+   "terms": "2.000đ/CP",
+   "yld": 3.03,
+   "title": "Cổ tức đợt 2/2026 bằng tiền, tỷ lệ 2.000đ/CP",
+   "src": "FinLens"
+  },
+  {
+   "t": "VDS",
+   "ex": "2026-10-30",
+   "pay": "2027-02-02",
+   "kind": "stock",
+   "terms": "thưởng CP 10:1",
+   "yld": null,
+   "title": "Cổ tức năm 2025 bằng cổ phiếu, tỷ lệ 10:1",
+   "src": "FinLens"
+  },
+  {
+   "t": "QTP",
+   "ex": "2026-11-05",
+   "pay": "2026-11-27",
+   "kind": "cash",
+   "terms": "700đ/CP",
+   "yld": 6.25,
+   "title": "Cổ tức đợt 1/2026 bằng tiền, tỷ lệ 700đ/CP",
+   "src": "FinLens"
+  },
+  {
+   "t": "TNG",
+   "ex": "2026-11-10",
+   "pay": "2026-11-20",
+   "kind": "cash",
+   "terms": "500đ/CP",
+   "yld": 2.63,
+   "title": "Cổ tức đợt 2/2026 bằng tiền, tỷ lệ 500đ/CP",
+   "src": "FinLens"
+  },
+  {
+   "t": "VNM",
+   "ex": "2026-11-10",
+   "pay": "2026-11-26",
+   "kind": "cash",
+   "terms": "2.500đ/CP",
+   "yld": 4.33,
+   "title": "Tạm ứng cổ tức đợt 1/2026 bằng tiền 25% (ĐKCC 11/11)",
+   "src": "Tin Vietstock 29/10"
+  },
+  {
+   "t": "GVR",
+   "ex": null,
+   "pay": "2026-12-10",
+   "kind": "cash",
+   "terms": "400đ/CP",
+   "yld": 1.25,
+   "title": "Cổ tức năm 2025 bằng tiền 4% (chưa rõ ngày chốt)",
+   "src": "Tin Vietstock 28/10"
+  }
+ ]
+}
