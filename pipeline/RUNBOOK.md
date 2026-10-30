@@ -41,7 +41,12 @@ Sau đó chạy nhịp hằng ngày.
 
 Trong mùa BCTC: TCBS `getIncomeStatementForBank/NonBank` cho mã chưa có quý mới → `q3/tcbs_raw.json`; sửa `earn` trong `conf/weekly.json`.
 
-## Danh mục mặc định: VN30 + VN100
+## Danh mục mặc định: 4 watchlist TradingView + VN30 + VN100
+
+Danh mục = 4 watchlist (🌲VN stage 2-2, 🟢VN STAGE 1-2, 🌳VN STAGE 0-1, 📗VN RVOL — id trong `conf/watchlists.json`) + rổ VN30/VN100 + mã anh tự thêm ("Bổ sung (anh thêm)"). Không giữ nhãn/list cũ.
+Nhịp tuần: kéo lại 4 watchlist, sửa `conf/watchlists.json`, chạy `sync_lists.py` (hướng dẫn trong đầu file).
+
+### Rổ VN30 + VN100
 
 Mọi mã thuộc rổ VN30/VN100 luôn có trong báo cáo, gắn nhãn "VN30" hoặc "VN100". Khi rổ đổi (review quý),
 kéo lại thành phần (DNSE market_get_stock_influences) vào `conf/idx.json`, thêm INFO cho mã mới trong `add_vn100.py`
