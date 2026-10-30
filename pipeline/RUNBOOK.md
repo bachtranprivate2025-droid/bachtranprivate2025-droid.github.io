@@ -6,7 +6,7 @@ Mọi lệnh chạy từ gốc repo `bachtranprivate2025-droid.github.io`. Kết
 
 | Nhịp | Khi nào | Kéo gì | Số lệnh tool (≈130 mã) |
 |---|---|---|---|
-| Hằng ngày | Thứ 2–6, sau 18h30 | Giá, KL/RVOL, RS vs VN30, khối ngoại, tự doanh, quote ETF/hàng hóa | TradingView 5 (4 lô 50 mã + 1 lô ETF) · FinLens flows 12 · FinLens nến cho mã RVOL ≥ 1,4× (thường 10–40) |
+| Hằng ngày | Thứ 2–6, sau 18h30 | Giá, KL/RVOL, RS vs VN30, khối ngoại, tự doanh, quote ETF/hàng hóa | TradingView 4 (3 lô 50 mã + 1 lô ETF) · FinLens flows 12 · FinLens nến cho mã RVOL ≥ 1,4× (thường 10–40) |
 | Hàng tuần | Thứ 6 sau phiên (hoặc cuối tuần) | F/cờ đỏ BCTC, TCBS rating, SSI FA, quỹ, nội bộ, giá mục tiêu CTCK, tin/catalyst, RS rating, ngành ICB4, Fialda rotation | như bản đầy đủ cũ |
 | Theo quý | Mùa BCTC: tháng 1, 4, 7, 10 + nửa đầu tháng kế tiếp | KQKD quý (TCBS income statement) | chỉ mã chưa có số quý mới |
 
@@ -14,7 +14,7 @@ Mọi lệnh chạy từ gốc repo `bachtranprivate2025-droid.github.io`. Kết
 
 1. `git pull`.
 2. TradingView `mcp-tv-get-symbol-data-batch`, columns `["close","volume","Perf.W","Perf.1M","Perf.3M","Perf.6M"]`,
-   các lô 50 mã (181 mã = 4 lô). Danh sách `EXCHANGE:TICKER` in bằng: `python3 pipeline/symbols.py` (lô cuối có thêm `HOSE:VNINDEX`, `HOSE:VN30`).
+   các lô 50 mã (141 mã = 3 lô; số lô theo `symbols.py`). Danh sách `EXCHANGE:TICKER` in bằng: `python3 pipeline/symbols.py` (lô cuối có thêm `HOSE:VNINDEX`, `HOSE:VN30`).
 3. TradingView batch ETF/hàng hóa: symbols = `conf/syms.json["syms"]`, columns `["close","SMA20","SMA50","Perf.1M","change","description"]` (1 lệnh).
 4. FinLens `flows_top_net` days=1 limit=30: flow_type foreign và proprietary × direction buy/sell × exchange HOSE/HNX/UPCOM (12 lệnh).
    Nếu note báo tự doanh "CHƯA gồm phiên" hôm nay thì vẫn chạy tiếp — báo cáo ghi rõ TD tới phiên trước.
