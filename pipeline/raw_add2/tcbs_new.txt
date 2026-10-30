@@ -94,3 +94,15 @@ PNJ None None None None None None None
 SAB None None None None None None None
 VHC None None None None None None None
 PHR None None None None None None None
+LSG None None None None None None None
+VCR None None None None None None None
+TLD None None None None None None None
+HHS None None None None None None None
+VC3 None None None None None None None
+VGR None None None None None None None
+SBG None None None None None None None
+DMX None None None None None None None
+HNG None None None None None None None
+DBD None None None None None None None
+SAM None None None None None None None
+RYG None None None None None None None

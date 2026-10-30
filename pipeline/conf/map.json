@@ -92,7 +92,10 @@
     "NVL",
     "TAL",
     "VHM",
-    "VPI"
+    "VPI",
+    "LSG",
+    "VCR",
+    "VC3"
    ],
    "etf": [
     "CBOE:ITB",
@@ -175,7 +178,9 @@
     "KSB",
     "SCL",
     "VGC",
-    "BCC"
+    "BCC",
+    "TLD",
+    "RYG"
    ],
    "etf": [
     "XLB",
@@ -335,7 +340,8 @@
     "GMD",
     "PHP",
     "VSC",
-    "MHC"
+    "MHC",
+    "VGR"
    ],
    "etf": [
     "AMEX:SEA",
@@ -402,7 +408,8 @@
     "FRT",
     "DGW",
     "PET",
-    "PSD"
+    "PSD",
+    "DMX"
    ],
    "etf": [
     "XRT",
@@ -449,7 +456,8 @@
     "CMX",
     "IDI",
     "HAG",
-    "VHC"
+    "VHC",
+    "HNG"
    ],
    "etf": [
     "MOO"
@@ -494,7 +502,8 @@
     "DCL",
     "FIT",
     "TNH",
-    "CVN"
+    "CVN",
+    "DBD"
    ],
    "etf": [
     "XLV",
@@ -582,7 +591,8 @@
    "name": "Công nghệ thông tin",
    "tickers": [
     "CMG",
-    "FPT"
+    "FPT",
+    "SAM"
    ],
    "etf": [
     "XLK"
@@ -608,6 +618,18 @@
    ],
    "etf": [
     "XLP"
+   ],
+   "comm": [],
+   "note": ""
+  },
+  {
+   "name": "Ô tô · cơ khí",
+   "tickers": [
+    "HHS",
+    "SBG"
+   ],
+   "etf": [
+    "XLY"
    ],
    "comm": [],
    "note": ""

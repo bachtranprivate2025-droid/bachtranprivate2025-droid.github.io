@@ -252,7 +252,8 @@ def tcbs_cmp(f, caps, tc):
 
 # ---------- rows ----------
 TICKERS = sorted(LISTS)
-TECH_ONLY = set(json.load(open(RUN + "conf/tech_only.json"))) if os.path.exists(RUN + "conf/tech_only.json") else set()
+TECH_ONLY = set(json.load(open(RUN + "conf/tech_only.json"))) if os.path.exists(RUN + "conf/tech_only.json") else set() 
+TECH_ONLY &= set(LISTS)
 LABS = sorted({x for v in LISTS.values() for x in v} - {"Stage 2-2", "Stage 1-2 (Emerging)", "Stage 0-1 (W-D MA10)"})
 ratings = {t: TC[t]["stockRating"] for t in TICKERS}
 def tc_rank(t):

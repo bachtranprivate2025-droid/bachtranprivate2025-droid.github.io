@@ -94,3 +94,15 @@ PNJ|NONE:-:chưa kéo
 SAB|NONE:-:chưa kéo
 VHC|NONE:-:chưa kéo
 PHR|NONE:-:chưa kéo
+LSG|NONE:-:chưa kéo
+VCR|NONE:-:chưa kéo
+TLD|NONE:-:chưa kéo
+HHS|NONE:-:chưa kéo
+VC3|NONE:-:chưa kéo
+VGR|NONE:-:chưa kéo
+SBG|NONE:-:chưa kéo
+DMX|NONE:-:chưa kéo
+HNG|NONE:-:chưa kéo
+DBD|NONE:-:chưa kéo
+SAM|NONE:-:chưa kéo
+RYG|NONE:-:chưa kéo
