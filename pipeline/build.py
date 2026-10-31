@@ -102,7 +102,7 @@ WK = json.load(open(RUN + "conf/weekly.json"))          # mốc các nhóm cập
 FD10 = [d for d in SD if d <= NN_ASOF][-10:][::-1]
 FLOW_DATES = FD10
 dm = lambda iso: iso[8:10] + "/" + iso[5:7]
-for t in FLOW:
+for t in [x for x in FLOW if SD[-1] in ST["close"].get(x, {})]:
     c = ST["close"][t]
     nn_ = [round(ST["nn"][t].get(d, 0.0), 2) for d in FD10]
     td_ = [round(ST["td"][t].get(d, 0.0), 2) for d in FD10]   # phiên TD chưa có số = 0
