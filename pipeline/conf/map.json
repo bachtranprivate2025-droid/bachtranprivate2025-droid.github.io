@@ -142,7 +142,8 @@
     "BCE",
     "CTR",
     "HHV",
-    "PC1"
+    "PC1",
+    "FCN"
    ],
    "etf": [
     "CBOE:PAVE"
@@ -505,7 +506,8 @@
     "FIT",
     "TNH",
     "CVN",
-    "DBD"
+    "DBD",
+    "JVC"
    ],
    "etf": [
     "XLV",

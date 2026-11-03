@@ -109,3 +109,6 @@ RYG|NONE:-:chưa kéo
 CEO|NONE:-:chưa kéo
 IDC|NONE:-:chưa kéo
 HVN|NONE:-:chưa kéo
+FCN|NONE:-:chưa kéo
+JVC|NONE:-:chưa kéo
+HID|NONE:-:chưa kéo
