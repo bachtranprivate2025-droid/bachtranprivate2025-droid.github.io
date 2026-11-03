@@ -63,3 +63,8 @@ Thêm vào `lists121.json` + các file tuần (như stage4 cũ). Cho store: FinL
 - Mã không qua kiểm FinLens dùng KL TradingView (có thể gồm thỏa thuận nhỏ).
 - 1M/3M theo Perf TradingView (tháng lịch), không đúng 21/63 phiên.
 - So sánh mã với ngành ICB4 (1D/1W) để trống khi số ngành là bản tuần.
+
+## Báo cáo CTCK (hàng tuần)
+- FinLens research_list_reports(ticker, limit=1..2) cho từng mã -> pipeline/conf/research_list.txt (T|id|date|src|title).
+- Đọc research_read_report (1-2 trang) cho nhóm A+/A/B gần A và báo cáo mới -> pipeline/conf/research.json (tag, view, tp, cat, risk). Báo cáo <04/10 hiển thị "cũ".
+- Kiểm tra nội dung khớp mã (LPB 2/11 thực ra là báo cáo TCH).

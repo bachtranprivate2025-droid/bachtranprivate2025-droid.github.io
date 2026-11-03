@@ -1,0 +1,282 @@
+{
+"HPG": {
+"tag": "🟢",
+"view": "BETA: giá hợp lý 31.700 (+51%)",
+"tp": 31700,
+"cat": "Q3 LNST +106% YoY, 9T vượt 8% kế hoạch năm; Dung Quất 2 mở rộng ra sản phẩm từ 28/10; nhà máy ray 80% tiến độ, chạy thử Q1/2027",
+"risk": "Giá than cốc tăng"
+},
+"VPB": {
+"tag": "🟢",
+"view": "NHSV MUA 28.888 (+23%)",
+"tp": 28888,
+"cat": "Tín dụng +28% YTD, lợi nhuận đỉnh mới; GPBank có thể nới room ngoại, chào bán cho SMBC",
+"risk": "LDR thuần 121%, NIM hẹp, thanh khoản BĐS chậm"
+},
+"VNM": {
+"tag": "🟢",
+"view": "Mirae MUA 86.800 (+55%)",
+"tp": 86800,
+"cat": "Q3 LNST +18%, 9T +30,6%, theo sát dự phóng 2026",
+"risk": "Tăng trưởng Q3 chậm lại; Fed có thể tăng lãi suất kéo định giá"
+},
+"FPT": {
+"tag": "🟡",
+"view": "Agriseco THEO DÕI",
+"tp": null,
+"cat": "Q3 LNST +12%, ký mới 9T +23% (16 dự án >10 triệu USD), CNTT trong nước tăng mạnh",
+"risk": "Giá dưới các đường MA, hỗ trợ 56–57; AI chi phí thấp cạnh tranh gia công"
+},
+"SAB": {
+"tag": "🟡",
+"view": "Mirae Tăng tỷ trọng 48.500 (+16%)",
+"tp": 48500,
+"cat": "9T theo sát dự phóng 2026, biên gộp mở rộng",
+"risk": "Q3 LNST −9,4% so với quý trước, chi phí bán hàng tăng"
+},
+"BSR": {
+"tag": "🟡",
+"view": "VPBankS GIỮ 29.700 (+3%)",
+"tp": 29700,
+"cat": "9T lợi nhuận trước thuế 25.910 tỷ (+935%); công suất 124%; crack spread DO/Jet tăng gấp 3",
+"risk": "Chu kỳ lọc dầu có thể ở đỉnh; bảo dưỡng 2027"
+},
+"STB": {
+"tag": "🔴",
+"view": "TCBS chưa nên giải ngân (P/B 2,0)",
+"tp": null,
+"cat": "Dự phóng quý 4 lợi nhuận trước thuế ~2.295 tỷ, dự phòng giảm so với Q3",
+"risk": "Q3 LNTT −52%, NIM 2,2%, bao phủ nợ xấu 34,8%, dự phòng cao tới nửa đầu 2027"
+},
+"ACB": {
+"tag": "🔴",
+"view": "Mirae: chất lượng tài sản suy giảm",
+"tp": null,
+"cat": "",
+"risk": "Chất lượng tài sản suy giảm (tiêu đề báo cáo 29/10)"
+},
+"VIB": {
+"tag": "🟡",
+"view": "VNDS: phí bứt phá, dự phòng tăng",
+"tp": null,
+"cat": "Thu nhập phí tăng mạnh",
+"risk": "Áp lực dự phòng gia tăng"
+},
+"LPB": {
+"tag": "⚠️",
+"view": "SHS Tăng tỷ trọng 16.100 (nhãn LPB)",
+"tp": null,
+"cat": "",
+"risk": "Nội dung file là báo cáo TCH, không phải LPB: bỏ qua"
+},
+"TCH": {
+"tag": "🟢",
+"view": "TCBS: tích lũy; SHS Tăng tỷ trọng 16.100 (+36%)",
+"tp": 16100,
+"cat": "Q3 DT +466%, LNST mẹ gấp 13,4 lần (bàn giao New City II, Green River); không nợ vay, tiền ròng ~3.300 tỷ; backlog 5.600 tỷ; P/B 1,0",
+"risk": "Lợi nhuận bàn giao dồn theo quý; thiểu số 28%; ROE 7–8%"
+},
+"NTP": {
+"tag": "🟢",
+"view": "KBSV MUA 73.200 (+44%) · cũ 15/9",
+"tp": 73200,
+"cat": "SCIC dự kiến thoái 37,1% vốn: kỳ vọng tái định giá; giải ngân hạ tầng miền Bắc",
+"risk": "Giá hạt nhựa gây áp lực biên H2/2026"
+},
+"GAS": {
+"tag": "🟢",
+"view": "VPBankS MUA 97.200 (+23%)",
+"tp": 97200,
+"cat": "LNTT 2026 dự báo 21.080 tỷ (+47%); khí khô +20%, LNG +125%; dự án Lô B–Ô Môn, Sư Tử Trắng 2B từ nửa cuối 2027",
+"risk": "Dự án chậm tiến độ; giá khí quốc tế"
+},
+"VIC": {
+"tag": "🟡",
+"view": "BSC giữ quan điểm tích cực",
+"tp": null,
+"cat": "BĐS 50–60% doanh thu 3–5 năm tới; VFS kỳ vọng hòa vốn nội địa 2026",
+"risk": "Nguồn vốn tín dụng còn thách thức"
+},
+"NKG": {
+"tag": "🟢",
+"view": "VDSC MUA 14.400 (+53%)",
+"tp": 14400,
+"cat": "Q2 FY26 LNST 104 tỷ (+366% QoQ), xuất khẩu Brazil; dự phóng Q3 100 tỷ",
+"risk": "Biên gộp thu hẹp về 8,3%, chi phí lãi vay tăng"
+},
+"PVD": {
+"tag": "🔴",
+"view": "VNDS: áp lực lên giá mục tiêu 23.000",
+"tp": 23000,
+"cat": "Doanh thu Q3 +25%, đội giàn mở rộng",
+"risk": "Q3 LNST −74,5%, 9T chỉ đạt 36,3% dự phóng, chi phí đội lên"
+},
+"BWE": {
+"tag": "🟢",
+"view": "Yuanta MUA 53.381 (+24%)",
+"tp": 53381,
+"cat": "9T LNST 949 tỷ (+26,7%), vượt kế hoạch năm; nhà máy điện rác 12MW từ đầu 2027",
+"risk": "Lãi LDLK đột biến; chưa được tăng giá nước"
+},
+"BID": {
+"tag": "🟢",
+"view": "MUA 40.800",
+"tp": 40800,
+"cat": "",
+"risk": ""
+},
+"MCH": {
+"tag": "🟢",
+"view": "MUA 156.559",
+"tp": 156559,
+"cat": "",
+"risk": ""
+},
+"QTP": {
+"tag": "🟢",
+"view": "KIS MUA 14.100",
+"tp": 14100,
+"cat": "",
+"risk": ""
+},
+"DGW": {
+"tag": "🟢",
+"view": "MUA 55.000",
+"tp": 55000,
+"cat": "",
+"risk": ""
+},
+"DXG": {
+"tag": "🟢",
+"view": "VCBS MUA 14.332 · 7/10",
+"tp": 14332,
+"cat": "",
+"risk": ""
+},
+"KBC": {
+"tag": "🟡",
+"view": "VCSC Khả quan 31.400",
+"tp": 31400,
+"cat": "",
+"risk": ""
+},
+"MSN": {
+"tag": "🟢",
+"view": "SHS Khả quan 98.300",
+"tp": 98300,
+"cat": "",
+"risk": ""
+},
+"BAF": {
+"tag": "🟡",
+"view": "VNDS Trung lập 35.600 · 7/10",
+"tp": 35600,
+"cat": "",
+"risk": ""
+},
+"PLX": {
+"tag": "🟡",
+"view": "Nắm giữ 38.300",
+"tp": 38300,
+"cat": "",
+"risk": ""
+},
+"PVT": {
+"tag": "🟡",
+"view": "AGR Nắm giữ; LNST 9T vượt kế hoạch năm",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"TCB": {
+"tag": "🟡",
+"view": "Theo dõi 37.500",
+"tp": 37500,
+"cat": "",
+"risk": ""
+},
+"BMP": {
+"tag": "🟢",
+"view": "ACBS MUA",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"HHV": {
+"tag": "🟢",
+"view": "ACBS MUA",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"CTD": {
+"tag": "🟢",
+"view": "VCBS MUA",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"IDC": {
+"tag": "🟢",
+"view": "ACBS MUA (2/11)",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"MSH": {
+"tag": "🟡",
+"view": "Shinhan MUA · cũ 25/8",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"NLG": {
+"tag": "🟡",
+"view": "Asean Theo dõi (+26%) · 16/10",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"CTG": {
+"tag": "🟡",
+"view": "Chỉ có báo cáo kỹ thuật",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"HSG": {
+"tag": "🟡",
+"view": "Chỉ có báo cáo kỹ thuật",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"EIB": {
+"tag": "🟡",
+"view": "Chỉ có báo cáo kỹ thuật",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"GEX": {
+"tag": "🟡",
+"view": "Chỉ có báo cáo kỹ thuật",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"VIX": {
+"tag": "🟡",
+"view": "Chỉ có báo cáo kỹ thuật",
+"tp": null,
+"cat": "",
+"risk": ""
+},
+"SSI": {
+"tag": "🟡",
+"view": "Chỉ có báo cáo kỹ thuật",
+"tp": null,
+"cat": "",
+"risk": ""
+}
+}

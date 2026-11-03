@@ -1,0 +1,93 @@
+ACB|85302|2026-10-29|VNDS|ACB - Báo cáo cập nhật KQKD Q3/2026
+ACB|85301|2026-10-29|Mirae Asset|ACB - Chất lượng tài sản suy giảm
+BID|85278|2026-10-27|Other|BID - Khuyến nghị MUA với giá mục tiêu 40,800 đồng/cổ phiếu
+BSR|85294|2026-10-28|VPBank Securities|BSR - Báo cáo cập nhật
+CTG|85253|2026-10-26|Other|CTG - Báo cáo phân tích kỹ thuật
+CTG|85162|2026-10-17|VPBank Securities|CTG - NIM phục hồi, mở rộng dư địa tăng trưởng lợi nhuận
+FPT|85262|2026-10-27|AGR|FPT - Lợi nhuận duy trì tăng hai chữ số
+GAS|85141|2026-10-14|Other|GAS - Khuyến nghị MUA với giá mục tiêu 97,200 đồng/cổ phiếu
+GVR|85080|2026-10-08|VCBS|GVR - Tăng trưởng lợi nhuận kép
+HDB|85116|2026-10-12|FPT Securities|HDB - Vị thế khuyến nghị
+HPG|85355|2026-11-02|BETA Securities|HPG - Báo cáo cập nhật: Sản lượng lập đỉnh mới, biên lợi nhuận mở rộng
+LPB|85354|2026-11-02|Saigon-Hanoi Securities|LPB - Khuyến nghị TĂNG TỶ TRỌNG với giá mục tiêu 16,100 đồng/cổ phiếu
+MBB|85176|2026-10-19|Viet Capital Securities|MBB - Lợi thế nguồn vốn thúc đẩy tăng trưởng, ROE duy trì ổn định
+MCH|85077|2026-10-07|Other|MCH: Khuyến nghị MUA với giá mục tiêu 156,559 đồng/cổ phiếu
+MSN|85333|2026-10-30|Other|MSN - Báo cáo cập nhật KQKD Q3/2026
+MSN|85305|2026-10-29|Saigon-Hanoi Securities|MSN - Khuyến nghị KHẢ QUAN với giá mục tiêu 98,300 đồng/cổ phiếu
+MWG|85311|2026-10-29|VNDS|MWG - Báo cáo cập nhật KQKD Q3/2026
+SAB|85360|2026-11-02|Mirae Asset|SAB - Cập nhật kết quả kinh doanh Q3/2026
+SHB|85175|2026-10-19|MB Securities|SHB - Báo cáo gặp gỡ nhà đầu tư tháng 10/2026
+SSI|84882|2026-09-16|VCBS|SSI - Báo cáo phân tích kỹ thuật
+STB|85356|2026-11-02|Other|STB - Báo cáo cập nhật KQKD Q3/2026
+TCB|85297|2026-10-28|Other|TCB - Khuyến nghị THEO DÕI với giá mục tiêu 37,500 đồng/cổ phiếu
+VCB|85003|2026-09-30|DSC|VCB - Báo cáo cập nhật
+VHM|85064|2026-10-07|MB Securities|VHM - Báo cáo gặp gỡ nhà đầu tư tháng 10/2026
+VIB|85345|2026-10-31|VNDS|VIB - Thu nhập phí bứt phá, áp lực dự phòng gia tăng
+VIC|85092|2026-10-09|BSC|VIC - Investor Conference 2026
+VNM|85357|2026-11-02|Mirae Asset|VNM - Cập nhật kết quả kinh doanh Q3/2026
+VPB|85336|2026-10-31|Other|VPB - Khuyến nghị MUA với giá mục tiêu 28,888 đồng/cổ phiếu
+VPL|85081|2026-10-08|MB Securities|VPL: Báo cáo gặp gỡ nhà đầu tư tháng 10/2026
+VRE|85265|2026-10-27|Other|VRE - Sức mạnh đến từ độ phủ
+ANV|85239|2026-10-23|Mirae Asset|ANV - Cập nhật kết quả kinh doanh Q3/2026
+BAF|85078|2026-10-07|VNDS|BAF: Khuyến nghị TRUNG LẬP với giá mục tiêu 35,600 đồng/cổ phiếu
+BCM|84827|2026-09-09|CTS|BCM - Vị thế đầu ngành BĐS Khu công nghiệp không thể sao chép
+BMP|85222|2026-10-23|ACBS|BMP - Cập nhật nhanh BMP – MUA
+BVH|84667|2026-08-22|Other|BVH - Báo cáo cập nhật KQKD Quý II
+BWE|85304|2026-10-29|Other|BWE - Khuyến nghị MUA với giá mục tiêu 53,381 đồng/cổ phiếu
+CMG|85083|2026-10-08|Other|CMG - ĐỘNG LỰC DẪN DẮT HỒI PHỤC PHÂN CỰC
+CTD|85300|2026-10-29|VCBS|CTD - Đà tăng được củng cố nhờ lực cầu ổn định: MUA
+CTR|85339|2026-10-31|Mirae Asset|CTR - Tăng trưởng đi kèm phân hóa
+CTS|85329|2026-10-30|Other|CTS - Báo cáo cập nhật KQKD Q3/2026
+DCM|85334|2026-10-31|VNDS|DCM - Lợi nhuận ròng tăng nhờ tiêu thụ urê và NPK tích cực
+DGW|85286|2026-10-28|Other|DGW - Khuyến nghị MUA với giá mục tiêu 55,000 đồng/cổ phiếu
+DMX|85351|2026-11-02|VNDS|DMX - ĐHĐCĐ bất thường 29/10/2026: Thông qua chính sách cổ tức và kế hoạch phát hành trái phiếu kèm chứng quyền cho ban điều hành
+DPG|84688|2026-08-24|Other|DPG - Báo cáo cập nhật KQKD Quý II/2026
+DPM|85139|2026-10-14|VDSC|DPM - Hưởng lợi nhờ xuất khẩu
+DXG|85074|2026-10-07|VCBS|DXG: Khuyến nghị MUA với giá mục tiêu 14,332 đồng/cổ phiếu
+DXP|85023|2026-10-02|VPBank Securities|DXP - Thiên thời, địa lợi, mở lối tăng trưởng
+EIB|85215|2026-10-22|Other|EIB - Báo cáo phân tích kỹ thuật
+EVF|85289|2026-10-28|Other|EVF - Báo cáo cập nhật KQKD Q3/2026
+FRT|84941|2026-09-22|VNDS|FRT - Tiếp đà tăng trưởng ở cả hai chuỗi bán lẻ
+GEE|84911|2026-09-19|MB Securities|GEE - Hưởng lợi toàn diện từ chu kỳ phát triển hạ tầng
+GEX|84695|2026-08-25|ORS|GEX - Báo cáo phân tích kỹ thuật
+GMD|85118|2026-10-12|VDSC|GMD - Kỳ vọng đà tăng trưởng nhanh được duy trì trong nửa cuối năm
+HCM|85280|2026-10-27|BETA Securities|HCM - LỢI NHUẬN TRƯỚC THUẾ
+HDG|85119|2026-10-12|MB Securities|HDG - Vượt qua thách thức
+HHV|85232|2026-10-23|ACBS|HHV - Cập nhật nhanh HHV: MUA
+HSG|85150|2026-10-16|Other|HSG - Báo cáo phân tích kỹ thuật
+HT1|85291|2026-10-28|ACBS|HT1 - Câu chuyện đầu tư: HT1: Lực đẩy từ sản lượng.
+HVN|84933|2026-09-21|BSC|HVN - Báo cáo cập nhật KQKD Q2/2026
+IDC|85359|2026-11-02|ACBS|IDC - Báo cáo cập nhật: MUA
+KBC|85344|2026-10-31|Viet Capital Securities|KBC - Khuyến nghị KHẢ QUAN với giá mục tiêu 31,400 đồng/cổ phiếu
+KDH|85058|2026-10-06|BSC|KDH - Hoạt động kinh doanh cốt lõi tạo đáy 2026
+MSB|85142|2026-10-14|Viet Capital Securities|MSB - Báo cáo cập nhật 13/10/2026
+MSH|84701|2026-08-25|Shinhan Securities VN|MSH - MUA: Linh hoạt ứng phó trước áp lực từ thị trường Mỹ
+MSR|84976|2026-09-28|MB Securities|MSR - Tổng hợp cuộc họp nhà đầu tư (24/09/2026)
+NKG|85047|2026-10-05|VDSC|NKG - Kỳ vọng ổn định sau quý cao điểm
+NLG|85153|2026-10-16|Asean Securities|NLG - DOANH SỐ PHỤC HỒI, LỢI NHUẬN CHỜ ĐIỂM RƠI BÀN GIAO KHUYẾN NGHỊ: THEO DÕI [+26%]
+NT2|85332|2026-10-30|Other|NT2 - Báo cáo cập nhật KQKD Quý III/2026
+NTP|84897|2026-09-17|KBSV|NTP - Tăng tốc trong chu kỳ thuận lợi
+NVL|84758|2026-08-29|VFS|NVL - Báo cáo cập nhật KQKD
+OCB|85331|2026-10-30|Other|OCB - Báo cáo cập nhật KQKD Quý III
+PC1|85161|2026-10-17|Mirae Asset|PC1 - Báo cáo ngắn: Đa trụ cột, kỳ vọng phục hồi
+PDR|85137|2026-10-14|MB Securities|PDR - Thủ Thiêm mở chu kỳ mới, lợi nhuận ngắn hạn chịu áp lực lãi vay
+PHR|85307|2026-10-29|VFS|PHR - BÁO CÁO NGẮN DOANH NGHIỆP
+PLX|85205|2026-10-21|Other|PLX - Khuyến nghị NẮM GIỮ với giá mục tiêu 38,300 đồng/cổ phiếu
+PNJ|85246|2026-10-26|ACBS|PNJ - Cập nhật nhanh
+POW|84967|2026-09-25|VPBank Securities|POW - Nâng cao hiệu quả kinh doanh và vị thế
+PVD|85335|2026-10-31|VNDS|PVD - Chi phí tăng cao tiếp tục bào mòn lợi nhuận Q3
+PVT|85319|2026-10-30|AGR|PVT - Nắm giữ: Lợi nhuận sau thuế 9 tháng vượt kế hoạch năm
+QTP|85272|2026-10-27|KIS|QTP - Khuyến nghị MUA với giá mục tiêu 14,100 đồng/cổ phiếu
+REE|84981|2026-09-28|Other|REE - “Tiểu” Berkshire Hathaway Phiên bản Việt
+SIP|84999|2026-09-30|VFS|SIP - Báo cáo phân tích doanh nghiệp
+TAL|85273|2026-10-27|Viet Capital Securities|TAL - Tăng trưởng cao trong 2026-2027; khu công nghiệp mở ra dư địa dài hạn
+TCH|85350|2026-11-02|Other|TCH - Báo cáo cập nhật KQKD Quý III/2026
+TPB|85052|2026-10-06|MB Securities|TPB - Định giá hấp dẫn cho tiềm năng tăng trưởng
+TV2|85314|2026-10-29|VNDS|TV2 - Báo cáo cập nhật KQKD Q3/2026
+VCI|85288|2026-10-28|Other|VCI - Giá có thể xuống thấp đến mức nào?
+VCK|85290|2026-10-28|Other|VCK - Báo cáo cập nhật KQKD Q3/2026
+VGC|85160|2026-10-17|AGR|VGC - Đón dòng vốn FDI, củng cố triển vọng tăng trưởng
+VHC|85174|2026-10-19|VDSC|VHC - Cập nhật KQKD: Kỳ vọng chiếm lại thị phần đã mất
+VIX|85056|2026-10-06|FPT Securities|VIX - Báo cáo phân tích kỹ thuật
+VSC|85173|2026-10-19|Viet Capital Securities|VSC - Từ khai thác cảng đến câu chuyện hệ sinh thái cảng biển – logistics
+VTP|84844|2026-09-11|MB Securities|VTP - Áp lực chi phí nhiên liệu gia tăng

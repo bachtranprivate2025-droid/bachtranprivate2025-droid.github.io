@@ -78,6 +78,20 @@ def ssi_view(t):
         line = f"KQKD {f(x['biz'])} · HQ {f(x['eff'])} · TV {f(x['pro'])}"
     last = ("Bản cũ " + dmy(x["date"]) + ", SSI chưa chấm lại") if stale else ("SSI chấm " + dmy(x["date"]))
     return dict(head=f"{icon} {vn(fa)}/100", line=line, last=last)
+# Báo cáo CTCK (FinLens research_list_reports) + tóm tắt đã đọc (conf/research.json)
+RESX = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "conf", "research.json"), encoding="utf-8"))
+RESL = {}
+for _l in open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "conf", "research_list.txt"), encoding="utf-8"):
+    if not _l.strip(): continue
+    _t, _i, _d, _s, _ti = _l.rstrip("\n").split("|", 4)
+    RESL.setdefault(_t, []).append(dict(id=int(_i), date=_d, src=_s, title=_ti))
+def research_view(t):
+    L = RESL.get(t)
+    if not L: return None
+    x = dict(RESX.get(t) or {})
+    x.setdefault("tag", "⚪"); x.setdefault("view", "Chưa đọc nội dung")
+    x["reports"] = L[:2]; x["stale"] = L[0]["date"] < "2026-10-04"
+    return x
 PROXY = {}
 for l in open(R26 + "proxy.txt"):
     k, a, b = l.split(); PROXY[k] = round((float(b) / float(a) - 1) * 100, 2)
@@ -272,6 +286,7 @@ def make_new(t):
         "newsN": s["news"]["n"], "newsScore": s["news"]["score"], "newsSent": s["news"]["sent"],
         "title": s["news"]["title"], "summary": s["news"]["summary"], "newsDate": s["news"]["date"],
         "source": s["news"]["source"], "directStrength": s["news"]["direct"],
+        "research": research_view(t),
         "r1": pct(s["c0"], s["c1"]), "r5": pct(s["c0"], s["c5"]), "r21": pct(s["c0"], s["c21"]), "r63": pct(s["c0"], s["c63"]),
         "quality": {"f": s["f"], "caps": s.get("caps", []), "years": ["2025", "2024", "2023", "2022", "2021"], "reliability": "High"},
         "caps": s.get("caps", []), "score": 0, "alloc": 0,
@@ -650,6 +665,15 @@ rep('85/85 mã</span>', str(len(rows))+"/"+str(len(rows))+' mã</span>')
 rep("cho cả 85 mã", "cho cả "+str(len(rows))+" mã")
 rep('selected.length+"/85 mã"', 'selected.length+"/"+rows.length+" mã"')
 rep("<option>Stage 0-1 (W-D MA10)</option></select>", "<option>Stage 0-1 (W-D MA10)</option>" + "".join("<option>" + x + "</option>" for x in LABS) + "</select>")
+# ---- Khối báo cáo CTCK trong ô catalyst ----
+rep("const cat=r=>r.title?", "const cat0=r=>r.title?")
+rep("chưa có catalyst riêng phù hợp trong cửa sổ 30 ngày.\")+'</div>';",
+    "chưa có catalyst riêng phù hợp trong cửa sổ 30 ngày.\")+'</div>';"
+    "const resCell=r=>{const x=r.research;if(!x)return '';const L=x.reports||[],a=L[0]||{};"
+    "const lk=L.map(y=>esc(y.src)+' '+esc(y.date.slice(8,10)+'/'+y.date.slice(5,7))+' · '+esc(y.title)).join('<br>');"
+    "return '<div class=\"note\" style=\"margin-top:5px;border-top:1px dashed #8884;padding-top:4px\"><b>Báo cáo CTCK '+x.tag+'</b> '+esc(x.view||'')+(x.stale?' <span title=\"Báo cáo cũ hơn 30 ngày\">⏳ cũ</span>':'')"
+    "+(x.cat?'<div>🟢 '+esc(x.cat)+'</div>':'')+(x.risk?'<div>⚠️ '+esc(x.risk)+'</div>':'')+'<div style=\"opacity:.75\">'+lk+'</div></div>';};"
+    "const cat=r=>cat0(r)+resCell(r);")
 rep("FinLens · chốt 23/10/2026<br>1D so 22/10 · 1W so 16/10", "FinLens · chốt 02/11/2026<br>1D so 30/10 · 1W so 26/10")
 rep("Chốt 23/10 · so 22/10, 16/10, 24/09/2026", "Chốt 02/11 · so 30/10, 26/10, 02/10/2026")
 rep("cùng ngày: 23/10 so 22/10 và 16/10;", "cùng ngày: 02/11 so 30/10 và 26/10;")
