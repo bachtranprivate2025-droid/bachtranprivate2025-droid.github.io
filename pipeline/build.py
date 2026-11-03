@@ -320,8 +320,8 @@ def refresh(r, t):
     else:
         sec = {"d1": None, "w1": None, "m1": None}
     idx = {"d1": pct(VNI[0], VNI[1]), "w1": pct(VNI[0], VNI[2]), "m1": pct(VNI[0], VNI[3])}
-    r["icbBenchmark"] = {"benchmark": "VNINDEX", "asof": "2026-10-26",
-                         "baseDates": {"d1": "2026-10-23", "w1": "2026-10-19", "m1": "2026-09-25"},
+    r["icbBenchmark"] = {"benchmark": "VNINDEX", "asof": "2026-11-02",
+                         "baseDates": {"d1": "2026-10-30", "w1": "2026-10-26", "m1": "2026-10-02"},
                          "sector": sec, "index": idx,
                          "relative": {k: (None if sec[k] is None else sec[k] - idx[k]) for k in sec}}
     stock = {"d1": r["r1"], "w1": r["r5"]}
@@ -374,12 +374,12 @@ data = {"rows": rows, "counts": {"rows": len(rows)}, "unique": len(rows),
         "overlap": sum(1 for v in LISTS.values() if len(v) > 1), "meta": meta}
 for k in base:
     if k not in data: data[k] = base[k]
-meta["icbPerformance"].update({"asof": "2026-10-26", "dayBase": "2026-10-23", "weekBase": "2026-10-19",
-    "method": "1D = C26/C23 - 1; 1W = C26/C19 - 1; delta = stock return minus sector return in percentage points"})
+meta["icbPerformance"].update({"asof": "2026-11-02", "dayBase": "2026-10-30", "weekBase": "2026-10-26",
+    "method": "1D = C02/C30 - 1; 1W = C02/C26 - 1; delta = stock return minus sector return in percentage points"})
 meta["icbStrength"]["asof"] = "2026-10-27"
-meta["icbBenchmark"].update({"asof": "2026-10-26", "baseDates": {"d1": "2026-10-23", "w1": "2026-10-19", "m1": "2026-09-25"},
-    "indexCloses": [{"date": "2026-10-26", "close": VNI[0]}, {"date": "2026-10-23", "close": VNI[1]},
-                    {"date": "2026-10-19", "close": VNI[2]}, {"date": "2026-09-25", "close": VNI[3]}]})
+meta["icbBenchmark"].update({"asof": "2026-11-02", "baseDates": {"d1": "2026-10-30", "w1": "2026-10-26", "m1": "2026-10-02"},
+    "indexCloses": [{"date": "2026-11-02", "close": VNI[0]}, {"date": "2026-10-30", "close": VNI[1]},
+                    {"date": "2026-10-26", "close": VNI[2]}, {"date": "2026-10-02", "close": VNI[3]}]})
 
 # ---- RVOL (FinLens stocks_get_price_history, 14/09–26/10/2026) ----
 SDD = SD[::-1]
@@ -650,10 +650,10 @@ rep('85/85 mã</span>', str(len(rows))+"/"+str(len(rows))+' mã</span>')
 rep("cho cả 85 mã", "cho cả "+str(len(rows))+" mã")
 rep('selected.length+"/85 mã"', 'selected.length+"/"+rows.length+" mã"')
 rep("<option>Stage 0-1 (W-D MA10)</option></select>", "<option>Stage 0-1 (W-D MA10)</option>" + "".join("<option>" + x + "</option>" for x in LABS) + "</select>")
-rep("FinLens · chốt 23/10/2026<br>1D so 22/10 · 1W so 16/10", "FinLens · chốt 26/10/2026<br>1D so 23/10 · 1W so 19/10")
-rep("Chốt 23/10 · so 22/10, 16/10, 24/09/2026", "Chốt 26/10 · so 23/10, 19/10, 25/09/2026")
-rep("cùng ngày: 23/10 so 22/10 và 16/10;", "cùng ngày: 26/10 so 23/10 và 19/10;")
-rep("cùng ngày 23/10/2026, so với 22/10 (Daily), 16/10 (W, 5 phiên), 24/09 (M, 21 phiên)", "cùng ngày 26/10/2026, so với 23/10 (Daily), 19/10 (W, 5 phiên), 25/09 (M, 21 phiên)")
+rep("FinLens · chốt 23/10/2026<br>1D so 22/10 · 1W so 16/10", "FinLens · chốt 02/11/2026<br>1D so 30/10 · 1W so 26/10")
+rep("Chốt 23/10 · so 22/10, 16/10, 24/09/2026", "Chốt 02/11 · so 30/10, 26/10, 02/10/2026")
+rep("cùng ngày: 23/10 so 22/10 và 16/10;", "cùng ngày: 02/11 so 30/10 và 26/10;")
+rep("cùng ngày 23/10/2026, so với 22/10 (Daily), 16/10 (W, 5 phiên), 24/09 (M, 21 phiên)", "cùng ngày 02/11/2026, so với 30/10 (Daily), 26/10 (W, 5 phiên), 02/10 (M, 21 phiên)")
 
 rep("""money(r,"prop","seriesTD","TD")+'""", """money(r,"prop","seriesTD","TD")+rvolCell(r)+rs30Cell(r)+'""")
 rep('<th class="money">Dòng tiền TD 10 phiên</th>', '<th class="money">Dòng tiền TD 10 phiên</th><th class="rvol rvsort" id="rvolHead" tabindex="0" title="Bấm để sắp xếp theo RVOL: phiên cuối → TB10 → Δ5 phiên → về mặc định">Relative RVOL 10 phiên <span id="rvolArrow">⇅</span></th><th class="rs30 rvsort" id="rsHead" tabindex="0" title="Bấm để sắp xếp: RS 10 phiên → RS phiên @D0@ → số phiên thắng VN30 → về mặc định">RS vs VN30 10 phiên <span id="rsArrow">⇅</span></th>')
