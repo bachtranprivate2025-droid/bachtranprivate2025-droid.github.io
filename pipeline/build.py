@@ -265,6 +265,7 @@ def tcbs_cmp(f, caps, tc):
     return dict(status="🟡", text=f"Lệch: F ≈{vn(fs, 1)}/5 vs TCBS {vn(r, 1)}, {hi}." + hint)
 
 # ---------- rows ----------
+FILL_F = json.load(open(RUN + "conf/fill_f.json")) if os.path.exists(RUN + "conf/fill_f.json") else {}
 TICKERS = sorted(LISTS)
 TECH_ONLY = set(json.load(open(RUN + "conf/tech_only.json"))) if os.path.exists(RUN + "conf/tech_only.json") else set() 
 TECH_ONLY &= set(LISTS)
@@ -360,6 +361,10 @@ def refresh(r, t):
 rows = []
 for t in TICKERS:
     r = make_new(t) if t in NEW else copy.deepcopy(BASE[t])
+    if r.get("f") is None and t in FILL_F:  # F bù từ FinLens fundamental_quality_scan (mã chỉ kỹ thuật)
+        _ff = FILL_F[t]
+        r["f"] = _ff["f"]; r["band"] = _ff["band"]; r["caps"] = _ff["caps"]; r["flags"] = _ff["flags"]
+        r["quality"] = dict(r.get("quality") or {}, f=_ff["f"], caps=_ff["caps"])
     r["lists"] = LISTS[t]
     fl = FLOW[t]
     r.update({"foreign": round(sum(fl["nn"]), 2), "prop": round(sum(fl["td"]), 2), "smart": round(sum(fl["smart"]), 2),

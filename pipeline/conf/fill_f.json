@@ -1,0 +1,796 @@
+{
+"PC1": {
+"f": 69.9,
+"band": "Good",
+"caps": [],
+"flags": [
+"Phải thu +42% vs DT +30%",
+"Nợ vay/EBITDA 3,75x",
+"Tồn kho thành phẩm tăng 7 đpt"
+]
+},
+"PVT": {
+"f": 69.1,
+"band": "Good",
+"caps": [],
+"flags": [
+"Trả cổ tức khi FCF âm",
+"FCF âm kéo dài 3 năm",
+"Phải thu dài hạn tăng mạnh",
+"Biên gộp giảm 6,2 đpt"
+]
+},
+"REE": {
+"f": 64.9,
+"band": "Average",
+"caps": [],
+"flags": [
+"Phải thu +34% vs DT +19%",
+"LN ngoài cốt lõi 36%",
+"Phải thu dài hạn tăng mạnh"
+]
+},
+"BVH": {
+"f": 60.6,
+"band": "Average",
+"caps": [],
+"flags": [
+"Tỷ lệ bồi thường tăng 3 năm",
+"Nhượng tái tăng 3 năm",
+"Suất sinh lời đầu tư giảm 3 năm",
+"VCSH/tài sản giảm 3 năm"
+]
+},
+"DBD": {
+"f": 82.3,
+"band": "Strong",
+"caps": [],
+"flags": [
+"XDCB dở dang 21% tài sản"
+]
+},
+"HHV": {
+"f": 19.4,
+"band": "Poor",
+"caps": [],
+"flags": [
+"Nợ vay/EBITDA 8,75x",
+"EBIT/lãi vay 1,85x",
+"Phải thu +36% vs DT +15%",
+"DSO tăng 3 năm"
+]
+},
+"POW": {
+"f": 35.0,
+"band": "Weak",
+"caps": [],
+"flags": [
+"Nợ vay/EBITDA 4,28x",
+"FCF âm 3 năm",
+"LN ngoài cốt lõi 32%",
+"Tồn kho +21% vs giá vốn +5%"
+]
+},
+"TAL": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Phải thu +151% vs DT +121%",
+"CFO/LNST −2,57",
+"CFO âm 3/3 năm",
+"CFO không đủ trả lãi"
+]
+},
+"HPG": {
+"f": 43.9,
+"band": "Weak",
+"caps": [],
+"flags": [
+"Phải thu +97% vs DT +12%",
+"Trả cổ tức khi FCF âm",
+"FCF âm kéo dài 3 năm",
+"Nợ vay/EBITDA 3,11x"
+]
+},
+"HHS": {
+"f": 6.3,
+"band": "Poor",
+"caps": [
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Phải thu +748% vs DT +56%",
+"LN ngoài cốt lõi 103%",
+"Tồn kho +4061% vs giá vốn +71%",
+"Biên gộp giảm 8,6 đpt"
+]
+},
+"SHB": {
+"f": 71.3,
+"band": "Good",
+"caps": [],
+"flags": [
+"Nợ xấu 2,37%",
+"LDR 107% tăng 3 năm",
+"NIM thu hẹp 3 năm",
+"VCSH/tài sản giảm 3 năm"
+]
+},
+"KDH": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Phải thu +82% vs DT +42%",
+"CFO/LNST −1,94",
+"CFO âm 3/3 năm",
+"Nợ vay/EBITDA 4,95x"
+]
+},
+"PAN": {
+"f": 44.0,
+"band": "Weak",
+"caps": [
+"Earnings Quality thấp → trần 55"
+],
+"flags": [
+"LNST tăng nhưng EBIT −20%",
+"LN ngoài cốt lõi 46%",
+"CFO âm 2/3 năm",
+"Nợ vay ngắn hạn 88%"
+]
+},
+"SAB": {
+"f": 77.8,
+"band": "Good",
+"caps": [],
+"flags": [
+"Tồn kho +2% vs giá vốn −26%",
+"Nợ vay ngắn hạn 61%"
+]
+},
+"VHM": {
+"f": 38.9,
+"band": "Weak",
+"caps": [
+"Earnings Quality thấp → trần 55"
+],
+"flags": [
+"LN ngoài cốt lõi 56%",
+"Tồn kho +140% vs giá vốn +54%",
+"CFO âm 1/3 năm",
+"XDCB dở dang 12% tài sản"
+]
+},
+"FCN": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"CFO/LNST −2,73",
+"Nợ vay/EBITDA 7,46x",
+"EBIT/lãi vay 1,53x",
+"CFO không đủ trả lãi"
+]
+},
+"HVN": {
+"f": 79.2,
+"band": "Good",
+"caps": [],
+"flags": [
+"Phải thu +29% vs DT +14%",
+"Nợ vay ngắn hạn 72%",
+"LN ngoài cốt lõi 32%",
+"CCC kéo dài"
+]
+},
+"IDC": {
+"f": 87.9,
+"band": "Strong",
+"caps": [],
+"flags": [
+"XDCB dở dang 31% tài sản",
+"Tài sản tăng nhưng ROA giảm",
+"Nợ vay tăng DT không tăng",
+"Đầu tư lớn DT chưa tăng"
+]
+},
+"SIP": {
+"f": 65.3,
+"band": "Good",
+"caps": [],
+"flags": [
+"Phải thu +79% vs DT +10%",
+"LN ngoài cốt lõi 48%",
+"Nợ vay ngắn hạn 78%",
+"CCC kéo dài"
+]
+},
+"SSI": {
+"f": 61.4,
+"band": "Average",
+"caps": [],
+"flags": [
+"Margin tăng quá nóng +77%",
+"Margin/VCSH tăng 3 năm",
+"Đòn bẩy 1,93x vs ngành 1,28x",
+"Khả năng trả lãi 2,98x"
+]
+},
+"LSG": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"LN ngoài cốt lõi 701%",
+"CFO/LNST −3,61",
+"CFO âm 3/3 năm",
+"EBIT/lãi vay 1,18x"
+]
+},
+"TVD": {
+"f": 59.7,
+"band": "Average",
+"caps": [],
+"flags": [
+"Trả cổ tức khi FCF âm",
+"Khả năng trả lãi suy giảm",
+"ROIC suy giảm sau đầu tư"
+]
+},
+"VCR": {
+"f": 9.4,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Earnings Quality thấp → trần 55"
+],
+"flags": [
+"LNST tăng nhưng EBIT giảm",
+"CFO/LNST −25,46",
+"XDCB dở dang 63%",
+"Tồn kho tăng mạnh"
+]
+},
+"FTS": {
+"f": 31.6,
+"band": "Poor",
+"caps": [],
+"flags": [
+"LN chưa thực hiện 74% LNTT",
+"Margin/VCSH 1,87x sát trần",
+"Đòn bẩy 2,15x vs ngành 1,28x",
+"LNST −30%"
+]
+},
+"HID": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Phải thu +224% vs DT +64%",
+"LNST tăng nhưng EBIT −17%",
+"Nợ vay/EBITDA 7,79x",
+"EBIT/lãi vay 1,34x"
+]
+},
+"PNJ": {
+"f": 43.9,
+"band": "Weak",
+"caps": [],
+"flags": [
+"CFO/LNST 0,01",
+"CFO không đủ trả lãi (0,16x)",
+"Nợ vay ngắn hạn 100%",
+"Trả cổ tức khi FCF âm"
+]
+},
+"TLD": {
+"f": 50.4,
+"band": "Average",
+"caps": [],
+"flags": [
+"Phải thu +76% vs DT +17%",
+"Phải thu ngắn hạn khác +3055%"
+]
+},
+"VGR": {
+"f": 79.8,
+"band": "Good",
+"caps": [],
+"flags": [
+"Tồn kho +19% vs giá vốn −15%"
+]
+},
+"VND": {
+"f": 65.2,
+"band": "Good",
+"caps": [],
+"flags": [
+"Trích lập phải thu/margin 3,04%",
+"Đòn bẩy 1,47x",
+"ROE thấp hơn ngành"
+]
+},
+"BSR": {
+"f": 59.5,
+"band": "Average",
+"caps": [],
+"flags": [
+"LN ngoài cốt lõi 32%",
+"CFO âm 1/3 năm",
+"Nợ vay ngắn hạn 100%"
+]
+},
+"CTR": {
+"f": 87.7,
+"band": "Strong",
+"caps": [],
+"flags": [
+"Nợ vay ngắn hạn 78%"
+]
+},
+"DPM": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Phải thu +113% vs DT +23%",
+"CFO/LNST −1,66",
+"CFO không đủ trả lãi",
+"Tồn kho +98% vs giá vốn +17%"
+]
+},
+"DSE": {
+"f": 61.4,
+"band": "Average",
+"caps": [],
+"flags": [
+"Đòn bẩy 2,52x vs ngành 1,28x",
+"ROE 6,5% vs ngành 12,7%",
+"Chi phí/doanh thu 60%",
+"Margin/VCSH tăng 3 năm"
+]
+},
+"FPT": {
+"f": 85.9,
+"band": "Strong",
+"caps": [],
+"flags": [
+"Phải thu +27% vs DT +12%",
+"Nợ vay ngắn hạn 91%",
+"Tài sản tăng nhưng ROA giảm",
+"Phải thu dài hạn tăng mạnh"
+]
+},
+"GEX": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"CFO/LNST 0,37",
+"FCF âm 3 năm",
+"CFO không đủ trả lãi (0,46x)",
+"Tồn kho +66% vs giá vốn +15%"
+]
+},
+"GVR": {
+"f": 64.9,
+"band": "Average",
+"caps": [],
+"flags": [
+"Tồn kho +53% vs giá vốn +6%",
+"LN ngoài cốt lõi 34%",
+"CCC kéo dài"
+]
+},
+"LPB": {
+"f": 43.3,
+"band": "Weak",
+"caps": [],
+"flags": [
+"LDR 116% rất căng",
+"Nợ xấu tăng 3 năm, trích lập/dư nợ giảm",
+"Bao phủ nợ xấu giảm 3 năm",
+"Vốn liên NH/GTCG 38%"
+]
+},
+"MBB": {
+"f": 63.1,
+"band": "Average",
+"caps": [],
+"flags": [
+"Tín dụng +40% quá nóng",
+"LDR 118% rất căng",
+"NIM thu hẹp 3 năm",
+"Tài sản +43% vs VCSH +26%"
+]
+},
+"NLG": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"LN ngoài cốt lõi 65%",
+"LNST tăng nhưng EBIT −29%",
+"CFO âm 2/3 năm",
+"CFO không đủ trả lãi"
+]
+},
+"PHR": {
+"f": 39.1,
+"band": "Weak",
+"caps": [
+"Earnings Quality thấp → trần 55"
+],
+"flags": [
+"LN ngoài cốt lõi 61%",
+"Nợ vay ngắn hạn 100%"
+]
+},
+"SSB": {
+"f": 30.8,
+"band": "Poor",
+"caps": [],
+"flags": [
+"LDR 124% rất căng",
+"Vốn liên NH/GTCG 45%",
+"Nợ xấu 2,06%, bao phủ 67%",
+"Bao phủ nợ xấu giảm 3 năm"
+]
+},
+"STB": {
+"f": 10.9,
+"band": "Poor",
+"caps": [
+"Severe Asset Quality Stress → trần 45",
+"NPL>3% kèm coverage<70% → trần 50"
+],
+"flags": [
+"Nợ xấu 6,41% (ngành 1,87%)",
+"Bao phủ nợ xấu 50%",
+"Nợ xấu tăng 3 năm",
+"LNST −41%"
+]
+},
+"VCK": {
+"f": 76.3,
+"band": "Good",
+"caps": [],
+"flags": [
+"Margin tăng quá nóng +81%"
+]
+},
+"VPI": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Nợ vay/EBITDA 10,27x",
+"LN ngoài cốt lõi 51%",
+"XDCB dở dang 20%",
+"CFO/LNST 0,40"
+]
+},
+"HNG": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"LN ngoài cốt lõi 68%",
+"EBIT/lãi vay −1,36x",
+"XDCB dở dang 42%",
+"Nợ vay ngắn hạn 93%"
+]
+},
+"PLX": {
+"f": 24.4,
+"band": "Poor",
+"caps": [
+"Earnings Quality thấp → trần 55"
+],
+"flags": [
+"LN ngoài cốt lõi 68%",
+"Phải thu +24% vs DT +9%",
+"Nợ vay ngắn hạn 97%"
+]
+},
+"SBT": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"LN ngoài cốt lõi 191%",
+"CFO/LNST −2,99",
+"Nợ vay/EBITDA 6,7x",
+"CFO không đủ trả lãi"
+]
+},
+"BMP": {
+"f": 83.9,
+"band": "Strong",
+"caps": [],
+"flags": [
+"CCC kéo dài",
+"Nợ vay ngắn hạn 100%"
+]
+},
+"SAM": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"LN ngoài cốt lõi 118%",
+"CFO/LNST −3,73",
+"Nợ vay/EBITDA 6,7x",
+"CFO không đủ trả lãi"
+]
+},
+"SBG": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"CFO âm 2/3 năm",
+"Nợ vay/EBITDA 5,53x",
+"XDCB dở dang 33%",
+"CFO không đủ trả lãi"
+]
+},
+"KOS": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Nợ vay/EBITDA 10,35x",
+"EBIT/lãi vay 1,3x",
+"CFO/LNST −1,17",
+"CFO không đủ trả lãi"
+]
+},
+"DXG": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Phải thu +28% vs DT −13%",
+"CFO âm 2/3 năm",
+"Nợ vay/EBITDA 4,44x",
+"Tài sản tăng nhưng ROA giảm"
+]
+},
+"BCE": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"CFO/LNST −2,9",
+"CFO âm 2/3 năm",
+"Nợ vay/EBITDA 4,52x",
+"Tồn kho +2477% vs giá vốn +291%"
+]
+},
+"BID": {
+"f": 48.4,
+"band": "Weak",
+"caps": [],
+"flags": [
+"Nợ xấu tăng nhưng trích lập/dư nợ giảm",
+"LDR 107% tăng 3 năm",
+"NIM thu hẹp 3 năm",
+"Nhóm 5 chiếm 74% nợ xấu"
+]
+},
+"CEO": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"CFO âm 3/3 năm",
+"CFO/LNST −0,84",
+"CFO không đủ trả lãi",
+"XDCB dở dang 15%"
+]
+},
+"CMG": {
+"f": 61.0,
+"band": "Average",
+"caps": [],
+"flags": [
+"Tồn kho +31% vs giá vốn +14%",
+"Trả cổ tức khi FCF âm",
+"XDCB dở dang 11%",
+"Nợ vay/EBITDA 3,55x"
+]
+},
+"JVC": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"CFO âm 2/3 năm",
+"CFO/LNST −1,77",
+"CFO không đủ trả lãi",
+"Phải thu +47% vs DT +25%"
+]
+},
+"KDC": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"LN ngoài cốt lõi 138%",
+"CFO/LNST 0,16",
+"CFO không đủ trả lãi",
+"Nợ vay ngắn hạn 90%"
+]
+},
+"NVL": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Nợ vay/EBITDA 15,97x",
+"CFO âm 3/3 năm",
+"CFO/LNST −3,52",
+"LN ngoài cốt lõi 138%"
+]
+},
+"PXL": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Phải thu +568% vs DT +7%",
+"CFO/LNST −570,96",
+"LN ngoài cốt lõi 2824%",
+"CFO âm 3/3 năm"
+]
+},
+"VC3": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"CFO âm 2/3 năm",
+"CFO/LNST −1,44",
+"Nợ vay/EBITDA 3,51x",
+"CFO không đủ trả lãi"
+]
+},
+"VCI": {
+"f": 63.7,
+"band": "Average",
+"caps": [],
+"flags": [
+"VCSH +39% vs EPS +2% (tăng trưởng nhờ pha loãng)"
+]
+},
+"VPX": {
+"f": 66.8,
+"band": "Good",
+"caps": [],
+"flags": [
+"Margin tăng nóng +258%",
+"Margin/VCSH tăng 3 năm",
+"Khả năng trả lãi suy giảm 3 năm"
+]
+},
+"HDG": {
+"f": 67.9,
+"band": "Good",
+"caps": [],
+"flags": [
+"XDCB dở dang 12%",
+"Đầu tư lớn (CIP cao) nhưng DT chưa tăng"
+]
+},
+"RYG": {
+"f": 0.0,
+"band": "Poor",
+"caps": [
+"Cash Flow Stress → trần 55",
+"Earnings Quality thấp → trần 55",
+"Potentially Manipulated → trần 40"
+],
+"flags": [
+"Nợ vay/EBITDA 8,1x",
+"EBIT/lãi vay 1,5x",
+"CFO âm 3/3 năm",
+"CFO/LNST −2,65"
+]
+},
+"VHC": {
+"f": 79.5,
+"band": "Good",
+"caps": [],
+"flags": [
+"Nợ vay ngắn hạn 100%",
+"Phải thu dài hạn tăng mạnh"
+]
+},
+"VIX": {
+"f": 66.1,
+"band": "Good",
+"caps": [],
+"flags": [
+"Tự doanh 72% doanh thu",
+"LN chưa thực hiện 50% LNTT",
+"Margin tăng nóng +166%",
+"Thu lặp lại mỏng 15%"
+]
+}
+}
