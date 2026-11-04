@@ -50,7 +50,12 @@
     "VCK",
     "VIX",
     "VND",
-    "VPX"
+    "VPX",
+    "BVS",
+    "MBS",
+    "AGR",
+    "SHS",
+    "VFS"
    ],
    "etf": [
     "IAI"
@@ -96,7 +101,10 @@
     "LSG",
     "VCR",
     "VC3",
-    "CEO"
+    "CEO",
+    "HAR",
+    "NHA",
+    "OGC"
    ],
    "etf": [
     "CBOE:ITB",
@@ -143,7 +151,10 @@
     "CTR",
     "HHV",
     "PC1",
-    "FCN"
+    "FCN",
+    "TCD",
+    "L40",
+    "MST"
    ],
    "etf": [
     "CBOE:PAVE"
@@ -160,7 +171,8 @@
     "NKG",
     "VGS",
     "SHI",
-    "HPG"
+    "HPG",
+    "SMC"
    ],
    "etf": [
     "XLB",
@@ -200,7 +212,8 @@
     "DCM",
     "LAS",
     "DDV",
-    "DPM"
+    "DPM",
+    "DGC"
    ],
    "etf": [
     "XLB"
@@ -412,7 +425,9 @@
     "DGW",
     "PET",
     "PSD",
-    "DMX"
+    "DMX",
+    "ABS",
+    "DL1"
    ],
    "etf": [
     "XRT",
@@ -460,7 +475,8 @@
     "IDI",
     "HAG",
     "VHC",
-    "HNG"
+    "HNG",
+    "NAF"
    ],
    "etf": [
     "MOO"
@@ -596,7 +612,8 @@
    "tickers": [
     "CMG",
     "FPT",
-    "SAM"
+    "SAM",
+    "HVH"
    ],
    "etf": [
     "XLK"

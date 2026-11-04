@@ -39,6 +39,11 @@ for i, (name, inp) in uses.items():
     if name.endswith("stocks_get_price_history") and d.get("bars"):
         m = out["bars"].setdefault(d["ticker"], {})
         for b in d["bars"]: m[b["date"]] = [b["close"], b["volume"]]
+    elif name.endswith("marketdata_list_stock_daily_data") and d.get("data", {}).get("stocks"):
+        from datetime import datetime as _dt
+        for b in d["data"]["stocks"]:
+            m = out["bars"].setdefault(b["symbol"], {})
+            m[_dt.strptime(b["trading_date"], "%d/%m/%Y").strftime("%Y-%m-%d")] = [float(b["close"]) / 1000, float(b["volume"])]
     elif name.endswith("flows_top_net") and "items" in d:
         out["flows"].append({"in": inp, "period_from": d.get("period_from"), "period_to": d.get("period_to"),
                              "items": [[x["ticker"], x["net_bil"]] for x in d["items"]]})

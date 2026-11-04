@@ -27,6 +27,32 @@ NEWINFO = {
  "SAM": ("SAM Holdings", "HOSE", "9578", "Thiết bị viễn thông", "YEG", "Công nghệ thông tin", True),
  "RYG": ("Hoàng Gia (gạch ốp lát)", "HOSE", "2353", "Vật liệu xây dựng & Nội thất", "HT1", "VLXD · đá · xi măng · gạch", False),
  "TLD": ("Đô thị Thăng Long (gỗ, ván ép)", "HOSE", "2353", "Vật liệu xây dựng & Nội thất", "HT1", "VLXD · đá · xi măng · gạch", False),
+ "ABS": ("DV Nông nghiệp Bình Thuận", "HOSE", "5337", "Phân phối chuyên ngành", "FRT", "Bán lẻ · phân phối", True),
+ "AGR": ("Chứng khoán Agribank", "HOSE", "8777", "Môi giới chứng khoán", "VCI", "Chứng khoán", False),
+ "APH": ("An Phát Holdings", "HOSE", "2357", "Bao bì & Đóng gói", "BMP", "Nhựa · bao bì", False),
+ "BVS": ("Chứng khoán Bảo Việt", "HNX", "8777", "Môi giới chứng khoán", "VCI", "Chứng khoán", False),
+ "DGC": ("Hóa chất Đức Giang", "HOSE", "1353", "Hóa chất chuyên dụng", "DPM", "Hóa chất · phân bón", False),
+ "DL1": ("Alpha Seven", "HNX", "5337", "Phân phối chuyên ngành", "FRT", "Bán lẻ · phân phối", True),
+ "HAR": ("BĐS An Dương Thảo Điền", "HOSE", "8633", "Bất động sản", "PDR", "BĐS dân cư", False),
+ "HDC": ("Phát triển Nhà Bà Rịa - Vũng Tàu", "HOSE", "8633", "Bất động sản", "PDR", "BĐS dân cư", False),
+ "HUT": ("Tasco", "HNX", "2753", "Xây dựng & Vật liệu", "CTD", "Xây dựng · hạ tầng", True),
+ "HVH": ("Đầu tư & Công nghệ HVC", "HOSE", "2357", "Xây dựng & Hạ tầng", "CMG", "Công nghệ thông tin", True),
+ "IJC": ("Becamex IJC", "HOSE", "8633", "Bất động sản", "KBC", "BĐS KCN", False),
+ "L40": ("Đầu tư & Xây dựng 40", "HNX", "2357", "Xây dựng & Hạ tầng", "CTD", "Xây dựng · hạ tầng", False),
+ "MBS": ("Chứng khoán MB", "HNX", "8777", "Môi giới chứng khoán", "VCI", "Chứng khoán", False),
+ "MST": ("Đầu tư MST", "HNX", "2357", "Xây dựng & Hạ tầng", "CTD", "Xây dựng · hạ tầng", False),
+ "NAF": ("Nafoods", "HOSE", "3577", "Thực phẩm chuyên biệt", "ANV", "Thủy sản · nông nghiệp", False),
+ "NHA": ("Phát triển Nhà & Đô thị Nam Hà Nội", "HOSE", "8633", "Bất động sản", "PDR", "BĐS dân cư", False),
+ "OGC": ("Tập đoàn Đại Dương", "HOSE", "8633", "Bất động sản", "PDR", "BĐS dân cư", True),
+ "ORS": ("Chứng khoán Phương Đông", "HOSE", "8777", "Môi giới chứng khoán", "VCI", "Chứng khoán", False),
+ "PET": ("Tổng CTCP Dịch vụ Tổng hợp Dầu khí", "HOSE", "5337", "Phân phối chuyên ngành", "FRT", "Bán lẻ · phân phối", True),
+ "SHI": ("Quốc tế Sơn Hà", "HOSE", "2727", "Sản xuất tổng hợp", "HSG", "Thép", True),
+ "SHS": ("Chứng khoán Sài Gòn - Hà Nội", "HNX", "8777", "Môi giới chứng khoán", "VCI", "Chứng khoán", False),
+ "SMC": ("Đầu tư Thương mại SMC", "HOSE", "1757", "Thép & Phân phối", "HSG", "Thép", False),
+ "SZC": ("Sonadezi Châu Đức", "HOSE", "8633", "Bất động sản", "KBC", "BĐS KCN", False),
+ "TCD": ("Tracodi", "UPCOM", "2357", "Xây dựng & Hạ tầng", "CTD", "Xây dựng · hạ tầng", False),
+ "TNG": ("Đầu tư & Thương mại TNG", "HNX", "3763", "May mặc", "GIL", "May mặc", False),
+ "VFS": ("Chứng khoán Nhất Việt", "HNX", "8777", "Môi giới chứng khoán", "VCI", "Chứng khoán", False),
 }
 NEWG = {"Ô tô · cơ khí": dict(etf=["XLY"], comm=[], note="")}
 L0 = json.load(open(H + "lists121.json"))
@@ -57,8 +83,8 @@ if todo:
                                 summary="Mã mới trong watchlist TradingView, thêm phần kỹ thuật (giá, RVOL, RS vs VN30, NN/TD). Cơ bản, tin kéo ở nhịp tuần.",
                                 date=asof, source="—", direct=0),
                       volume=float(V[0]), icbnone=icbnone, techOnly=True)
-        sf = {d: v for d, v in IN["stockflow"][t].items() if d <= asof}; FD = sorted(sf, reverse=True)[:10]
-        nn = " ".join(str(sf[d][0]) for d in FD); td = " ".join(str(sf[d][1]) for d in FD)
+        sf = {d: v for d, v in IN["stockflow"].get(t, {}).items() if d <= asof}; FD = sorted(sf, reverse=True)[:10]
+        nn = " ".join(str(sf[d][0]) for d in FD) or " ".join(["0"] * 10); td = " ".join(str(sf[d][1]) for d in FD) or " ".join(["0"] * 10)  # chưa kéo → 0
         app("raw_add2/tcbs_new.txt", [t + " None None None None None None None"])
         app("raw_add2/fund_new.txt", [t + " NONE"])
         app("raw_add2/insider_new.txt", [t + "|NONE:-:chưa kéo"])
