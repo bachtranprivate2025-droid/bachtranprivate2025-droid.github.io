@@ -34,7 +34,7 @@ for t in T + ["VN30", "VNINDEX"]:
     ST["close"].setdefault(t, {})[asof] = v["close"] / k
     if t in T and vs.get(t, {}).get(asof) != "finlens":
         ST["vol"].setdefault(t, {})[asof] = float(v["volume"]); vs.setdefault(t, {})[asof] = "tv"
-    ST["tv"]["perf"][t] = {"w": v.get("Perf.W"), "m1": v.get("Perf.1M"), "m3": v.get("Perf.3M"), "m6": v.get("Perf.6M"),
+    ST["tv"]["perf"][t] = {"w": v.get("Perf.W"), "m1": v.get("Perf.1M"), "m3": v.get("Perf.3M"), "m6": v.get("Perf.6M"), "y": v.get("Perf.Y"),
                            "close": v.get("close"), "vol": v.get("volume")}
 if tvt: ST["tv"]["asof"] = asof
 
