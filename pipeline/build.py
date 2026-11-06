@@ -317,6 +317,7 @@ def make_new(t):
         st["relative"] = {k: (None if st["sector"][k] is None else st["stock"][k] - st["sector"][k]) for k in ("d1", "w1")}
     return tmpl
 
+NEWS_X = json.load(open(RUN + "conf/news_extra.json")) if os.path.exists(RUN + "conf/news_extra.json") else {}
 VNI = ICBPX["VNINDEX"]
 def refresh(r, t):
     pct = lambda a, b: None if (a is None or b is None) else (a / b - 1) * 100
@@ -383,6 +384,11 @@ for t in TICKERS:
     elif t == "EVG": sig["avg_value_bil"] = 2.86  # 28,63 tỷ / 10 phiên (FinLens flows)
     r["sig"] = sig if rs else None  # không có trong signals_screen thì không tính vào coverage
     refresh(r, t)
+    _nx = NEWS_X.get(t)   # catalyst nhiều tin (tối thiểu 3 nếu có): conf/news_extra.json
+    if _nx:
+        _m = _nx["main"]
+        r.update(title=_m["title"], summary=_m["summary"], newsDate=_m["date"], source=_m["source"], newsSent=_m["sent"], directStrength=_m["direct"])
+        r["news3"] = _nx["items"]
     r["tcbs"] = TC[t]; r["tcbsRank"] = tc_rank(t); r["tcbsCmp"] = tcbs_cmp(r["f"], r["caps"], TC[t])
     r["fundView"] = fund_view(t); r["insiderView"] = insider_view(t); r["consView"] = cons_view(t); r["ssiView"] = ssi_view(t)
     if t in TECH_ONLY:  # mã chỉ cập nhật kỹ thuật
@@ -807,6 +813,8 @@ for x in L2DATA["rows"]:
 ROT_HTML += '</tbody></table></div><div class="note">NG (trụ 5) = tổng điểm: rotation cấp 2 (−1/0/+1) + ngành ICB4 FinLens (🟢+1/🟡0/🔴−1) + ETF Mỹ + hàng hóa. NG 2 khi tổng ≥ +2 và ngành cấp 2 không ngược; NG 0 khi tổng ≤ −1 hoặc cả cấp 2 lẫn ICB4 cùng xấu; còn lại NG 1. Dữ liệu Fialda chốt phiên 30/10; chưa có cột 3D (TCBS mất kết nối) nên Ngắn hạn = thứ hạng 1W. 1D = 0,00% là ngành đứng yên thật trong phiên. Nhóm tuần khác của báo cáo chốt 26–27/10.</div></div>'
 rep("<th>1W / 1M / 3M</th>", "<th>1W / 1M / 3M / 6M / 1Y</th>")
 rep("[r.r5,r.r21,r.r63].map(v=>'<span class=\"'+tone(v)+'\">'+sign(v)+'%</span>')", "[r.r5,r.r21,r.r63,r.r126,r.r252].map(v=>v==null?'<span class=\"muted\">–</span>':'<span class=\"'+tone(v)+'\">'+sign(v)+'%</span>')")
+rep("const resCell=r=>{", "const more=r=>(r.news3&&r.news3.length)?'<div class=\"note\" style=\"margin-top:5px;border-top:1px dashed #8884;padding-top:4px\"><b>Tin liên quan ('+r.news3.length+')</b>'+r.news3.map(n=>'<div>'+(n.sent==='positive'?'🟢':n.sent==='negative'?'🔴':'⚪')+' <b>'+esc(n.title)+'</b> <span class=\"muted\">'+esc(n.source)+' · '+esc((n.date||'').slice(0,10))+'</span>'+(n.note?'<div class=\"note\">'+esc(n.note)+'</div>':'')+'</div>').join('')+'</div>':'';const resCell=r=>{")
+rep("\"Tin bối cảnh / cần xác minh tác động\")+'</div>':", "\"Tin bối cảnh / cần xác minh tác động\")+'</div>'+more(r):")
 rep("<h2>2. Market / sector / ETF confluence</h2>", "")  # đã bỏ mục 2 theo yêu cầu 04/11 (ROT_HTML không còn chèn)
 rep("""TradingView sector / ETF:</b></div>'+refs(r.sectorProxy,"sector/ETF")+'</td>'""", """TradingView sector / ETF:</b></div>'+refs((r.sectorProxy||[]).filter(p=>/^(HOSE|HNX|UPCOM):/.test(p[0])),"sector VN")+globalRefs(r)+'</td>'""")
 rep("</style>", ".rotT td{vertical-align:middle}.rr td:first-child{border-left:4px solid transparent}.phLr td:first-child{border-left-color:#2fb36b}.phIr td:first-child{border-left-color:#4a8fe0}.phWr td:first-child{border-left-color:#e8923a}.phGr td:first-child{border-left-color:#e0475b}.ph{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:700}.phL{background:#1d4a32;color:#8ff0b5}.phI{background:#1d3352;color:#9cc6ff}.phW{background:#4d3216;color:#ffc27a}.phG{background:#4d1d26;color:#ff9aa8}.flw{display:inline-block;margin-left:5px;font-size:11px;padding:1px 6px;border-radius:3px}.fIn{background:#14402a;color:#7ee2a6}.fOut{background:#45181f;color:#ff8f9e}.hc{text-align:center;font-weight:700;color:#fff}.ht0{background:#5c2029}.ht1{background:#4a2e22}.ht2{background:#3a3626}.ht3{background:#24452f}.ht4{background:#1d5a37}.rpos{color:#5fd48f}.rneg{color:#ff7a8a}.rz{color:#aaa}.rb{font-weight:700}.mo{display:inline-block;min-width:38px;text-align:center;padding:1px 6px;border-radius:3px;font-weight:700}.mIn{background:#1d5a37;color:#c9ffdd}.mOut{background:#5c2029;color:#ffd0d6}.mMid{color:#bbb}.ngp{display:inline-block;min-width:26px;text-align:center;padding:1px 6px;border-radius:3px;font-weight:800}.ngP{background:#2f8f5c;color:#fff}.ngZ{background:#6b5a1f;color:#fff}.ngN{background:#a8364a;color:#fff}.tks{font-size:12px;color:#ddd}.rsrt{cursor:pointer;user-select:none;white-space:nowrap}.rsrt:hover,.rsrt:focus{color:#fff;background:#303030}.rsrt[data-s=d] .sar,.rsrt[data-s=a] .sar{color:var(--yellow)}.sar{color:#777;font-weight:400}\n</style>")
