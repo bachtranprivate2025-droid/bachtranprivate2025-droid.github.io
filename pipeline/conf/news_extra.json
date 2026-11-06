@@ -591,5 +591,1706 @@
     "note": "Cũng là tin Samsung bị gắn nhầm mã SAM"
    }
   ]
+ },
+ "HPG": {
+  "main": {
+   "title": "Hòa Phát: LNST quý 3 8.265 tỷ (+106%), 9 tháng 23.746 tỷ vượt 8% mục tiêu năm",
+   "summary": "Quý 3 doanh thu 62.669 tỷ (+70%); 9T doanh thu 171.539 tỷ (+54%), LNST +104%, hoàn thành 82% kế hoạch doanh thu, vượt 8% kế hoạch lợi nhuận 2026 (22.000 tỷ).",
+   "date": "2026-11-06 10:55",
+   "source": "vietstock",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "Ngành thép Q3/2026: nội địa cải thiện nhờ đầu tư công, xuất khẩu chịu sức ép bảo hộ",
+    "date": "2026-11-06 09:02",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Triển vọng Q4 phụ thuộc giải ngân đầu tư công, chi phí đầu vào"
+   },
+   {
+    "title": "PYN Elite Fund tăng tỷ trọng HPG lên 15,8% (từ 14,3%)",
+    "date": "2026-11-06 07:22",
+    "source": "vietnambiz",
+    "sent": "positive",
+    "note": "Dòng tiền quỹ nội"
+   },
+   {
+    "title": "Con trai ông Trần Đình Long chỉ mua 10 triệu/50 triệu cp HPG đăng ký",
+    "date": "2026-11-06 10:55",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Sở hữu lên 2,85%; mua ít hơn đăng ký do diễn biến thị trường"
+   },
+   {
+    "title": "BSC bán ra HPG và TCB trong quý 3",
+    "date": "2026-10-22 09:51",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Tự doanh CTCK thu hẹp danh mục"
+   }
+  ]
+ },
+ "MSN": {
+  "main": {
+   "title": "Masan: nợ vay ròng/EBITDA giảm từ 3,9x xuống 2,0x; FCF 12 tháng 10.794 tỷ, tiền mặt 21.197 tỷ",
+   "summary": "Cân nhắc đơn giản hóa sở hữu, giảm nợ và hoàn trả vốn cổ đông. WinCommerce quý 3 doanh thu 12.775 tỷ, lợi nhuận 325 tỷ. HSC giá mục tiêu 136.600đ, HSBC 111.100đ.",
+   "date": "2026-11-05 10:07",
+   "source": "vietstock",
+   "sent": "positive",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "Masan bổ nhiệm Giám đốc Chiến lược & Đầu tư (cựu KKR, TPG) và Giám đốc Nhân sự (cựu TikTok)",
+    "date": "2026-11-04 10:44",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Tập trung phân bổ vốn và mở rộng ngoài Việt Nam"
+   },
+   {
+    "title": "Doanh nghiệp tay ngang tăng đầu tư chứng khoán: MSN dẫn đầu 6.500 tỷ",
+    "date": "2026-11-04 11:29",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Rủi ro trích lập dự phòng giá trị đầu tư tài chính"
+   }
+  ]
+ },
+ "VIB": {
+  "main": {
+   "title": "VIB: LNTT 9 tháng ~7.600 tỷ (+8%), chi phí dự phòng +98%, nợ xấu 2,29%",
+   "summary": "Tổng thu nhập hoạt động >17.300 tỷ; tổng tài sản ~599.600 tỷ (+8%); dư nợ 411.300 tỷ. Tăng dự phòng ăn mòn lợi nhuận.",
+   "date": "2026-11-04 14:42",
+   "source": "nguoiduatin / vietstock",
+   "sent": "neutral",
+   "direct": 0.6
+  },
+  "items": [
+   {
+    "title": "VIB bổ nhiệm 2 Phó TGĐ mới (3 lượt trong năm 2026)",
+    "date": "2026-11-04 14:42",
+    "source": "nguoiduatin",
+    "sent": "neutral",
+    "note": "Kiện toàn ban điều hành"
+   },
+   {
+    "title": "Bellmont và Beston (cùng nhóm liên quan) sở hữu >8,6% vốn VIB",
+    "date": "2026-10-29 12:00",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Cơ cấu cổ đông"
+   },
+   {
+    "title": "MyVIB thêm Quỹ nhóm, Click to Pay, đặc quyền sân bay",
+    "date": "2026-10-30 14:53",
+    "source": "nguoiduatin",
+    "sent": "positive",
+    "note": "Tin sản phẩm, tác động giá thấp"
+   }
+  ]
+ },
+ "VIC": {
+  "main": {
+   "title": "Vingroup: LNST 9 tháng 43.700 tỷ (~6 lần), vượt 25% kế hoạch năm; doanh thu 372.500 tỷ",
+   "summary": "VinFast bàn giao >211.000 xe (+91%); Vinhomes LNST 9T 75.059 tỷ (+390%); Vinpearl doanh thu 10.700 tỷ (+19%).",
+   "date": "2026-10-31 12:51",
+   "source": "tuoitre / saigongiaiphong",
+   "sent": "positive",
+   "direct": 0.95
+  },
+  "items": [
+   {
+    "title": "Vingroup lập kỷ lục doanh thu thuần 372.500 tỷ sau 9 tháng, gấp 2,2 lần",
+    "date": "2026-11-02 13:39",
+    "source": "saigongiaiphong",
+    "sent": "positive",
+    "note": "VinFast 177.697 xe nội địa (+71%), xe máy điện gấp 3 lần"
+   },
+   {
+    "title": "Hilltop Collection – Vinhomes Hải Vân Bay (Đà Nẵng) giới thiệu dinh thự",
+    "date": "2026-11-05 14:47",
+    "source": "nguoiduatin",
+    "sent": "positive",
+    "note": "Dự kiến hoàn thành 3/2028; tin dự án, tác động nhỏ"
+   }
+  ]
+ },
+ "VPL": {
+  "main": {
+   "title": "Vinpearl: LNST 9 tháng 2.829 tỷ (gấp 6,6 lần), quý 3 +283% (649 tỷ), đạt 94% kế hoạch năm",
+   "summary": "Doanh thu 9T 10.686 tỷ (+18,6%); tổng tài sản 129.009 tỷ (+48%). Kế hoạch dự án du lịch Tuyên Quang, Cần Giờ 2026–2027.",
+   "date": "2026-10-29 20:01",
+   "source": "nguoiduatin / vietnambiz",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "Doanh nghiệp 'họ Vin' báo lãi quý gấp gần 4 lần cùng kỳ",
+    "date": "2026-10-29 15:54",
+    "source": "vietnambiz",
+    "sent": "positive",
+    "note": "Doanh thu quý 3 3.892 tỷ (+26%)"
+   },
+   {
+    "title": "Dự thảo thay thế Thông tư 45: kéo dài khấu hao có thể tăng LNTT ~7,4%",
+    "date": "2026-10-22 09:28",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Tin chính sách ngành, VPL relevance 0,7"
+   }
+  ]
+ },
+ "TCB": {
+  "main": {
+   "title": "Techcombank: LNTT quý 3 10,4 nghìn tỷ kỷ lục, 9 tháng 28,9 nghìn tỷ (+23,7%)",
+   "summary": "CEO nhấn mạnh sức chống chịu của Việt Nam, vai trò AI và đầu tư hạ tầng.",
+   "date": "2026-11-03 19:51",
+   "source": "vietstock",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "CTCK BIDV giữ MUA TCB, giá mục tiêu 28.300đ (+32%)",
+    "date": "2026-11-03 17:30",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Câu chuyện cổ đông chiến lược nước ngoài trở lại, LN 2027 +17,7%"
+   },
+   {
+    "title": "30 ngân hàng giảm lãi suất huy động 0,5–0,7 điểm % (có Techcombank)",
+    "date": "2026-11-02 14:58",
+    "source": "saigongiaiphong",
+    "sent": "positive",
+    "note": "Giảm chi phí vốn; một số gói vay ưu đãi giảm tới 2%/năm"
+   }
+  ]
+ },
+ "BSI": {
+  "main": {
+   "title": "BSC (BSI): LNST quý 3 -23,5% còn 165 tỷ dù doanh thu 9T +39%",
+   "summary": "9T doanh thu 2.133 tỷ (+39%) nhưng LNST 377 tỷ do chi phí hoạt động +33%; tổng tài sản 19.905 tỷ.",
+   "date": "2026-10-28 10:45",
+   "source": "nguoiduatin / vietnambiz",
+   "sent": "negative",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "BSC thu hẹp gần 97% danh mục cổ phiếu niêm yết, bán ra HPG và TCB",
+    "date": "2026-10-22 09:51",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Giảm rủi ro tự doanh"
+   },
+   {
+    "title": "Tăng tốc chuẩn bị CCP – BSC, CTS, FPTS, SBSI làm thành viên bù trừ từ Q1/2027",
+    "date": "2026-10-22 11:02",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Góp tối thiểu 20–30 tỷ; thanh khoản HOSE -62,5% YoY"
+   }
+  ]
+ },
+ "BVS": {
+  "main": {
+   "title": "BVSC (BVS): LNST quý 3 -80% còn ~17 tỷ, tự doanh chuyển lỗ",
+   "summary": "9T LNST 80 tỷ (-59%), mới đạt 36% kế hoạch năm; doanh thu quý 3 -40% xuống 228 tỷ; môi giới -58,7%.",
+   "date": "2026-10-23 06:50",
+   "source": "vietnambiz / nguoiduatin / vietstock",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Hoạt động môi giới giảm sâu, tự doanh từ lãi thành lỗ",
+    "date": "2026-10-21 06:45",
+    "source": "nguoiduatin",
+    "sent": "negative",
+    "note": "Chi phí lãi vay +33% lên 61 tỷ"
+   },
+   {
+    "title": "Tự doanh đảo chiều, BVS báo lãi quý 3 giảm gần 80%",
+    "date": "2026-10-20 16:13",
+    "source": "vietstock",
+    "sent": "negative",
+    "note": "Lỗ tự doanh >25 tỷ; đánh giá lại danh mục âm ~28 tỷ"
+   }
+  ]
+ },
+ "HDC": {
+  "main": {
+   "title": "Hodeco: LNST quý 3 -88% (63 tỷ) do không còn lãi bán cổ phần; 9T -73%, mới 33,5% kế hoạch",
+   "summary": "Doanh thu quý 3 116 tỷ (+13,7%); 9T doanh thu 459 tỷ (+63%). TGĐ Lê Viết Liên mua 1 triệu cp, nâng sở hữu lên 3,93%.",
+   "date": "2026-10-28 12:20",
+   "source": "vietstock / tinnhanhchungkhoan",
+   "sent": "negative",
+   "direct": 0.7
+  },
+  "items": [
+   {
+    "title": "Hodeco hoàn thiện pháp lý, chuẩn bị mở bán 100 sản phẩm The Light City",
+    "date": "2026-10-28 13:39",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Gia hạn thỏa thuận đất đến 12/9/2028; GĐ1 vốn 2.756 tỷ, GĐ2 khởi động 2027"
+   },
+   {
+    "title": "TGĐ Lê Viết Liên mua vào 1 triệu cổ phiếu HDC",
+    "date": "2026-11-04 07:06",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "Nội bộ mua, tín hiệu niềm tin"
+   }
+  ]
+ },
+ "TCH": {
+  "main": {
+   "title": "Tài chính Hoàng Huy (TCH): LNST quý II/FY2026 750 tỷ (gấp 13 lần), doanh thu 1.958 tỷ (gấp 5,7 lần)",
+   "summary": "Tồn kho BĐS 15.258 tỷ (~69% tài sản), dòng tiền kinh doanh âm 3.078 tỷ. SHS khuyến nghị tăng tỷ trọng, giá mục tiêu 16.100đ.",
+   "date": "2026-11-04 07:51",
+   "source": "nguoiduatin / vietstock / tinnhanhchungkhoan",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "SHS: tăng tỷ trọng TCH, mục tiêu 16.100đ; New City II, Green River tiếp tục bàn giao",
+    "date": "2026-11-01 17:00",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Người mua trả trước 5.555 tỷ"
+   },
+   {
+    "title": "TCH rót thêm >3.000 tỷ vào 2 dự án mới",
+    "date": "2026-10-30 20:12",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Rủi ro đòn bẩy/tồn kho tăng"
+   }
+  ]
+ },
+ "SZC": {
+  "main": {
+   "title": "Sonadezi Châu Đức (SZC): LNST 9 tháng -76% (57,7 tỷ), doanh thu -52%; quý 3 LNST +3,8%",
+   "summary": "Mảng KCN suy yếu do đổi phương pháp ghi nhận doanh thu cho thuê đất; kế hoạch 2026 doanh thu 518 tỷ, LNST 56 tỷ (-84%).",
+   "date": "2026-10-22 16:13",
+   "source": "tinnhanhchungkhoan / vietstock",
+   "sent": "negative",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "BĐS công nghiệp: 'của để dành' nhưng chưa chắc là cổ phiếu rẻ (SZC -50%, KBC -34%, IDC -24,9% YTD)",
+    "date": "2026-10-15 06:34",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "P/E SZC 18,8x; nhiều mã dưới MA200"
+   },
+   {
+    "title": "Doanh thu quý 3 SZC +30% lên 112 tỷ",
+    "date": "2026-10-22 12:09",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Dấu hiệu phục hồi nhẹ sau quý yếu"
+   }
+  ]
+ },
+ "IDC": {
+  "main": {
+   "title": "IDICO (IDC): LNST quý 3 -44,9% (540 tỷ), doanh thu -27,7%; 9T doanh thu -9%",
+   "summary": "Doanh thu chưa thực hiện ~5.500 tỷ; tiền gửi >6.600 tỷ (lãi ~1,5 tỷ/ngày); IDC giảm 19,6% từ tháng 4.",
+   "date": "2026-11-02 06:49",
+   "source": "tinnhanhchungkhoan / nguoiduatin",
+   "sent": "negative",
+   "direct": 0.75
+  },
+  "items": [
+   {
+    "title": "IDC đưa 1.400ha đất KCN vào khai thác từ 2027 (Tân Phước 1 470ha, Vinh Quang 350ha)",
+    "date": "2026-11-06 12:27",
+    "source": "vietstock",
+    "sent": "positive",
+    "note": "Vốn đầu tư 5.900 + 3.550 tỷ; giữ giá thuê 2026 bằng 2025; 150ha sẵn sàng cho thuê"
+   },
+   {
+    "title": "Nắm >6.600 tỷ tiền gửi, IDICO thu lãi gần 1,5 tỷ/ngày",
+    "date": "2026-11-02 15:11",
+    "source": "nguoiduatin",
+    "sent": "neutral",
+    "note": "Bù đắp phần nào doanh thu cho thuê hạ tầng giảm"
+   }
+  ]
+ },
+ "NKG": {
+  "main": {
+   "title": "Thép Nam Kim: LNST 9 tháng 251,8 tỷ (+124%), quý 3 +158% (127,7 tỷ)",
+   "summary": "Doanh thu quý 3 5.472 tỷ (+45%); nợ vay +25,7% lên 8.635 tỷ.",
+   "date": "2026-10-29 10:15",
+   "source": "tinnhanhchungkhoan / vietstock",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "Nam Kim lãi quý 3 tăng bằng lần, Tôn Đông Á đi lùi do chi phí tăng",
+    "date": "2026-10-29 13:00",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "So sánh ngành tôn mạ"
+   },
+   {
+    "title": "Phó TGĐ đăng ký mua 100.000 cp NKG",
+    "date": "2026-10-22 07:35",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Kế hoạch 2026: doanh thu 22.000 tỷ, LNTT 400 tỷ"
+   },
+   {
+    "title": "Ngành thép Q3: khoản lãi đột biến, xuất khẩu chịu sức ép bảo hộ",
+    "date": "2026-11-06 09:02",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "NKG relevance 0,3 – tin ngành"
+   }
+  ]
+ },
+ "HSG": {
+  "main": {
+   "title": "Hoa Sen: LNST niên độ 2025-26 623 tỷ (104% kế hoạch) nhưng quý 4 -34%",
+   "summary": "Doanh thu niên độ 37.736 tỷ (102% kế hoạch); quý 4 LNST 55,6 tỷ (-34%). Chuyển trọng tâm nội địa (Hoa Sen Home) do xuất khẩu khó.",
+   "date": "2026-10-30 19:43",
+   "source": "tinnhanhchungkhoan / vietstock",
+   "sent": "neutral",
+   "direct": 0.7
+  },
+  "items": [
+   {
+    "title": "Trùm tôn mạ Hoa Sen có quý giảm 34% lợi nhuận",
+    "date": "2026-10-31 10:57",
+    "source": "vietstock",
+    "sent": "negative",
+    "note": "Niên độ LNST -15,1%"
+   },
+   {
+    "title": "Hoa Sen lần thứ 8 liên tiếp Thương hiệu Quốc gia",
+    "date": "2026-10-17 09:40",
+    "source": "vietnambiz",
+    "sent": "positive",
+    "note": "Tin hình ảnh, tác động thấp"
+   }
+  ]
+ },
+ "HT1": {
+  "main": {
+   "title": "Xi măng Hà Tiên (HT1): LNST 9 tháng 315 tỷ (+67%), gần 80% kế hoạch năm; xóa ~600 tỷ nợ ngắn hạn",
+   "summary": "Quý 3 doanh thu 2.269 tỷ (+22%), LNST 99 tỷ (+16%); giảm nợ phải trả 6%; dự án hạ tầng miền Nam hỗ trợ tiêu thụ.",
+   "date": "2026-10-21 12:46",
+   "source": "vietstock",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "Bảo Việt khuyến nghị MUA HT1, giá mục tiêu 15.700–16.700đ",
+    "date": "2026-10-28 17:28",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Dự báo tăng trưởng LN và doanh thu 9T tích cực"
+   },
+   {
+    "title": "Dự thảo thay thế Thông tư 45 về khấu hao (HT1 relevance 0,7)",
+    "date": "2026-10-22 09:28",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Tin chính sách ngành, tác động gián tiếp"
+   }
+  ]
+ },
+ "APH": {
+  "main": {
+   "title": "An Phát Holdings: TGĐ đăng ký bán toàn bộ 1,125 triệu cp (0,46%)",
+   "summary": "6T/2026 doanh thu 4.683 tỷ (-24%) nhưng LNST 347 tỷ (+55%); HOSE gỡ cảnh báo từ 9/2026. Chỉ có 1 tin trong 30 ngày.",
+   "date": "2026-10-14 11:07",
+   "source": "vietnambiz",
+   "sent": "neutral",
+   "direct": 0.4
+  },
+  "items": []
+ },
+ "MSR": {
+  "main": {
+   "title": "Masan High-Tech Materials: quý 3 doanh thu 14.557 tỷ (gấp 7,1 lần), LNST 2.148 tỷ",
+   "summary": "9T doanh thu 25.687 tỷ, LN 4.350 tỷ, vượt 27% và 74% kế hoạch năm. Mục tiêu vonfram 8.000 tấn năm 2027, đơn hàng 2027 gần kín.",
+   "date": "2026-10-27 08:04",
+   "source": "vietnambiz / vietstock",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "Kế hoạch nâng công suất và hợp tác với Elmet (Mỹ), GB Innovation (Hàn Quốc)",
+    "date": "2026-11-04 08:53",
+    "source": "vietstock",
+    "sent": "positive",
+    "note": "Mở rộng nguồn nguyên liệu và thị trường"
+   },
+   {
+    "title": "Cổ phiếu cần quan tâm 3/11: MSR +187% trong 12 tháng, P/E 16,5x – chưa nên mua đuổi",
+    "date": "2026-11-02 17:35",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "Rủi ro định giá/mua đuổi"
+   }
+  ]
+ },
+ "NT2": {
+  "main": {
+   "title": "NT2: LNST 9 tháng 906 tỷ (+57%), quý 3 +95% (419 tỷ), vượt 2,1 lần kế hoạch LNTT năm",
+   "summary": "Doanh thu 9T 7.803 tỷ (+44%); chuẩn bị chia cổ tức tiền mặt 10% (1.000đ/cp, ~287 tỷ).",
+   "date": "2026-10-21 17:30",
+   "source": "vietstock / tinnhanhchungkhoan",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "NT2 chuẩn bị chia cổ tức tiền mặt 10%",
+    "date": "2026-10-21 11:22",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Giá 21/10: 24.300đ"
+   },
+   {
+    "title": "Đắk Lắk thu hút 52 dự án, vốn >70.600 tỷ (NT2 relevance 0,6)",
+    "date": "2026-10-26 14:19",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "Tin tỉnh/ngành, tác động gián tiếp"
+   }
+  ]
+ },
+ "VC3": {
+  "main": {
+   "title": "VC3: không có tin riêng trong 90 ngày – chỉ xuất hiện trong điểm tin thị trường",
+   "summary": "Không có KQKD quý 3 hay công bố riêng trên hệ thống FinLens; cần kiểm tra báo cáo tài chính/công bố thông tin trực tiếp.",
+   "date": "2026-10-25 14:49",
+   "source": "FinLens (chỉ tin thị trường)",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": [
+   {
+    "title": "Khối ngoại bán ròng >1.000 tỷ trong tuần 19–23/10 (điểm tin chung, relevance thấp)",
+    "date": "2026-10-25 14:49",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Không liên quan trực tiếp VC3"
+   },
+   {
+    "title": "VN-Index cải thiện, BĐS là tâm điểm nâng đỡ (điểm tin chung)",
+    "date": "2026-10-22 15:54",
+    "source": "nguoiduatin",
+    "sent": "neutral",
+    "note": "Không liên quan trực tiếp VC3"
+   }
+  ]
+ },
+ "VGS": {
+  "main": {
+   "title": "VGS: không có tin riêng – chỉ nằm trong nhịp tăng 3–5% của nhóm thép (3/11)",
+   "summary": "Nhóm thép HPG, NKG, HSG, VGS tăng 3–5% phiên 3/11; SCIC tăng vốn lên 50.000 tỷ (VGS relevance 0,7, tác động gián tiếp).",
+   "date": "2026-11-03 16:47",
+   "source": "vietstock",
+   "sent": "neutral",
+   "direct": 0.2
+  },
+  "items": [
+   {
+    "title": "Nhịp đập thị trường 3/11: cổ phiếu thép tích cực, lực mua dần trở lại",
+    "date": "2026-11-03 11:52",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "HPG +5%, HSG +4%, NKG +5%"
+   },
+   {
+    "title": "SCIC tăng vốn điều lệ 19.000 → 50.000 tỷ (có Vnsteel/VGS)",
+    "date": "2026-08-12 06:30",
+    "source": "nguoiquansat",
+    "sent": "positive",
+    "note": "LNST 6T của SCIC 5.888 tỷ nhờ hoàn nhập dự phòng Vnsteel"
+   }
+  ]
+ },
+ "DPG": {
+  "main": {
+   "title": "Đạt Phương: doanh thu quý 3 1.854 tỷ (+58%), LN 9T +51,7%, nhưng nợ vay kỷ lục",
+   "summary": "Trúng 10 gói thầu gần 8.900 tỷ từ đầu năm; dư nợ vay 5.666 tỷ (+47%), nợ phải trả 7.300 tỷ (+41%) để xây nhà máy kính (chi phí dở dang 1.666 tỷ).",
+   "date": "2026-10-30 16:55",
+   "source": "vietstock / nguoiduatin / tinnhanhchungkhoan",
+   "sent": "neutral",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "Đạt Phương tăng tốc xây nhà máy kính, nợ vay thêm 1.800 tỷ",
+    "date": "2026-11-03 15:59",
+    "source": "nguoiduatin",
+    "sent": "neutral",
+    "note": "Mảng điện -47%, xây lắp 1.681 tỷ"
+   },
+   {
+    "title": "Đạt Phương duy trì đà tăng trưởng: 9T doanh thu 3.775 tỷ (+53%), LNST 251 tỷ (+51,7%)",
+    "date": "2026-10-30 12:46",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "LNST quý 3 gấp 2,51 lần"
+   }
+  ]
+ },
+ "CTD": {
+  "main": {
+   "title": "Coteccons: doanh thu quý I FY2027 11.269 tỷ (+51%), lợi nhuận gộp +75%",
+   "summary": "LNST cổ đông mẹ 305 tỷ (+4%); mua thêm 45% AnPR nâng lên 64%, nắm quyền kiểm soát; tổng tài sản 41.026 tỷ.",
+   "date": "2026-11-02 20:18",
+   "source": "vietnambiz",
+   "sent": "positive",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "Coteccons thâu tóm công ty truyền thông AnPR (64%)",
+    "date": "2026-11-03 11:05",
+    "source": "vietnambiz",
+    "sent": "positive",
+    "note": "Giá phí hợp nhất ~33 tỷ, lợi thế thương mại 6,5 tỷ"
+   },
+   {
+    "title": "TP.HCM giải ngân ~111.000 tỷ vốn đầu tư công; cả nước đạt 74,1% kế hoạch",
+    "date": "2026-11-04 07:17",
+    "source": "tuoitre",
+    "sent": "positive",
+    "note": "Hỗ trợ nhu cầu xây dựng (CTD relevance 0,7)"
+   }
+  ]
+ },
+ "NAF": {
+  "main": {
+   "title": "NAF chào bán riêng lẻ 15 triệu cp giá 36.500đ (tối đa 547,5 tỷ); Chứng khoán Tiên Phong mua 10,76%",
+   "summary": "Giảm nợ vay/vốn chủ từ 2,08 lần xuống ~0,90 lần; 6T LNST 140,6 tỷ (+96%), hoàn thành 70% kế hoạch.",
+   "date": "2026-10-23 11:45",
+   "source": "tinnhanhchungkhoan",
+   "sent": "positive",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Nafoods có 3 nhóm sản phẩm đạt Thương hiệu Quốc gia 2026",
+    "date": "2026-10-21 14:44",
+    "source": "baodautu",
+    "sent": "positive",
+    "note": "Cung ứng ~15 triệu cây giống/năm, có mặt 70 quốc gia – tin hình ảnh"
+   }
+  ]
+ },
+ "GIL": {
+  "main": {
+   "title": "Gilimex: 9T lãi 51,6 tỷ (lãi trở lại) nhưng dòng tiền âm kỷ lục 738,9 tỷ, kiểm toán ngoại trừ",
+   "summary": "Doanh thu 9T 776 tỷ (+71%); nợ vay +59% lên 1.545 tỷ; vụ kiện Amazon đòi 7.100 tỷ ảnh hưởng tồn kho ~800 tỷ; GIL -43,8% từ đầu năm.",
+   "date": "2026-11-02 06:58",
+   "source": "tinnhanhchungkhoan",
+   "sent": "negative",
+   "direct": 0.6
+  },
+  "items": [
+   {
+    "title": "GIL thay Tổng Giám đốc trong nỗ lực tái cấu trúc, giải thể 2 công ty con",
+    "date": "2026-10-27 16:39",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Mất khách hàng lớn, tồn kho lớn"
+   },
+   {
+    "title": "GIL sắp họp ĐHCĐ bất thường; kiểm toán ý kiến ngoại trừ",
+    "date": "2026-10-27 15:49",
+    "source": "tinnhanhchungkhoan",
+    "sent": "negative",
+    "note": "Chưa trích lập dự phòng tồn kho liên quan vụ kiện Amazon"
+   }
+  ]
+ },
+ "TNG": {
+  "main": {
+   "title": "TNG: LNST quý 3 +29% (152 tỷ), 9 tháng 362 tỷ (+29%); sắp tạm ứng cổ tức 5%",
+   "summary": "Doanh thu quý 3 3.229 tỷ (+23%); 9T 8.095 tỷ. Tạm ứng cổ tức đợt 2/2026 bằng tiền 5% (~64 tỷ).",
+   "date": "2026-10-27 12:02",
+   "source": "vietstock",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "Các CTCK khuyến nghị TNG, KBC, HHV, HPG... tiềm năng +17% đến +48%",
+    "date": "2026-10-24 07:39",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "TNG tăng 6,74% trong tuần"
+   },
+   {
+    "title": "Nhà ở xã hội Thái Nguyên: TNG Việt Bắc mở bán 9 lần chưa hết (giá ~22,8 triệu/m²)",
+    "date": "2026-10-28 09:11",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Mảng BĐS nhà ở xã hội tiêu thụ chậm"
+   }
+  ]
+ },
+ "HVN": {
+  "main": {
+   "title": "Vietnam Airlines: LNST quý 3 hợp nhất -56% (319 tỷ), công ty mẹ lỗ 284 tỷ do nhiên liệu +61%",
+   "summary": "Doanh thu quý 3 39.078 tỷ (+29%) nhưng biên gộp co xuống 7,3%; 9T LNST -41,8% còn 4.172 tỷ.",
+   "date": "2026-11-01 14:20",
+   "source": "vietnambiz / tuoitre / tinnhanhchungkhoan",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Quý III công ty mẹ HVN lỗ do chi phí nhiên liệu tăng mạnh",
+    "date": "2026-11-02 17:07",
+    "source": "tinnhanhchungkhoan",
+    "sent": "negative",
+    "note": "9T LNST công ty mẹ -58,4%"
+   },
+   {
+    "title": "Chi phí nhiên liệu +61%, công ty mẹ lỗ 284 tỷ trong quý 3 (cùng kỳ lãi 412 tỷ)",
+    "date": "2026-10-31 17:34",
+    "source": "tuoitre",
+    "sent": "negative",
+    "note": "Doanh thu hợp nhất 9T 114.480 tỷ (+28%)"
+   },
+   {
+    "title": "SCIC tăng vốn lên 50.000 tỷ; giữ 14.666 tỷ tại Vietnam Airlines",
+    "date": "2026-08-12 06:30",
+    "source": "nguoiquansat",
+    "sent": "positive",
+    "note": "Hỗ trợ cổ đông nhà nước"
+   }
+  ]
+ },
+ "TV2": {
+  "main": {
+   "title": "TV2: doanh thu quý 3 517 tỷ (gấp 2 lần), LNST 61 tỷ (gấp 4,6 lần); tiền mặt 2.100 tỷ nhờ khách trả trước",
+   "summary": "9T doanh thu ~1.200 tỷ (+56%), LNST 162 tỷ (gấp 3,5 lần); tiền và tiền gửi +89% nhờ dự án điện sinh khối. Chỉ có 1 tin trong 30 ngày.",
+   "date": "2026-10-28 16:30",
+   "source": "vietstock",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": []
+ },
+ "HID": {
+  "main": {
+   "title": "HID: không có tin riêng – chỉ được nhắc là cổ phiếu nhỏ hút dòng tiền đầu cơ (tuần 14–18/9)",
+   "summary": "Hệ thống không có tin KQKD hay công bố riêng của HID trong 90 ngày.",
+   "date": "2026-09-18 18:28",
+   "source": "tinnhanhchungkhoan",
+   "sent": "neutral",
+   "direct": 0.1
+  },
+  "items": [
+   {
+    "title": "Top 10 cổ phiếu tăng/giảm mạnh nhất tuần: SSB nổi sóng; HID, PIT thu hút dòng tiền đầu cơ",
+    "date": "2026-09-18 18:28",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "HID relevance 0,3 – đầu cơ, không có catalyst cơ bản"
+   },
+   {
+    "title": "VN-Index hồi phục với thanh khoản thấp (điểm tin chung)",
+    "date": "2026-09-22 15:19",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "Không liên quan trực tiếp"
+   }
+  ]
+ },
+ "DXP": {
+  "main": {
+   "title": "Cảng Đoạn Xá (DXP): 6T doanh thu gấp 2,3 lần, LN ròng gấp 2,5 lần; khuyến nghị MUA mục tiêu 26.500đ",
+   "summary": "Chỉ có 1 bài (tháng 10) nhắc DXP; chưa có tin KQKD quý 3 trên hệ thống.",
+   "date": "2026-10-05 11:56",
+   "source": "vietstock",
+   "sent": "positive",
+   "direct": 0.7
+  },
+  "items": []
+ },
+ "SHI": {
+  "main": {
+   "title": "Sơn Hải (SHI): ký tín dụng ~9.600 tỷ với VDB và MB cho cao tốc Tân Phú–Bảo Lộc (66km, 18.002 tỷ)",
+   "summary": "Dự kiến hoàn thành cuối 2027. Chỉ có 1 tin trong 90 ngày, chưa có KQKD quý 3 trên hệ thống.",
+   "date": "2026-08-12 16:08",
+   "source": "nguoiquansat",
+   "sent": "positive",
+   "direct": 0.7
+  },
+  "items": []
+ },
+ "CTG": {
+  "main": {
+   "title": "VietinBank: LNTT 9 tháng +33,9%, quý 3 13.688 tỷ (+29%) – dẫn đầu ngành, vượt Vietcombank",
+   "summary": "Lợi nhuận trước trích lập 60.300 tỷ (+29,8%); NIM thu nhập lãi thuần +27,7%; nợ xấu 1,2%, bao phủ 160%; giảm lãi vay tới 2%/năm.",
+   "date": "2026-11-05 16:10",
+   "source": "tinnhanhchungkhoan / vietnambiz",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "VietinBank 'soán ngôi' Vietcombank về lợi nhuận quý 3; VPBank vượt MB",
+    "date": "2026-11-03 09:15",
+    "source": "vietnambiz",
+    "sent": "positive",
+    "note": "LNTT quý 3 13.688 tỷ (+29%)"
+   },
+   {
+    "title": "6 ngân hàng đóng góp >80% mức tăng LN quý 3 toàn ngành (LNTT 28 NH: 106.704 tỷ, +21,3%)",
+    "date": "2026-11-05 07:59",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Chi phí dự phòng ngành +12.706 tỷ"
+   }
+  ]
+ },
+ "TPB": {
+  "main": {
+   "title": "TPBank: LN 9 tháng 7.464 tỷ (+23,4%), hoàn thành 72% kế hoạch; nợ xấu 1,52%",
+   "summary": "Tổng tài sản gần 600.000 tỷ (+17,9%); dư nợ 345.000 tỷ (+10,5%); thu dịch vụ +21,3%.",
+   "date": "2026-10-30 10:02",
+   "source": "vietstock",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "KQKD ngân hàng 9 tháng: NCB +141%, VPBank LNTT gần 30.000 tỷ (+47%), Techcombank +23,7% (TPB relevance 0,7)",
+    "date": "2026-10-30 09:35",
+    "source": "vietnambiz",
+    "sent": "positive",
+    "note": "Bối cảnh ngành tích cực"
+   },
+   {
+    "title": "Diễn đàn Thị trường vốn: nâng hạng FTSE mở cửa hút vốn ngoại; khối ngoại vẫn bán ròng ~4,8 tỷ USD/10 tháng",
+    "date": "2026-10-31 10:17",
+    "source": "tuoitre",
+    "sent": "neutral",
+    "note": "TPBank nhấn mạnh vai trò vốn quốc tế"
+   }
+  ]
+ },
+ "MBS": {
+  "main": {
+   "title": "MBS: LNST 9 tháng 907 tỷ (+10%, 61% kế hoạch) nhưng quý 3 LNTT -5%, môi giới lỗ gộp",
+   "summary": "Dư nợ margin lập đỉnh >16.500 tỷ; doanh thu môi giới quý 3 -65%.",
+   "date": "2026-10-30 11:47",
+   "source": "nguoiduatin",
+   "sent": "neutral",
+   "direct": 0.7
+  },
+  "items": [
+   {
+    "title": "Bức tranh ngành chứng khoán quý III: thanh khoản -55–60%, lợi nhuận phân hóa",
+    "date": "2026-10-28 06:48",
+    "source": "baodautu",
+    "sent": "negative",
+    "note": "MBS -5% LN; SSI, HSC, Vietcap dự báo giảm"
+   },
+   {
+    "title": "Dư nợ margin ngày 19/10: TCBS 54.740 tỷ; MBS 16.511 tỷ (+13,7% YTD)",
+    "date": "2026-10-19 21:06",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Margin giảm nhẹ trong quý 3"
+   }
+  ]
+ },
+ "VCI": {
+  "main": {
+   "title": "Vietcap (VCI): LNST quý 3 -13% (367 tỷ), 9T +7% (~959 tỷ); lỗ AFS chưa thực hiện >1.858 tỷ",
+   "summary": "Doanh thu quý 3 1.305 tỷ (-10%); tạm lỗ >600 tỷ ở KDH và FPT; nợ vay ngắn hạn +40% so với đầu năm.",
+   "date": "2026-10-21 16:29",
+   "source": "vietstock / vietnambiz / nguoiduatin",
+   "sent": "neutral",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "Vietcap tạm lỗ >600 tỷ đầu tư vào KDH và FPT",
+    "date": "2026-10-21 14:06",
+    "source": "vietnambiz",
+    "sent": "negative",
+    "note": "Danh mục AFS 13.618 tỷ"
+   },
+   {
+    "title": "Vietcap lãi >1.000 tỷ sau 9 tháng, danh mục ghi nhận lỗ chưa thực hiện lớn",
+    "date": "2026-10-21 10:55",
+    "source": "nguoiduatin",
+    "sent": "neutral",
+    "note": "Lỗ đánh giá lại AFS làm giảm vốn chủ sở hữu"
+   }
+  ]
+ },
+ "VIX": {
+  "main": {
+   "title": "VIX: lập đỉnh thanh khoản hơn 1 năm (105 triệu cp, 1.396 tỷ), khối ngoại gom ~33,8 triệu cp (452 tỷ)",
+   "summary": "Giá đóng cửa 13.100đ. Ngành chứng khoán bị 'sàng lọc' do lo ngại KQKD quý 3 và rủi ro margin.",
+   "date": "2026-11-05 15:50",
+   "source": "vietnambiz",
+   "sent": "positive",
+   "direct": 0.5
+  },
+  "items": [
+   {
+    "title": "Cổ phiếu chứng khoán trở lại guồng quay 'sàng lọc'? (VIX +139,8% năm 2025 nhưng giảm sâu 2026)",
+    "date": "2026-11-03 13:02",
+    "source": "vietstock",
+    "sent": "negative",
+    "note": "Rủi ro giải chấp, cổ phiếu cầm cố"
+   },
+   {
+    "title": "Lợi nhuận ngành chứng khoán quý 3: loạt ông lớn hụt hơn",
+    "date": "2026-10-27 22:00",
+    "source": "tuoitre",
+    "sent": "negative",
+    "note": "LN toàn ngành 6.903 tỷ vs 13.384 tỷ cùng kỳ"
+   }
+  ]
+ },
+ "SSI": {
+  "main": {
+   "title": "SSI: LN quý 3 dự báo giảm cùng ngành; margin ngành lập đỉnh 9 tháng 457.500 tỷ",
+   "summary": "Chưa có tin KQKD riêng của SSI trong danh sách mới nhất; ngành quý 3 LN 6.903 tỷ (giảm gần một nửa).",
+   "date": "2026-11-04 11:57",
+   "source": "nguoiduatin / tuoitre",
+   "sent": "neutral",
+   "direct": 0.4
+  },
+  "items": [
+   {
+    "title": "Lợi nhuận ngành chứng khoán quý 3: SSI, VPS, VPBankS đều giảm",
+    "date": "2026-10-27 22:00",
+    "source": "tuoitre",
+    "sent": "negative",
+    "note": "Chỉ 5 công ty LNTT >500 tỷ"
+   },
+   {
+    "title": "Công ty chứng khoán qua những lần chuyển vai",
+    "date": "2026-11-04 12:46",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "Bối cảnh ngành: margin chiếm 44,4% tài sản"
+   }
+  ]
+ },
+ "VCK": {
+  "main": {
+   "title": "VPS (VCK): LNST 9 tháng 3.233 tỷ (+26,1%), quý 3 LNTT 1.119 tỷ (-19,8%)",
+   "summary": "Dẫn đầu thị phần môi giới HOSE 11,54%; margin 25.363 tỷ (+14,9%); thu cho vay ký quỹ +68,3%; 1,62 triệu tài khoản.",
+   "date": "2026-10-21 18:41",
+   "source": "baodautu / vietstock / nguoiduatin",
+   "sent": "positive",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "VPS duy trì vị thế dẫn đầu thị phần, LNTT 9 tháng +26,7%",
+    "date": "2026-10-20 16:00",
+    "source": "vietstock",
+    "sent": "positive",
+    "note": "Biên LNTT quý 3 53,9%"
+   },
+   {
+    "title": "VPS tiếp tục báo lãi trước thuế >1.000 tỷ trong quý 3",
+    "date": "2026-10-20 15:37",
+    "source": "nguoiduatin",
+    "sent": "neutral",
+    "note": "Quý 3 giảm do thanh khoản thấp"
+   }
+  ]
+ },
+ "VDS": {
+  "main": {
+   "title": "Rồng Việt (VDS): lỗ quý 3 >105 tỷ, 9T LNST âm 62,5 tỷ; danh mục thấp hơn giá vốn ~442 tỷ",
+   "summary": "Doanh thu quý 3 -57%; chuẩn bị phát hành 27,2 triệu cp trả cổ tức 10:1; vợ Chủ tịch mua thêm 4 triệu cp.",
+   "date": "2026-10-18 15:28",
+   "source": "vietnambiz / tinnhanhchungkhoan",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Vợ Chủ tịch VDS đăng ký mua thêm 4 triệu cp (6/11–4/12), ~37 tỷ",
+    "date": "2026-10-31 14:13",
+    "source": "nguoiduatin",
+    "sent": "positive",
+    "note": "Hai lãnh đạo khác đăng ký bán"
+   },
+   {
+    "title": "Doanh thu 9T 663 tỷ; cho vay +24,7%; an toàn tài chính 418,4%",
+    "date": "2026-10-19 10:19",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "LNTT lũy kế âm 81 tỷ"
+   }
+  ]
+ },
+ "FTS": {
+  "main": {
+   "title": "FPTS: LNTT quý 3 -36% (106 tỷ); kế hoạch quý 4 đi lùi, LN năm khó đạt mục tiêu",
+   "summary": "Dự kiến cả năm LN 512 tỷ (thấp hơn 7% mục tiêu, -17% YoY); chính sách 'zero fee' và lãi suất cao ảnh hưởng môi giới. Chỉ có 1 tin trong 30 ngày.",
+   "date": "2026-10-30 19:17",
+   "source": "vietstock",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "FPTS (FTS) chuẩn bị làm thành viên bù trừ CCP từ Q1/2027",
+    "date": "2026-10-22 11:02",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Tin ngành, góp tối thiểu 20–30 tỷ"
+   }
+  ]
+ },
+ "AGR": {
+  "main": {
+   "title": "Agriseco (AGR): LNST quý 3 -57% (29 tỷ), chi phí lãi vay +483%; 9T LNTT 128,5 tỷ (-8%)",
+   "summary": "Doanh thu quý 3 170 tỷ (+8%) nhưng chi phí quản lý +85%, môi giới -57,8%; AFS giảm từ 125 tỷ còn ~40 tỷ; AGR 11.550đ (-24% YTD).",
+   "date": "2026-10-22 16:55",
+   "source": "nguoiduatin / vietnambiz / vietstock",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Agriseco giảm mạnh danh mục AFS, GMD và POW không còn được thuyết minh",
+    "date": "2026-10-23 20:28",
+    "source": "vietnambiz",
+    "sent": "negative",
+    "note": "Lợi nhuận 9T -9%"
+   },
+   {
+    "title": "Agriseco hoàn tất trả cổ tức 2025 (100:6), vốn lên >2.420 tỷ",
+    "date": "2026-10-22 17:30",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Pha loãng nhẹ"
+   }
+  ]
+ },
+ "CEO": {
+  "main": {
+   "title": "CEO Group: LNST quý 3 -23% (40 tỷ); tiền mặt giảm 79% còn 164 tỷ, nợ vay 2.859 tỷ",
+   "summary": "9T LNST 187 tỷ (+27%) chủ yếu nhờ lợi nhuận khác; doanh thu 9T đi ngang 993 tỷ; đầu tư mạnh CEOHomes Hana Garden, Sonasea Premier Nha Trang. Chỉ có 1 tin trong 30 ngày.",
+   "date": "2026-11-03 17:35",
+   "source": "nguoiduatin",
+   "sent": "neutral",
+   "direct": 0.7
+  },
+  "items": []
+ },
+ "DXG": {
+  "main": {
+   "title": "Đất Xanh (Bluemarq/DXG): LNST quý 3 -84%, doanh thu thấp nhất từ Q2/2023",
+   "summary": "Doanh thu quý 3 683 tỷ (-36%); 9T LNST giảm ~52%; khách hàng trả trước tăng 47% lên ~9.100 tỷ; tồn kho 16.330 tỷ, phải thu/cho vay cá nhân ~6.360 tỷ.",
+   "date": "2026-10-31 17:23",
+   "source": "vietstock / nguoiduatin",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Bluemarq: môi giới hụt hơi, hàng nghìn tỷ nằm ở khoản phải thu và cho vay",
+    "date": "2026-10-31 17:21",
+    "source": "nguoiduatin",
+    "sent": "negative",
+    "note": "Thực hiện 56,5% kế hoạch doanh thu năm"
+   },
+   {
+    "title": "Bluemarq cho Hội An Invest (DatXanhHomes Parkview) vay 358 tỷ",
+    "date": "2026-11-04 19:33",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Bất động sản dở dang toàn tập đoàn 11.949 tỷ"
+   }
+  ]
+ },
+ "IJC": {
+  "main": {
+   "title": "Becamex IJC: LNST quý 3 -47% (134 tỷ), doanh thu -77%; 9T LNST 321 tỷ (-19%), 59% kế hoạch",
+   "summary": "Doanh thu BĐS 9T 284 tỷ (27% kế hoạch); chào bán 251,8 triệu cp thu 2.518 tỷ, mới giải ngân 1.592 tỷ (còn 926 tỷ); dư nợ vay 1.692 tỷ (+42%).",
+   "date": "2026-11-05 06:50",
+   "source": "tinnhanhchungkhoan / vietstock",
+   "sent": "negative",
+   "direct": 0.7
+  },
+  "items": [
+   {
+    "title": "1,6 nghìn tỷ từ đợt chào bán – IJC giải ngân ra sao?",
+    "date": "2026-11-05 14:45",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Giảm vốn cho Sunflower II, Prince Town II, ưu tiên trả nợ ngân hàng"
+   },
+   {
+    "title": "IJC đối mặt áp lực hoàn thành kế hoạch BĐS, đẩy mạnh đầu tư hạ tầng giao thông",
+    "date": "2026-11-04 19:55",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "Tồn kho 6.145 tỷ; tập trung bán IJC Green City, Hòa Lợi"
+   }
+  ]
+ },
+ "DIG": {
+  "main": {
+   "title": "DIG: doanh thu quý 3 -43% (761 tỷ), LNST -64%; Chủ tịch hoàn tất mua 5 triệu cp (lên 4%)",
+   "summary": "9T doanh thu 1.519 tỷ, LNST 203 tỷ (+1%); kế hoạch 2026 doanh thu 3.000 tỷ, LNTT 600 tỷ (-27%). Gia đình Chủ tịch từng bị giải chấp mạnh, DIG về đáy 4 năm.",
+   "date": "2026-11-04 13:50",
+   "source": "vietstock / vietnambiz / tinnhanhchungkhoan",
+   "sent": "neutral",
+   "direct": 0.7
+  },
+  "items": [
+   {
+    "title": "Chủ tịch DIC Group gom xong 5 triệu cp DIG (12/10–2/11)",
+    "date": "2026-11-04 11:59",
+    "source": "vietnambiz",
+    "sent": "positive",
+    "note": "Gia đình sở hữu 5,87%"
+   },
+   {
+    "title": "Chủ tịch DIC Corp mua vào 5 triệu cp DIG",
+    "date": "2026-11-03 15:11",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "Cổ phiếu -40% từ đầu năm"
+   }
+  ]
+ },
+ "NHA": {
+  "main": {
+   "title": "NHA: LNST 9 tháng -96% (3,09 tỷ), doanh thu -53%; biên gộp quý 3 từ 39,6% xuống 13,1%",
+   "summary": "Hoàn thành 49% kế hoạch doanh thu, ~6% kế hoạch lợi nhuận; dòng tiền kinh doanh âm 69 tỷ; nợ vay +40% lên 387,5 tỷ.",
+   "date": "2026-10-16 09:22",
+   "source": "vietstock / tinnhanhchungkhoan",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "NHA cấn trừ gần 29 tỷ nợ Chủ tịch bằng nhà ở Đông Đồng Văn",
+    "date": "2026-10-22 10:22",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Giao dịch với bên liên quan"
+   },
+   {
+    "title": "NHA: lợi nhuận sau thuế 9 tháng giảm 96% khi hụt doanh thu xây dựng và BĐS",
+    "date": "2026-10-14 06:56",
+    "source": "tinnhanhchungkhoan",
+    "sent": "negative",
+    "note": "Nợ vay chiếm 51% vốn chủ sở hữu"
+   }
+  ]
+ },
+ "KBC": {
+  "main": {
+   "title": "Kinh Bắc (KBC): LNST quý 3 937 tỷ (gấp 3 lần), doanh thu +137%; 9T LNST -23%",
+   "summary": "9T doanh thu 5.112 tỷ (+25%), LNST 1.197 tỷ; dư nợ vay ~33.825 tỷ, vay mới lãi suất 15,5%/năm; FDI đăng ký 9T 50,36 tỷ USD hỗ trợ nhu cầu thuê đất KCN.",
+   "date": "2026-10-13 17:34",
+   "source": "tinnhanhchungkhoan / vietnambiz",
+   "sent": "positive",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Doanh nghiệp BĐS khu công nghiệp khởi sắc (KBC +200,5%, VGC +423,8% quý 3)",
+    "date": "2026-11-02 12:34",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Lũy kế 9T nhiều DN vẫn giảm"
+   },
+   {
+    "title": "Ông lớn BĐS công nghiệp phía Bắc vay vốn lãi suất 15,5%/năm",
+    "date": "2026-10-17 10:03",
+    "source": "vietnambiz",
+    "sent": "negative",
+    "note": "Áp lực chi phí vốn"
+   },
+   {
+    "title": "BĐS công nghiệp: 'của để dành' nhưng chưa chắc là cổ phiếu rẻ (KBC -34% YTD)",
+    "date": "2026-10-15 06:34",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "P/E KBC 20,5x; nhiều mã dưới MA200"
+   }
+  ]
+ },
+ "SMC": {
+  "main": {
+   "title": "SMC: chuyển lỗ thành lãi quý 3 (30,6 tỷ); 9T lãi 75 tỷ vs lỗ 160 tỷ; nợ xấu giảm từ 1.200 tỷ còn 154 tỷ",
+   "summary": "Doanh thu quý 3 1.238 tỷ (-21%); 9T 3.625 tỷ (-32,5%). Tuy nhiên miễn nhiệm Tổng giám đốc và Phó TGĐ tài chính (hiệu lực 5/11); Chủ tịch kiêm TGĐ; SMC 9.800đ dưới MA200.",
+   "date": "2026-11-02 17:00",
+   "source": "vietstock / tinnhanhchungkhoan",
+   "sent": "positive",
+   "direct": 0.75
+  },
+  "items": [
+   {
+    "title": "SMC miễn nhiệm Tổng giám đốc Nguyễn Quang Trung và Phó TGĐ tài chính",
+    "date": "2026-11-06 14:18",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "Biến động nhân sự ngay sau KQ quý 3"
+   },
+   {
+    "title": "Biến động thượng tầng tại SMC: Chủ tịch Phạm Hoàng Anh kiêm nhiệm TGĐ",
+    "date": "2026-11-06 12:14",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Cần theo dõi quản trị"
+   }
+  ]
+ },
+ "HAR": {
+  "main": {
+   "title": "HAR: không có tin nào trong 90 ngày",
+   "summary": "Hệ thống FinLens không có bài về HAR (kể cả bài nhắc mã relevance ≥0,3) – chưa có catalyst để xác nhận; cần kiểm tra công bố thông tin trực tiếp.",
+   "date": "2026-11-06 22:27",
+   "source": "FinLens (không có kết quả)",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": []
+ },
+ "TCD": {
+  "main": {
+   "title": "TCD: không có tin riêng trong 90 ngày – chỉ được nhắc ở tin BCG/BCR bị hủy tư cách công ty đại chúng (relevance 0,3)",
+   "summary": "Không có KQKD quý 3 hay công bố riêng của TCD trên hệ thống; tin nhắc mã không liên quan trực tiếp.",
+   "date": "2026-08-12 10:37",
+   "source": "vietstock",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": [
+   {
+    "title": "Bamboo Capital và BCG Land bị hủy tư cách công ty đại chúng (có nhắc TCD)",
+    "date": "2026-08-12 10:37",
+    "source": "vietstock",
+    "sent": "negative",
+    "note": "Relevance 0,3 – không phải tin của TCD, không tính vào chấm điểm"
+   }
+  ]
+ },
+ "HHV": {
+  "main": {
+   "title": "Đèo Cả (HHV): LNST 9 tháng 602 tỷ (+26%), hoàn thành 78,6% kế hoạch năm",
+   "summary": "Doanh thu 9T 2.991 tỷ (+15%), 67% kế hoạch. Rủi ro: lãi vay chưa trả >7.000 tỷ, nghĩa vụ nợ vay ròng ~24.200 tỷ.",
+   "date": "2026-11-02 20:06",
+   "source": "nguoiduatin",
+   "sent": "positive",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "BSC giữ MUA HHV, giá mục tiêu 12.300đ, P/B 0,4x",
+    "date": "2026-10-21 06:42",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Thấp hơn trung bình ngành xây dựng"
+   },
+   {
+    "title": "HHV ước lãi 9 tháng 564 tỷ, ~74% kế hoạch năm",
+    "date": "2026-10-16 14:09",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "BOT thu phí 1.835 tỷ (+13%); nghiên cứu danh mục PPP >417.000 tỷ"
+   },
+   {
+    "title": "Thấy gì từ bức tranh lợi nhuận DN xây dựng quý III (Đèo Cả, Fecon, Đạt Phương tăng mạnh)",
+    "date": "2026-11-02 17:42",
+    "source": "vietnambiz",
+    "sent": "positive",
+    "note": "Tin ngành; HHV relevance 0,7"
+   }
+  ]
+ },
+ "VCG": {
+  "main": {
+   "title": "Vinaconex (VCG): LNST quý 3 -89–91% (~306–371 tỷ), 9T -73%; dòng tiền kinh doanh âm 1.822 tỷ",
+   "summary": "Doanh thu quý 3 3.296 tỷ (-25,6%) do không còn lãi chuyển nhượng vốn; kế hoạch 2026 doanh thu 15.400 tỷ (-22%), LNST 1.037 tỷ (-73%).",
+   "date": "2026-10-30 11:12",
+   "source": "vietstock / nguoiduatin",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Dòng tiền kinh doanh âm >1.800 tỷ, Vinaconex dồn vốn vào đâu?",
+    "date": "2026-10-31 15:13",
+    "source": "nguoiduatin",
+    "sent": "negative",
+    "note": "Phải thu và tồn kho tăng; nợ vay giảm 18,2% còn 6.073 tỷ"
+   },
+   {
+    "title": "Đằng sau những công trường bận rộn của các nhà thầu xây dựng",
+    "date": "2026-11-06 14:42",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Backlog ngành +10–15% nhưng chi phí cát +15%, thép +10–13% gây áp lực"
+   }
+  ]
+ },
+ "HUT": {
+  "main": {
+   "title": "Tasco (HUT): LNST quý 3 -72% (138 tỷ), lãi vay 9 tháng 1.474 tỷ (~18 tỷ/ngày)",
+   "summary": "Doanh thu quý 3 10.430 tỷ (+14%), 9T 32.621 tỷ (+33%) nhưng LNTT 9T 585 tỷ (-25%, 54% kế hoạch); dư nợ vay 23.560 tỷ.",
+   "date": "2026-11-04 16:46",
+   "source": "nguoiduatin",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Tasco dự kiến thoái toàn bộ vốn BOT trong quý IV",
+    "date": "2026-10-27 11:18",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Phát hành 35,6 triệu trái phiếu chuyển đổi (~3.561 tỷ); bổ nhiệm Phó TGĐ"
+   },
+   {
+    "title": "BOT chiếm gần 10% tài sản (5,1 nghìn tỷ), Tasco rút khỏi mảng truyền thống để tập trung ô tô, giao thông",
+    "date": "2026-10-27 14:53",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Doanh thu BOT 6T -29%, LNST -37%"
+   }
+  ]
+ },
+ "FCN": {
+  "main": {
+   "title": "Fecon (FCN): chỉ có 1 tin – LNST quý 3 hơn 90 tỷ, gấp 6 lần cùng kỳ (tin ngành xây dựng)",
+   "summary": "Ngành xây dựng quý III được đầu tư công hỗ trợ (giá trị tăng thêm +~11%); Fecon, Đạt Phương, Đèo Cả tăng mạnh; Vinaconex, Hòa Bình giảm. Chưa có tin riêng về FCN trong 30 ngày.",
+   "date": "2026-11-02 17:42",
+   "source": "vietnambiz",
+   "sent": "positive",
+   "direct": 0.6
+  },
+  "items": []
+ },
+ "ABS": {
+  "main": {
+   "title": "Chứng khoán An Bình (ABS): LNTT 9 tháng 602 tỷ (gấp 4,6 lần), hoàn thành 100,3% kế hoạch năm",
+   "summary": "Doanh thu 941 tỷ (+176%) chủ yếu nhờ tự doanh (lãi FVTPL 411,8 tỷ); môi giới -59%; vốn điều lệ 3.011,5 tỷ, dự kiến niêm yết ABW trên HOSE 2027.",
+   "date": "2026-10-20 15:59",
+   "source": "vietstock / nguoiduatin / tinnhanhchungkhoan",
+   "sent": "positive",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "ABS lãi lớn nhờ tự doanh, vượt kế hoạch lợi nhuận cả năm",
+    "date": "2026-10-20 12:12",
+    "source": "nguoiduatin",
+    "sent": "positive",
+    "note": "Rủi ro: lợi nhuận phụ thuộc tự doanh, không bền vững"
+   },
+   {
+    "title": "ABS hoàn thành kế hoạch lợi nhuận năm sau 9 tháng; 3 mảng cốt lõi 189 tỷ (+5,4%)",
+    "date": "2026-10-20 11:14",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Cho vay ký quỹ +18,4% (124,5 tỷ)"
+   }
+  ]
+ },
+ "NAG": {
+  "main": {
+   "title": "NAG: không có tin riêng – chỉ có tin kinh tế Nghệ An (thu ngân sách vượt 22,3% dự toán, xuất khẩu +52,7%)",
+   "summary": "Chưa có KQKD quý 3 hay công bố riêng của NAG trên hệ thống (relevance tin 0,7, tác động gián tiếp).",
+   "date": "2026-11-03 07:09",
+   "source": "nguoiduatin",
+   "sent": "positive",
+   "direct": 0.2
+  },
+  "items": []
+ },
+ "BWE": {
+  "main": {
+   "title": "BIWASE (BWE): LNST quý 3 +45% (408 tỷ), 9T 957 tỷ (+28%), vượt 24% kế hoạch lợi nhuận năm",
+   "summary": "Doanh thu quý 3 1.269 tỷ (+40%); tổng tài sản 17.181 tỷ (+13%), vốn chủ +27%; đấu nối thêm >15.000 khách hàng, sản lượng nước +27%.",
+   "date": "2026-10-28 14:28",
+   "source": "vietstock / tinnhanhchungkhoan",
+   "sent": "positive",
+   "direct": 0.9
+  },
+  "items": [
+   {
+    "title": "BIWASE bứt phá 9 tháng: LNST hợp nhất 909 tỷ (+26%), vượt 18% kế hoạch cả năm",
+    "date": "2026-10-08 15:24",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Thất thoát nước ở mức tốt nhất"
+   }
+  ]
+ },
+ "L40": {
+  "main": {
+   "title": "L40: không có tin nào trong 90 ngày",
+   "summary": "Hệ thống FinLens không có bài về L40 (kể cả bài nhắc mã) – chưa có catalyst để xác nhận.",
+   "date": "2026-11-06 22:28",
+   "source": "FinLens (không có kết quả)",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": []
+ },
+ "DL1": {
+  "main": {
+   "title": "DL1: không có tin nào trong 90 ngày",
+   "summary": "Hệ thống FinLens không có bài về DL1 (kể cả bài nhắc mã) – chưa có catalyst để xác nhận.",
+   "date": "2026-11-06 22:28",
+   "source": "FinLens (không có kết quả)",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": []
+ },
+ "OGC": {
+  "main": {
+   "title": "Ocean Group (OGC): bị pha loãng tại OCH từ 55,6% xuống 33,7%, mất quyền kiểm soát; vẫn trong diện cảnh báo",
+   "summary": "Chưa có tin riêng về KQKD OGC; tin nhắc mã (relevance 0,3) về OCH phát hành riêng lẻ 1.300 tỷ cho Leadvisors Capital và OGC vẫn nằm trong diện cảnh báo do lỗ/kiểm toán ngoại trừ.",
+   "date": "2026-10-12 15:41",
+   "source": "theleader / tinnhanhchungkhoan",
+   "sent": "negative",
+   "direct": 0.3
+  },
+  "items": [
+   {
+    "title": "OCH huy động 1.300 tỷ để mua cổ phần IDS Equity Holdings",
+    "date": "2026-10-09 10:21",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "Vốn điều lệ OCH lên 3.300 tỷ; relevance OGC 0,3"
+   },
+   {
+    "title": "Cổ phiếu PMG, APH, ASP ra khỏi diện cảnh báo; OGC vẫn giữ nguyên diện cảnh báo",
+    "date": "2026-09-10 16:12",
+    "source": "tinnhanhchungkhoan",
+    "sent": "negative",
+    "note": "Cảnh báo do thua lỗ/kiểm toán ngoại trừ"
+   }
+  ]
+ },
+ "SHS": {
+  "main": {
+   "title": "SHS: chưa có tin KQKD riêng trong danh sách; nằm trong khảo sát Best Retail Brokers 2026 và nhóm chứng khoán chịu áp lực",
+   "summary": "Khảo sát: SHS 23,3% lượt phản hồi (thứ 2, sau KAFI 43,1%); kết quả công bố 12/11/2026. Ngành chứng khoán quý 3: thanh khoản giảm, lợi nhuận phân hóa.",
+   "date": "2026-10-30 16:45",
+   "source": "vietnambiz",
+   "sent": "neutral",
+   "direct": 0.2
+  },
+  "items": [
+   {
+    "title": "Best Retail Brokers 2026: còn 2 ngày, Pinetree 24,1%, SHS 14,3%",
+    "date": "2026-10-28 13:45",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Tin hình ảnh, không phải KQKD"
+   },
+   {
+    "title": "SHS, Pinetree, DNSE, Yuanta dẫn đầu lượng khách hàng tham gia khảo sát",
+    "date": "2026-10-26 11:45",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Khảo sát không phản ánh mức độ hài lòng"
+   },
+   {
+    "title": "Cổ phiếu chứng khoán trở lại guồng quay 'sàng lọc'? (SHS relevance 0,7)",
+    "date": "2026-11-03 13:02",
+    "source": "vietstock",
+    "sent": "negative",
+    "note": "Rủi ro margin, KQKD quý 3"
+   }
+  ]
+ },
+ "VND": {
+  "main": {
+   "title": "VNDirect: LNST quý 3 -64,5% (329,5 tỷ), môi giới -70%, tự doanh -53%; 9T +4,6% nhờ hoàn nhập dự phòng",
+   "summary": "9T LNST 1.757 tỷ (+4,6%), 73% kế hoạch; doanh thu quý 3 1.715 tỷ (-22,6%); tổng tài sản -11,6% còn 45.636 tỷ.",
+   "date": "2026-10-22 16:15",
+   "source": "vietstock / nguoiduatin",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "Lợi nhuận loạt DN lớn suy giảm hai chữ số quý III: VND, VPX giảm >60%",
+    "date": "2026-10-29 16:18",
+    "source": "vietnambiz",
+    "sent": "negative",
+    "note": "Gần một nửa DN công bố BCTC lợi nhuận giảm hoặc đi ngang"
+   },
+   {
+    "title": "VNDirect lãi 9 tháng tăng nhờ hoàn nhập dự phòng",
+    "date": "2026-10-22 10:49",
+    "source": "nguoiduatin",
+    "sent": "neutral",
+    "note": "Chất lượng lợi nhuận thấp (một lần)"
+   }
+  ]
+ },
+ "HCM": {
+  "main": {
+   "title": "HSC (HCM): LNST quý 3 -32,5% (297 tỷ), môi giới -70%; 9T LNST 861 tỷ tăng nhẹ",
+   "summary": "Doanh thu quý 3 1.244 tỷ (-25%), 9T 3.945 tỷ (+6%); tăng gấp 3 lần khoản đầu tư VPB lên ~445 tỷ.",
+   "date": "2026-10-21 06:42",
+   "source": "vietnambiz / nguoiduatin",
+   "sent": "negative",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "HSC lãi gần 300 tỷ, Tổng Giám đốc nhận lương 900 triệu/tháng",
+    "date": "2026-10-21 16:20",
+    "source": "nguoiduatin",
+    "sent": "neutral",
+    "note": "Tin quản trị/lương"
+   },
+   {
+    "title": "TP.HCM bổ sung tối đa 1.800 tỷ vào Quỹ đầu tư mạo hiểm 2027–2035 (HCM relevance 0,7)",
+    "date": "2026-10-29 15:41",
+    "source": "baodautu",
+    "sent": "positive",
+    "note": "Tin chính sách địa phương, tác động gián tiếp"
+   }
+  ]
+ },
+ "VFS": {
+  "main": {
+   "title": "VinFast (VFS): đặt mục tiêu Ấn Độ là 1 trong 2 thị trường lớn nhất châu Á; châu Á 90% doanh số toàn cầu năm 2030",
+   "summary": "Hiện ~90% xe bàn giao tại Việt Nam; doanh số quốc tế 6T 2026 ~12.700 xe vs ~116.000 xe trong nước; 75 đại lý Ấn Độ cuối 2026. Tập đoàn Vingroup 9T bàn giao >211.000 xe (+91%).",
+   "date": "2026-10-29 14:20",
+   "source": "vietnambiz / saigongiaiphong",
+   "sent": "positive",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "VinFast VF 8 thế hệ mới trang bị ADAS, ưu đãi 5% còn 854 triệu",
+    "date": "2026-10-29 20:35",
+    "source": "saigongiaiphong",
+    "sent": "positive",
+    "note": "Miễn phí sạc tối đa 10 lượt/tháng đến 10/2/2029"
+   },
+   {
+    "title": "Lợi thế khi chuyển sang VinFast VF 6: bảo hành 7 năm, ~450 xưởng dịch vụ",
+    "date": "2026-10-29 16:49",
+    "source": "saigongiaiphong",
+    "sent": "positive",
+    "note": "Ưu đãi 9% giá niêm yết"
+   },
+   {
+    "title": "Vingroup lãi kỷ lục 43.700 tỷ 9 tháng; VinFast bàn giao 177.697 xe nội địa (+71%)",
+    "date": "2026-11-02 13:39",
+    "source": "saigongiaiphong",
+    "sent": "positive",
+    "note": "Tin tập đoàn mẹ, tác động tích cực gián tiếp"
+   }
+  ]
+ },
+ "VPX": {
+  "main": {
+   "title": "VPBankS (VPX): phát hành 843,75 triệu cp thưởng 100:45 (vốn lên 27.187 tỷ, >1 tỷ USD); chào bán 6.000 tỷ trái phiếu",
+   "summary": "9T doanh thu ~10.660 tỷ, LNTT 3.516 tỷ (+8%, 54,5% kế hoạch); margin ~40.000 tỷ (+17%), thứ 2 toàn ngành; quý 3 LN giảm >60% theo VND.",
+   "date": "2026-11-06 15:15",
+   "source": "nguoiduatin / saigongiaiphong / tinnhanhchungkhoan",
+   "sent": "positive",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "VPBankS đón đầu nhu cầu quản lý gia sản (Wealth)",
+    "date": "2026-11-03 10:38",
+    "source": "saigongiaiphong",
+    "sent": "positive",
+    "note": "Tổng tài sản >83.000 tỷ (+14%)"
+   },
+   {
+    "title": "Sự kiện chứng khoán 7/11: VPX thông qua phát hành tăng vốn 100:45",
+    "date": "2026-11-06 18:16",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Cổ phiếu thưởng, không phải vốn mới"
+   },
+   {
+    "title": "Lợi nhuận loạt DN lớn giảm hai chữ số quý III: VPX giảm >60%",
+    "date": "2026-10-29 16:18",
+    "source": "vietnambiz",
+    "sent": "negative",
+    "note": "Rủi ro lợi nhuận quý 3 yếu"
+   }
+  ]
+ },
+ "DGC": {
+  "main": {
+   "title": "Hóa chất Đức Giang (DGC): LNST quý 3 -37% (507 tỷ), 9T -45,9% (1.369 tỷ), khai trường 25 vẫn tạm dừng điều tra",
+   "summary": "Doanh thu 9T 7.009 tỷ (-17,7%); phải dùng quặng nhập khẩu làm tăng giá vốn; đã hoàn thành ~86% kế hoạch lợi nhuận năm.",
+   "date": "2026-10-29 20:31",
+   "source": "vietnambiz / tinnhanhchungkhoan",
+   "sent": "negative",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "DGC: lợi nhuận 9 tháng giảm 45,9% khi khai trường 25 dừng hoạt động",
+    "date": "2026-10-29 13:29",
+    "source": "tinnhanhchungkhoan",
+    "sent": "negative",
+    "note": "Doanh thu quý 3 2.469 tỷ (-12,3%)"
+   },
+   {
+    "title": "Tập đoàn Đèo Cả xử lý vướng mắc nhiều công trường giao thông miền Trung",
+    "date": "2026-10-29 17:39",
+    "source": "baodautu",
+    "sent": "neutral",
+    "note": "Bị gắn nhầm mã DGC (tin về Đèo Cả/HHV) – không tính vào chấm điểm"
+   }
+  ]
+ },
+ "POW": {
+  "main": {
+   "title": "PV Power (POW): LNST 9 tháng 6.899 tỷ (gấp 3,2 lần), quý 3 2.073 tỷ (+118,6%)",
+   "summary": "Doanh thu 9T 49.406 tỷ (+94,5%); quý 3 16.772 tỷ (+113,5%); sản lượng điện +44%, vượt 21% kế hoạch 9 tháng (19.329 triệu kWh).",
+   "date": "2026-11-03 10:53",
+   "source": "baodautu / tinnhanhchungkhoan",
+   "sent": "positive",
+   "direct": 0.95
+  },
+  "items": [
+   {
+    "title": "9 tháng, LNST PV Power xấp xỉ 7.000 tỷ đồng",
+    "date": "2026-11-04 09:35",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Lợi nhuận cổ đông mẹ 6.434 tỷ (gần gấp 3,5 lần)"
+   },
+   {
+    "title": "PV Power: 9 tháng lợi nhuận sau thuế tăng hơn 3 lần",
+    "date": "2026-11-03 10:53",
+    "source": "baodautu",
+    "sent": "positive",
+    "note": "Sản lượng điện huy động là động lực chính"
+   }
+  ]
+ },
+ "VTP": {
+  "main": {
+   "title": "Viettel Post (VTP): chưa có tin KQKD riêng – chỉ có tin đấu giá tài sản bà Trương Mỹ Lan (gắn nhầm mã, relevance 0,8)",
+   "summary": "Tin không liên quan tới hoạt động của VTP; hệ thống chỉ có 1 bài trong 30 ngày.",
+   "date": "2026-10-22 16:48",
+   "source": "vietstock",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": [
+   {
+    "title": "Bán đấu giá biệt thự của bà Trương Mỹ Lan (giá khởi điểm >334 tỷ)",
+    "date": "2026-10-22 16:48",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Gắn nhầm mã VTP – không tính vào chấm điểm"
+   }
+  ]
+ },
+ "MST": {
+  "main": {
+   "title": "MST: Hà Nội chọn Sun Group (Mặt trời Thủ đô) làm nhà đầu tư dự án tái thiết Hồ Gươm, tổng vốn 22.229 tỷ",
+   "summary": "Quy mô nghiên cứu 66,82ha (sử dụng đất 30,82ha); trung tâm thương mại ngầm và cải tạo cảnh quan. Tin MST relevance 0,9 nhưng là công ty Mặt trời Thủ đô (Sun Group), cần xác minh liên hệ với MST niêm yết.",
+   "date": "2026-10-28 16:46",
+   "source": "theleader",
+   "sent": "positive",
+   "direct": 0.3
+  },
+  "items": []
+ },
+ "CTR": {
+  "main": {
+   "title": "Viettel Construction (CTR): doanh thu 9T 12.186 tỷ (+22%), LNST 505 tỷ (+16%); ký mới hợp đồng xây dựng +76%",
+   "summary": "Quý 3 doanh thu 4.227 tỷ (+6,6%), LNST 183 tỷ (+8,6%); tiền ~4.200 tỷ nhưng nợ phải trả +22% lên 7.476 tỷ; hoàn thành ~79% kế hoạch doanh thu.",
+   "date": "2026-10-27 13:01",
+   "source": "nguoiduatin / vietstock / tinnhanhchungkhoan",
+   "sent": "positive",
+   "direct": 0.85
+  },
+  "items": [
+   {
+    "title": "CTR đạt 617 tỷ LNTT 9 tháng, +13%",
+    "date": "2026-10-15 18:02",
+    "source": "tinnhanhchungkhoan",
+    "sent": "neutral",
+    "note": "CTR 68.100đ, xu hướng giảm ngắn hạn"
+   },
+   {
+    "title": "Tăng trưởng doanh thu 23%: xây dựng +37%, dịch vụ kỹ thuật +51%",
+    "date": "2026-10-15 14:30",
+    "source": "vietstock",
+    "sent": "positive",
+    "note": "LNTT +13% chậm hơn doanh thu"
+   }
+  ]
+ },
+ "HHS": {
+  "main": {
+   "title": "HHS: không có tin riêng trong 30 ngày",
+   "summary": "Hệ thống FinLens chưa có bài về HHS trong 30 ngày – chưa có catalyst để xác nhận.",
+   "date": "2026-11-06 22:28",
+   "source": "FinLens (không có kết quả)",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": []
+ },
+ "DMX": {
+  "main": {
+   "title": "Điện Máy Xanh (DMX): LNST quý 3 +104,7% (2.825 tỷ), 9T 7.701 tỷ (+83%), hoàn thành 99% kế hoạch năm",
+   "summary": "Doanh thu quý 3 34.180 tỷ (+21,8%), 9T 99.460 tỷ; mục tiêu LNST 2026 10.500 tỷ (+83%); mở rộng Indonesia; tổng tài sản 74.288 tỷ (+30,5%).",
+   "date": "2026-10-29 19:54",
+   "source": "nguoiduatin / vietnambiz",
+   "sent": "positive",
+   "direct": 0.95
+  },
+  "items": [
+   {
+    "title": "DMX xoay trục tăng trưởng: Indonesia và giải pháp tài chính, dự án House of Future",
+    "date": "2026-10-29 20:33",
+    "source": "vietnambiz",
+    "sent": "positive",
+    "note": "Mục tiêu 2030: nhân đôi doanh thu, nhân ba lợi nhuận"
+   },
+   {
+    "title": "Chương trình trái phiếu kèm chứng quyền cho 15 lãnh đạo (giá thực hiện 74.000đ, tối đa 126,7 triệu cp)",
+    "date": "2026-10-30 14:30",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Pha loãng tối đa 10%, gắn với hiệu suất so với VN30"
+   }
+  ]
  }
 }
