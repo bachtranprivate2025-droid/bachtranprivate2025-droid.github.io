@@ -138,3 +138,7 @@ SHS|NONE:-:chưa kéo
 VFS|NONE:-:chưa kéo
 DGC|NONE:-:chưa kéo
 MST|NONE:-:chưa kéo
+PGI|NONE:-:chưa kéo
+HPA|NONE:-:chưa kéo
+NTL|NONE:-:chưa kéo
+KHG|NONE:-:chưa kéo

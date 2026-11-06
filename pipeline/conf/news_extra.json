@@ -4033,5 +4033,302 @@
     "note": "Ghi chú: không có tin"
    }
   ]
+ },
+ "TLG": {
+  "main": {
+   "title": "Thiên Long: Kokuyo sẽ chào mua thêm 18,19% (lên 65,01%), gia đình sáng lập rút khỏi HĐQT",
+   "summary": "Kokuyo nắm 46,82% sẽ chào mua thêm 18,19% để TLG thành công ty con; ĐHĐCĐ bất thường 7/12/2026, 5/9 thành viên HĐQT miễn nhiệm hiệu lực 1/1/2027. 9T LNST 423 tỷ (+12%), đạt 96% kế hoạch.",
+   "date": "2026-11-06 22:41",
+   "source": "vietstock / vietnambiz",
+   "sent": "positive",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "Gia đình Cô Gia Thọ rút khỏi HĐQT, ĐHĐCĐ bất thường 7/12",
+    "date": "2026-11-06",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "5/9 HĐQT miễn nhiệm từ 1/1/2027; ông Thọ làm Chủ tịch danh dự"
+   },
+   {
+    "title": "9T doanh thu 3.621 tỷ (+12%), LNST 423 tỷ (+12%), đạt 96% kế hoạch lợi nhuận",
+    "date": "2026-11-06",
+    "source": "nguoiduatin",
+    "sent": "positive",
+    "note": "Q3 TTM: ROE 19,2%, P/E 10,6"
+   },
+   {
+    "title": "Dòng tiền: NN bán ròng 11,3 tỷ/10 phiên",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "negative",
+    "note": "Áp lực bán NN trước tin chào mua"
+   }
+  ]
+ },
+ "NTL": {
+  "main": {
+   "title": "Lideco lỗ Q3 ~76,6 tỷ do trích lập dự phòng chứng khoán kinh doanh ~101 tỷ",
+   "summary": "Q3 lỗ ~76,6 tỷ, 9T lỗ 55,5 tỷ; dòng tiền kinh doanh âm ~644 tỷ, tiền mặt giảm 84% còn 83 tỷ, nợ vay ngắn hạn 216 tỷ. Giá -34% từ đầu năm.",
+   "date": "2026-10-28",
+   "source": "báo chí tổng hợp",
+   "sent": "negative",
+   "direct": 0.8
+  },
+  "items": [
+   {
+    "title": "Dự phòng ~101 tỷ cho cổ phiếu TCH, PAN, HHS",
+    "date": "2026-10-28",
+    "source": "báo chí",
+    "sent": "negative",
+    "note": "Nguyên nhân chính khoản lỗ Q3"
+   },
+   {
+    "title": "Dòng tiền kinh doanh âm ~644 tỷ, tiền mặt giảm 84%",
+    "date": "2026-10-27",
+    "source": "báo chí",
+    "sent": "negative",
+    "note": "Rủi ro thanh khoản"
+   },
+   {
+    "title": "Cổ phiếu giảm 34% từ đầu năm",
+    "date": "2026-10-27",
+    "source": "báo chí",
+    "sent": "negative",
+    "note": "TTM EPS -452đ, P/B 0,94"
+   }
+  ]
+ },
+ "DXS": {
+  "main": {
+   "title": "Môi giới BĐS khó khăn: tiêu thụ sơ cấp -66% Q3, LN bán niên DXS -40%",
+   "summary": "Đất nền chật vật tìm đầu ra, cung-cầu BĐS lệch pha; DXS TTM LNST -64% dù doanh thu +47%. NN bán ròng 28,3 tỷ/10 phiên.",
+   "date": "2026-11-04",
+   "source": "tinnhanhchungkhoan / vietnambiz",
+   "sent": "negative",
+   "direct": 0.6
+  },
+  "items": [
+   {
+    "title": "Đất nền chật vật tìm đầu ra, tiêu thụ sơ cấp -66% Q3",
+    "date": "2026-11-04",
+    "source": "tinnhanhchungkhoan",
+    "sent": "negative",
+    "note": "Ảnh hưởng trực tiếp mảng môi giới"
+   },
+   {
+    "title": "Cung-cầu BĐS lệch pha",
+    "date": "2026-10-29",
+    "source": "báo chí",
+    "sent": "negative",
+    "note": "Thanh khoản thị trường thấp"
+   },
+   {
+    "title": "Khó khăn bủa vây doanh nghiệp môi giới BĐS, LN bán niên DXS -40%",
+    "date": "2026-10-25",
+    "source": "vietnambiz",
+    "sent": "negative",
+    "note": "P/B 0,32"
+   }
+  ]
+ },
+ "KHG": {
+  "main": {
+   "title": "Khải Hoàn Land: ra mắt Khải Hoàn Imperial (Thuận An), chính sách bán hàng mới",
+   "summary": "Dự án 2 tháp 41 tầng; Khải Hoàn Prime ưu đãi nhận nhà trước trả tiền sau, lãi 0% 18 tháng, bảo lãnh MB. NN mua ròng 4,46 tỷ, signal Accumulation. TTM doanh thu +75%, LNST +26%.",
+   "date": "2026-10-25",
+   "source": "báo chí BĐS",
+   "sent": "positive",
+   "direct": 0.6
+  },
+  "items": [
+   {
+    "title": "Thuận An xuất hiện biểu tượng sống mới (Khải Hoàn Imperial)",
+    "date": "2026-11-02",
+    "source": "báo chí BĐS",
+    "sent": "positive",
+    "note": "Quảng bá dự án"
+   },
+   {
+    "title": "Khải Hoàn Prime: nhận nhà trước, trả tiền sau 11%, lãi 0% 18 tháng",
+    "date": "2026-10-20",
+    "source": "báo chí BĐS",
+    "sent": "positive",
+    "note": "Bảo lãnh MB"
+   },
+   {
+    "title": "Dòng tiền: NN mua ròng 4,46 tỷ, smart_streak 3",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "positive",
+    "note": "P/E 24, P/B 0,38"
+   }
+  ]
+ },
+ "HPA": {
+  "main": {
+   "title": "HPA tạm ứng cổ tức 18% (513 tỷ), nhưng Q3 LNST -16%",
+   "summary": "Trả 27/11 (HPG nhận 434 tỷ). Q3 DT 1.685 tỷ (-19%), LNST 300 tỷ (-16%); 9T đạt 70% KH doanh thu, 94% KH LNST. P/E 6,3, ROE 26%.",
+   "date": "2026-10-30",
+   "source": "báo chí",
+   "sent": "neutral",
+   "direct": 0.6
+  },
+  "items": [
+   {
+    "title": "Tạm ứng cổ tức 18% bằng tiền, chi 513 tỷ, trả 27/11",
+    "date": "2026-10-30",
+    "source": "báo chí",
+    "sent": "positive",
+    "note": "HPG nhận 434 tỷ"
+   },
+   {
+    "title": "Q3 doanh thu 1.685 tỷ (-19%), LNST 300 tỷ (-16%)",
+    "date": "2026-10-30",
+    "source": "báo chí",
+    "sent": "negative",
+    "note": "9T đạt 94% KH LNST"
+   },
+   {
+    "title": "Dòng tiền: smart money bán ròng 3,84 tỷ, Bearish Divergence",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "negative",
+    "note": ""
+   }
+  ]
+ },
+ "PGI": {
+  "main": {
+   "title": "PJICO: 9T doanh thu phí 3.970 tỷ (+13%), LNST 217 tỷ (+10%)",
+   "summary": "Q3 LNST 44 tỷ (+17%). TTM ROE 12,7%, P/E 8,3, cổ tức ~6%. Thanh khoản cực thấp.",
+   "date": "2026-10-30",
+   "source": "báo chí",
+   "sent": "positive",
+   "direct": 0.7
+  },
+  "items": [
+   {
+    "title": "Chỉ có 1 tin riêng trong 30 ngày (KQKD 9T)",
+    "date": "2026-10-30",
+    "source": "Finlens",
+    "sent": "neutral",
+    "note": "Không có tin riêng khác"
+   },
+   {
+    "title": "Định giá: P/E 8,3, P/B 1,04, cổ tức ~6%",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "neutral",
+    "note": "TTM Q3/2026"
+   },
+   {
+    "title": "Thanh khoản cực thấp – cần lưu ý khi vào lệnh",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "neutral",
+    "note": ""
+   }
+  ]
+ },
+ "HDA": {
+  "main": {
+   "title": "HDA: không có tin riêng trong 90 ngày",
+   "summary": "Giá tăng mạnh từ 7,3 (28/9) lên 10,1 không kèm tin. TTM LNST -47% dù DT +7%; P/E 11,8, P/B 0,79. Vốn hóa ~307 tỷ, thanh khoản thấp.",
+   "date": "2026-11-06",
+   "source": "Finlens",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": [
+   {
+    "title": "Không có tin nhắc tới HDA trong 90 ngày",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "neutral",
+    "note": "Tăng giá không có catalyst công bố"
+   },
+   {
+    "title": "TTM LNST -47% YoY, biên LN ròng 7%",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "negative",
+    "note": "Q3/2026"
+   },
+   {
+    "title": "Định giá P/E 11,8, P/B 0,79, EV/EBITDA 8,5",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "neutral",
+    "note": ""
+   }
+  ]
+ },
+ "HTN": {
+  "main": {
+   "title": "HTN: không có tin doanh nghiệp riêng; smart money bán ròng 3 phiên",
+   "summary": "Tin 90 ngày chỉ liên quan gián tiếp (cấp sổ NƠXH Hưng Thịnh; chuỗi Hồng Trà Ngô Gia trùng ticker, không phải HTN). TTM DT -42%, LNST -47%, P/E 37,8.",
+   "date": "2026-10-22",
+   "source": "Finlens",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": [
+   {
+    "title": "TP.HCM cấp giấy chứng nhận 750 căn NƠXH, ưu tiên 495 căn dự án Hưng Thịnh Tân Bình",
+    "date": "2026-10-22",
+    "source": "saigongiaiphong",
+    "sent": "neutral",
+    "note": "Tin ngành, liên quan gián tiếp"
+   },
+   {
+    "title": "TTM doanh thu -42%, LNST -47%, ROE 1,7%",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "negative",
+    "note": "Q3/2026"
+   },
+   {
+    "title": "Smart money bán ròng 3 phiên liên tiếp, signal Distribution",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "negative",
+    "note": "NN -0,59 tỷ/10 phiên"
+   }
+  ]
+ },
+ "FIT": {
+  "main": {
+   "title": "F.I.T: không có tin riêng 30 ngày; TTM lỗ",
+   "summary": "TTM LNST -132% YoY, EPS -198đ, P/B 0,17. Tin 90 ngày chỉ nhắc gián tiếp (DCL góp tài sản vào Benovas Capsule – công ty con FIT).",
+   "date": "2026-09-28",
+   "source": "Finlens",
+   "sent": "neutral",
+   "direct": 0.0
+  },
+  "items": [
+   {
+    "title": "Dược Cửu Long góp ~497 tỷ tài sản nhà máy cho Benovas Capsule (công ty con FIT)",
+    "date": "2026-09-28",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Liên quan gián tiếp"
+   },
+   {
+    "title": "ĐHĐCĐ 2026 phải triệu tập nhiều lần do không đủ tỷ lệ dự họp",
+    "date": "2026-08-11",
+    "source": "vietstock",
+    "sent": "negative",
+    "note": "FIT nằm trong danh sách"
+   },
+   {
+    "title": "TTM LNST âm, EPS -198đ, P/B 0,17",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "negative",
+    "note": ""
+   }
+  ]
  }
 }
