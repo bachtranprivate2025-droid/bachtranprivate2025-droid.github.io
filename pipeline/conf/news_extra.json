@@ -4330,5 +4330,71 @@
     "note": ""
    }
   ]
+ },
+ "BFC": {
+  "main": {
+   "title": "Phân bón Bình Điền: Q3 doanh thu 3.051 tỷ (+48%) nhưng LNST giảm còn 73 tỷ",
+   "summary": "9T doanh thu 8.095 tỷ, LNST 267 tỷ (-20%). Thu nhập lãnh đạo tăng mạnh dù lợi nhuận thụt lùi. Smart money bán ròng 4,94 tỷ/10 phiên (Bearish Divergence).",
+   "date": "2026-10-30 20:54",
+   "source": "nguoiduatin",
+   "sent": "neutral",
+   "direct": 0.5
+  },
+  "items": [
+   {
+    "title": "Lợi nhuận thụt lùi, thu nhập nhiều lãnh đạo vẫn tăng gấp đôi",
+    "date": "2026-10-30",
+    "source": "nguoiduatin",
+    "sent": "neutral",
+    "note": "TGĐ nhận 1,2 tỷ (+102%)"
+   },
+   {
+    "title": "Đo tác động của thuế xuất khẩu 0% với ngành phân bón",
+    "date": "2026-11-02",
+    "source": "tinnhanhchungkhoan",
+    "sent": "positive",
+    "note": "Tin ngành, BFC liên quan gián tiếp (relevance 0,4)"
+   },
+   {
+    "title": "Chứng khoán tuần 05–09/10: BFC tăng 13,74%",
+    "date": "2026-10-09",
+    "source": "vietstock",
+    "sent": "neutral",
+    "note": "Tin thị trường tuần"
+   }
+  ]
+ },
+ "BGE": {
+  "main": {
+   "title": "BCG Energy tính rút gần hết vốn tại nhà máy điện rác Củ Chi; LN Q3 ~283 tỷ gấp 4 lần",
+   "summary": "Giảm sở hữu từ 50% xuống 5% (chuyển nhượng 45%), nhà máy vốn ~6.400 tỷ, vận hành quý 1/2027. Tái cơ cấu danh mục điện gió/mặt trời. Cổ phiếu UPCoM thanh khoản rất thấp.",
+   "date": "2026-11-03 16:11",
+   "source": "vietstock",
+   "sent": "neutral",
+   "direct": 0.6
+  },
+  "items": [
+   {
+    "title": "Bamboo Capital thoái toàn bộ vốn tại BCG Land và BCG Energy trong kế hoạch tái cấu trúc",
+    "date": "2026-09-18",
+    "source": "theleader",
+    "sent": "neutral",
+    "note": "Cổ đông lớn thoái vốn BGE – rủi ro cung cổ phiếu"
+   },
+   {
+    "title": "Cổ đông BCG thông qua thoái BCR, BGE và phát hành 400 triệu cổ phiếu",
+    "date": "2026-09-17",
+    "source": "vietnambiz",
+    "sent": "neutral",
+    "note": "Lộ trình tái cấu trúc 2026–2030"
+   },
+   {
+    "title": "BGE tăng trần phiên 06/11 lên 3,1 với KL 3,0 triệu cp (tuần trước hầu như không có giao dịch)",
+    "date": "2026-11-06",
+    "source": "Finlens",
+    "sent": "positive",
+    "note": "Thanh khoản rất thấp, nhiều phiên KL = 0"
+   }
+  ]
  }
 }

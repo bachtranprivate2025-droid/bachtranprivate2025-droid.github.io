@@ -142,3 +142,5 @@ PGI|NONE:-:chưa kéo
 HPA|NONE:-:chưa kéo
 NTL|NONE:-:chưa kéo
 KHG|NONE:-:chưa kéo
+BFC|NONE:-:chưa kéo
+BGE|NONE:-:chưa kéo
