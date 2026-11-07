@@ -661,7 +661,7 @@ return '<td class="rs30" title="'+esc('RS so VN30 = giá đóng cửa mã / VN30
 '''
 RV_DEF = r'''
 const rvolWCell=r=>{const a=r.rvolW,W0=DATA.meta.rvWeeks||[];if(!a)return '<td class="rvol"></td>';
-const W=168,H=50,bw=22,gap=6,mx=Math.min(4,Math.max(2.5,...a.filter(x=>x!=null))),y=v=>H-2-(Math.min(v,mx)/mx)*(H-6);
+const W=130,H=44,bw=15,gap=6,mx=Math.min(4,Math.max(2.5,...a.filter(x=>x!=null))),y=v=>H-2-(Math.min(v,mx)/mx)*(H-6);
 const bars=a.map((v,i)=>({v,i})).reverse().map(({v,i},j)=>{if(v==null)return "";const w=W0[i]||{};const cls=v>=2?"rv3":v>=1.5?"rv2":v>=1?"rv1":"rv0";const t=r.t+' · tuần '+(w.from||"").split("-").reverse().slice(0,2).join("/")+'–'+(w.to||"").split("-").reverse().slice(0,2).join("/")+' ('+(w.n||"?")+' phiên) · RVOL tuần '+num(v,2)+'×';return '<rect class="'+cls+'" x="'+(j*(bw+gap)+1).toFixed(1)+'" y="'+y(v).toFixed(1)+'" width="'+bw+'" height="'+(H-2-y(v)).toFixed(1)+'" rx="2"><title>'+esc(t)+'</title></rect>';}).join("");
 const ln=(v,c)=>'<line class="'+c+'" x1="0" x2="'+W+'" y1="'+y(v).toFixed(1)+'" y2="'+y(v).toFixed(1)+'"/>';
 const svg='<svg class="rvsvg" viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="'+esc('RVOL weekly '+r.t)+'">'+ln(1,"ref1")+ln(1.5,"ref15")+bars+'</svg>';
