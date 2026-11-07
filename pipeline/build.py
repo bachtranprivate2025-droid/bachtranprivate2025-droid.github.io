@@ -419,18 +419,19 @@ for r in rows:
     for d in range(10):
         base = sum(v[d+1:d+21]) / 20
         rv.append(round(v[d] / base, 3) if base > 0 else None)
+    rvr = rv; rv = [None if x is None else min(x, 3.0) for x in rv]  # chặn 3× để 1 phiên đột biến không kéo TB/Δ5
     a5 = sum(rv[:5]) / 5; b5 = sum(rv[5:]) / 5; m10 = sum(rv) / 10
     sd = (sum((x - m10) ** 2 for x in rv) / 10) ** 0.5
-    r["rvol"] = rv
-    r["rvolStats"] = {"today": rv[0], "avg10": round(m10, 3), "avg5": round(a5, 3), "prev5": round(b5, 3),
+    r["rvol"] = rvr
+    r["rvolStats"] = {"today": rvr[0], "avg10": round(m10, 3), "avg5": round(a5, 3), "prev5": round(b5, 3),
                       "delta": round((a5 / b5 - 1) * 100, 1) if b5 else None, "sd": round(sd, 3),
-                      "hi15": sum(1 for x in rv if x >= 1.5), "hi2": sum(1 for x in rv if x >= 2),
+                      "hi15": sum(1 for x in rvr if x >= 1.5), "hi2": sum(1 for x in rvr if x >= 2),
                       "vol": v[0], "sma20": round(sum(v[1:21]) / 20)}
     r["volume"] = int(v[0])
     srt = sorted(rv); base9 = sum(srt[:9]) / 9; cnt1 = sum(1 for x in rv if x >= 1.0)
     qual = 10 * (0.5 * min(base9 / 1.5, 1) + 0.35 * cnt1 / 10 + 0.15 * (1 - min(sd / m10, 1) if m10 else 0))
     r["rvolStats"].update({"base9": round(base9, 3), "cnt1": cnt1, "score": round(qual, 1)})
-    r["rvolToday"] = rv[0]; r["rvolAvg10"] = round(qual + base9 / 1000, 4); r["rvolDelta"] = r["rvolStats"]["delta"]; r["rvolHi15"] = r["rvolStats"]["hi15"]
+    r["rvolToday"] = rvr[0]; r["rvolAvg10"] = round(qual + base9 / 1000, 4); r["rvolDelta"] = (r["rvolStats"]["delta"] or 0) if a5 >= 1.0 else (r["rvolStats"]["delta"] or 0) - 1000; r["rvolHi15"] = r["rvolStats"]["hi15"]
 
 # ---- RS vs VN30 (FinLens price history, 21 phiên gần nhất tới @D0@/2026) ----
 CLS = {t: [ST["close"][t][d] for d in SDD[:21]] for t in TICKERS + ["VN30"]}
