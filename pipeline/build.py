@@ -431,7 +431,7 @@ for r in rows:
     srt = sorted(rv); base9 = sum(srt[:9]) / 9; cnt1 = sum(1 for x in rv if x >= 1.0)
     qual = 10 * (0.5 * min(base9 / 1.5, 1) + 0.35 * cnt1 / 10 + 0.15 * (1 - min(sd / m10, 1) if m10 else 0))
     r["rvolStats"].update({"base9": round(base9, 3), "cnt1": cnt1, "score": round(qual, 1)})
-    r["rvolToday"] = rvr[0]; r["rvolAvg10"] = round(qual + base9 / 1000, 4); r["rvolDelta"] = (r["rvolStats"]["delta"] or 0) if a5 >= 1.0 else (r["rvolStats"]["delta"] or 0) - 1000; r["rvolHi15"] = r["rvolStats"]["hi15"]
+    r["rvolToday"] = rvr[0]; r["rvolAvg10"] = round(qual + base9 / 1000, 4); r["rvolDelta"] = (r["rvolStats"]["delta"] or 0) if (a5 >= 1.0 and cnt1 >= 5 and (r.get("smart") or 0) >= 0) else (r["rvolStats"]["delta"] or 0) - 1000; r["rvolHi15"] = r["rvolStats"]["hi15"]
 
 # ---- RS vs VN30 (FinLens price history, 21 phiên gần nhất tới @D0@/2026) ----
 CLS = {t: [ST["close"][t][d] for d in SDD[:21]] for t in TICKERS + ["VN30"]}
