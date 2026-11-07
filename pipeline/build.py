@@ -398,6 +398,10 @@ for t in TICKERS:
     rows.append(r)
 
 meta = copy.deepcopy(base["meta"]); meta["reportDate"] = ASOF; meta["revisionDate"] = datetime.date.today().isoformat(); meta["tdAsof"] = TD_ASOF; meta["weekly"] = WK; meta["flowDates"] = FLOW_DATES; meta["rvDates"] = SD[::-1][:20]
+_wk = {}
+for _d in SD[::-1][:32]:
+    _wk.setdefault(datetime.date.fromisoformat(_d).isocalendar()[:2], []).append(_d)
+meta["rvWeeks"] = [{"from": min(_wk[k]), "to": max(_wk[k]), "n": len(_wk[k])} for k in sorted(_wk, reverse=True)]
 data = {"rows": rows, "counts": {"rows": len(rows)}, "unique": len(rows),
         "overlap": sum(1 for v in LISTS.values() if len(v) > 1), "meta": meta}
 for k in base:
@@ -424,6 +428,18 @@ for r in rows:
         w = v[d+1:d+21]
         rv20.append(round(v[d] / (sum(w) / len(w)), 3) if len(w) >= 10 and sum(w) > 0 else None)
     r["rvol20"] = rv20
+    # RVOL weekly: KL TB/phiên của tuần chia TB các tuần trước có trong kho (tuần cũ nhất không có nền)
+    wk = {}
+    for i, d in enumerate(SDD[:32]):
+        k = datetime.date.fromisoformat(d).isocalendar()[:2]
+        wk.setdefault(k, []).append(i)
+    wks = sorted(wk, reverse=True)  # mới nhất trước
+    adv = [sum(v[i] for i in wk[k]) / len(wk[k]) for k in wks]
+    rvw = []
+    for j in range(len(wks)):
+        prev = adv[j+1:]
+        rvw.append(round(adv[j] / (sum(prev) / len(prev)), 3) if prev and sum(prev) > 0 else None)
+    r["rvolW"] = rvw
     rvr = rv; rv = [None if x is None else min(x, 3.0) for x in rv]  # chặn 3× để 1 phiên đột biến không kéo TB/Δ5
     a5 = sum(rv[:5]) / 5; b5 = sum(rv[5:]) / 5; m10 = sum(rv) / 10
     sd = (sum((x - m10) ** 2 for x in rv) / 10) ** 0.5
@@ -644,6 +660,13 @@ const sg=v=>(v>0?'+':v<0?'−':'')+num(Math.abs(v),2)+'%';
 return '<td class="rs30" title="'+esc('RS so VN30 = giá đóng cửa mã / VN30 (FinLens). Đường = % vượt/thua VN30 cộng dồn từ @RS0@; chấm xanh = phiên mã mạnh hơn VN30, chấm đỏ = yếu hơn. MA20 tính trên đường RS 20 phiên.')+'">'+svg+'<div class="flowline"><span class="'+(up?"up":"down")+'">'+sg(s.r10)+'</span> <span class="note">10 phiên</span></div><div class="note">@D0@: <span class="'+(s.today>0?"up":s.today<0?"down":"flat")+'">'+sg(s.today)+'</span> · thắng '+s.wins+'/10 phiên</div><div class="note">RS '+(s.aboveMa?'trên':'dưới')+' MA20 ('+sg(s.maGap)+')</div>'+(s.tag?'<div class="rvtag '+(s.tag==="RS gãy"?"rsTagBad":"rsTagGood")+'">'+esc(s.tag)+'</div>':'')+'</td>';};
 '''
 RV_DEF = r'''
+const rvolWCell=r=>{const a=r.rvolW,W0=DATA.meta.rvWeeks||[];if(!a)return '<td class="rvol"></td>';
+const W=168,H=50,bw=22,gap=6,mx=Math.min(4,Math.max(2.5,...a.filter(x=>x!=null))),y=v=>H-2-(Math.min(v,mx)/mx)*(H-6);
+const bars=a.map((v,i)=>({v,i})).reverse().map(({v,i},j)=>{if(v==null)return "";const w=W0[i]||{};const cls=v>=2?"rv3":v>=1.5?"rv2":v>=1?"rv1":"rv0";const t=r.t+' · tuần '+(w.from||"").split("-").reverse().slice(0,2).join("/")+'–'+(w.to||"").split("-").reverse().slice(0,2).join("/")+' ('+(w.n||"?")+' phiên) · RVOL tuần '+num(v,2)+'×';return '<rect class="'+cls+'" x="'+(j*(bw+gap)+1).toFixed(1)+'" y="'+y(v).toFixed(1)+'" width="'+bw+'" height="'+(H-2-y(v)).toFixed(1)+'" rx="2"><title>'+esc(t)+'</title></rect>';}).join("");
+const ln=(v,c)=>'<line class="'+c+'" x1="0" x2="'+W+'" y1="'+y(v).toFixed(1)+'" y2="'+y(v).toFixed(1)+'"/>';
+const svg='<svg class="rvsvg" viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="'+esc('RVOL weekly '+r.t)+'">'+ln(1,"ref1")+ln(1.5,"ref15")+bars+'</svg>';
+const L=a.find(x=>x!=null),P=a.slice(1).find(x=>x!=null),w0=W0[0]||{};const tc=L>=2?"rv3t":L>=1.5?"rv2t":L>=1?"rv1t":"muted";
+return '<td class="rvol" title="'+esc('RVOL weekly = KL TB/phiên của tuần chia KL TB/phiên của các tuần trước có trong kho (chỉ khoảng 6 tuần; tuần cũ nhất không có nền). Tuần mới nhất có thể chưa đủ 5 phiên.')+'">'+svg+'<div class="flowline"><span class="'+tc+'">'+(L==null?"–":num(L,2)+"×")+'</span> <span class="note">tuần '+(w0.from||"").split("-").reverse().slice(0,2).join("/")+' ('+(w0.n||"?")+' phiên)</span></div><div class="note">Tuần trước '+(P==null?"–":num(P,2)+"×")+'</div></td>';};
 const rvolCell=r=>{const a=r.rvol20||r.rvol,s=r.rvolStats;if(!a)return '<td class="rvol"></td>';
 const W=168,H=50,bw=6,gap=2.4,mx=Math.min(4,Math.max(2.5,...a.filter(x=>x!=null))),y=v=>H-2-(Math.min(v,mx)/mx)*(H-6);
 const bars=a.map((v,i)=>({v,i})).reverse().map(({v,i},j)=>{const d=(DATA.meta.rvDates||DATA.meta.flowDates)[i]||"";if(v==null)return "";const cls=v>=2?"rv3":v>=1.5?"rv2":v>=1?"rv1":"rv0";const t=r.t+' · '+d.split("-").reverse().slice(0,2).join("/")+' · RVOL '+num(v,2)+'×';return '<rect class="'+cls+'" x="'+(j*(bw+gap)+1).toFixed(1)+'" y="'+y(v).toFixed(1)+'" width="'+bw+'" height="'+(H-2-y(v)).toFixed(1)+'" rx="1"><title>'+esc(t)+'</title></rect>';}).join("");
@@ -705,8 +728,8 @@ rep("Chốt 23/10 · so 22/10, 16/10, 24/09/2026", "Chốt 02/11 · so 30/10, 26
 rep("cùng ngày: 23/10 so 22/10 và 16/10;", "cùng ngày: 02/11 so 30/10 và 26/10;")
 rep("cùng ngày 23/10/2026, so với 22/10 (Daily), 16/10 (W, 5 phiên), 24/09 (M, 21 phiên)", "cùng ngày 02/11/2026, so với 30/10 (Daily), 26/10 (W, 5 phiên), 02/10 (M, 21 phiên)")
 
-rep("""money(r,"prop","seriesTD","TD")+'""", """money(r,"prop","seriesTD","TD")+rvolCell(r)+rs30Cell(r)+'""")
-rep('<th class="money">Dòng tiền TD 10 phiên</th>', '<th class="money">Dòng tiền TD 10 phiên</th><th class="rvol rvsort" id="rvolHead" tabindex="0" title="Bấm để sắp xếp theo RVOL: phiên cuối → TB10 → Δ5 phiên → về mặc định">Relative RVOL 20 phiên <span id="rvolArrow">⇅</span></th><th class="rs30 rvsort" id="rsHead" tabindex="0" title="Bấm để sắp xếp: RS 10 phiên → RS phiên @D0@ → số phiên thắng VN30 → về mặc định">RS vs VN30 10 phiên <span id="rsArrow">⇅</span></th>')
+rep("""money(r,"prop","seriesTD","TD")+'""", """money(r,"prop","seriesTD","TD")+rvolCell(r)+rvolWCell(r)+rs30Cell(r)+'""")
+rep('<th class="money">Dòng tiền TD 10 phiên</th>', '<th class="money">Dòng tiền TD 10 phiên</th><th class="rvol rvsort" id="rvolHead" tabindex="0" title="Bấm để sắp xếp theo RVOL: phiên cuối → TB10 → Δ5 phiên → về mặc định">Relative RVOL 20 phiên <span id="rvolArrow">⇅</span></th><th class="rvol" title="RVOL theo tuần, kho hiện chỉ có khoảng 6 tuần">RVOL weekly</th><th class="rs30 rvsort" id="rsHead" tabindex="0" title="Bấm để sắp xếp: RS 10 phiên → RS phiên @D0@ → số phiên thắng VN30 → về mặc định">RS vs VN30 10 phiên <span id="rsArrow">⇅</span></th>')
 rep('<option value="prop">TD mua ròng</option></select>', '<option value="prop">TD mua ròng</option><option value="smart">Smart money (NN + TD)</option><option value="rvolToday">RVOL phiên @D0@ cao → thấp</option><option value="rvolAvg10">RVOL bền 10 phiên (điểm TB10) cao → thấp</option><option value="rvolRise3">RVOL 3 phiên tăng liên tiếp, mạnh và đều</option><option value="rvolDelta">RVOL Δ5 phiên tăng mạnh nhất</option><option value="rvolHi15">Số phiên RVOL ≥1,5×</option><option value="rs30_10">RS vs VN30 10 phiên mạnh nhất</option><option value="rs30_1">RS vs VN30 phiên @D0@</option><option value="rs30_wins">Số phiên thắng VN30</option></select>')
 rep('document.querySelector("#sort").addEventListener("change",render);', 'document.querySelector("#sort").addEventListener("change",()=>{rvArrow();render();});\n  const RVS=["rvolToday","rvolAvg10","rvolRise3","rvolDelta"],RVL={rvolToday:"↓ phiên cuối",rvolAvg10:"↓ điểm bền",rvolRise3:"↓ 3 phiên tăng đều",rvolDelta:"↓ Δ5"};\n  function rvArrow(){const v=document.querySelector("#sort").value,a=document.querySelector("#rvolArrow"),b=document.querySelector("#rsArrow");if(a)a.textContent=RVL[v]||(v==="rvolHi15"?"↓ số phiên ≥1,5×":"⇅");if(b)b.textContent=RSL[v]||"⇅";}\n  const RSS=["rs30_10","rs30_1","rs30_wins"],RSL={rs30_10:"↓ 10 phiên",rs30_1:"↓ @D0@",rs30_wins:"↓ số phiên thắng"};\n  function rsCycle(){const s=document.querySelector("#sort"),i=RSS.indexOf(s.value);s.value=i<0?RSS[0]:(i===RSS.length-1?"rankScore":RSS[i+1]);rvArrow();render();}\n  const rsh=document.querySelector("#rsHead");if(rsh){rsh.addEventListener("click",rsCycle);rsh.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();rsCycle();}});}\n  function rvCycle(){const s=document.querySelector("#sort"),i=RVS.indexOf(s.value);s.value=i<0?RVS[0]:(i===RVS.length-1?"rankScore":RVS[i+1]);rvArrow();render();}\n  const rvh=document.querySelector("#rvolHead");if(rvh){rvh.addEventListener("click",rvCycle);rvh.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();rvCycle();}});}')
 rep("</style>", ".rvol{min-width:190px}.rs30{min-width:190px}.rssvg{display:block;overflow:visible}.rssvg circle{cursor:help}.rs0{stroke:#bbb;stroke-dasharray:3 3;stroke-width:1}.rsUp{fill:none;stroke:var(--green);stroke-width:1.8}.rsDn{fill:none;stroke:var(--red);stroke-width:1.8}.rsUpA{fill:var(--green);opacity:.12}.rsDnA{fill:var(--red);opacity:.12}.rsW{fill:var(--green)}.rsL{fill:var(--red)}#rsArrow{color:var(--yellow);font-weight:400;margin-left:4px}.rsTagGood{background:#1d3a2a;color:#9fe3b9}.rsTagBad{background:#3a1d24;color:#f0a5b5}.rvsort{cursor:pointer;user-select:none}.rvsort:hover,.rvsort:focus{color:#fff;background:#303030}#rvolArrow{color:var(--yellow);font-weight:400;margin-left:4px}.rvsvg{display:block;overflow:visible}.rvsvg rect{cursor:help}.rv0{fill:#5a5a5a}.rv1{fill:var(--blue)}.rv2{fill:var(--yellow)}.rv3{fill:var(--green)}.ref1{stroke:#bbb;stroke-dasharray:3 3;stroke-width:1}.ref15{stroke:var(--yellow);stroke-dasharray:1 3;stroke-width:1;opacity:.7}.rv1t{color:var(--blue)}.rv2t{color:var(--yellow)}.rv3t{color:var(--green)}.rvtag{display:inline-block;margin-top:4px;font-size:11px;padding:1px 6px;border-radius:3px;background:#2a2a2a;color:#ddd}\n</style>")
