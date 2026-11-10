@@ -685,28 +685,29 @@ BEST_JS = r"""
   var bestDone;
   function ensureBest(){
     if(bestDone)return;bestDone=true;
-    const pRS=pctOf(rows.map(r=>r.rs30_10)),pW=pctOf(rows.map(r=>r.r5)),pD=pctOf(rows.map(r=>r.r1)),pRV=pctOf(rows.map(r=>r.rvolRankScore));
+    const pRS=pctOf(rows.map(r=>r.rs30_10)),pW=pctOf(rows.map(r=>r.r5)),pD=pctOf(rows.map(r=>r.r1)),pRV=pctOf(rows.map(r=>r.rvolRankScore)),pAV=pctOf(rows.map(r=>r.rvolAvg10));
     const G={"A+":100,A:80,B:50,C:20},wavg=a=>{let w=0,s=0;a.forEach(([v,k])=>{if(v!=null){s+=v*k;w+=k}});return w?s/w:null;};
     rows.forEach(r=>{
       r.strScore=wavg([[pRS(r.rs30_10),.30],[pW(r.r5),.25],[pD(r.r1),.10],[pRV(r.rvolRankScore),.35]]);
+      r.volScore=wavg([[pAV(r.rvolAvg10),.5],[pRV(r.rvolRankScore),.5]]);
       r.cbScore=(!r.techOnly&&r.fCombo!=null&&r.f>0)?r.fCombo:null;
       r.bicScore=wavg([[r.strScore,.5],[r.cbScore,.3],[G[(r.setup||{}).grade]??20,.2]]);
     });
     const by={};rows.forEach(r=>(by[r.grp]=by[r.grp]||[]).push(r));
     Object.values(by).forEach(a=>{a.sort((x,y)=>(y.bicScore||0)-(x.bicScore||0));a.forEach((r,i)=>{r.bicRank=i+1;r.bic=i<(a.length>=4?2:1);});});
     const top=(k,n,pred)=>{rows.filter(pred).sort((x,y)=>(y[k]||0)-(x[k]||0)).slice(0,n).forEach(r=>r["top_"+k]=true);};
-    top("strScore",30,r=>r.strScore!=null&&!(r.smart<0));top("cbScore",30,r=>r.cbScore!=null);
-    rows.forEach(r=>{r.bestStr=!!r.top_strScore;r.bestCb=!!r.top_cbScore;r.bestBoth=r.bestStr&&r.bestCb;});
+    top("strScore",30,r=>r.strScore!=null&&!(r.smart<0));top("cbScore",30,r=>r.cbScore!=null);top("volScore",30,r=>r.volScore!=null&&!(r.smart<0));
+    rows.forEach(r=>{r.bestStr=!!r.top_strScore;r.bestCb=!!r.top_cbScore;r.bestVol=!!r.top_volScore;r.bestBoth=r.bestStr&&r.bestCb;r.bestSV=r.bestStr&&r.bestVol;});
   }
-  function bestBadges(r){ensureBest();const b=[];if(r.bestBoth)b.push("⭐ Best strength + CB");else{if(r.bestStr)b.push("💪 Best strength");if(r.bestCb)b.push("📊 Best CB");}if(r.bic)b.push("🏆 Best ngành #"+r.bicRank);return b.map(x=>'<span class="srcbadge src-e">'+x+'</span>').join("<br>")+(r.bic?'<small style="display:block;white-space:normal;max-width:120px;margin-top:2px;overflow-wrap:anywhere">'+esc(r.grp)+'</small>':"");}
-  function bestPass(r,v){ensureBest();return !v||(v==="bic"&&r.bic)||(v==="str"&&r.bestStr)||(v==="cb"&&r.bestCb)||(v==="both"&&r.bestBoth);}
+  function bestBadges(r){ensureBest();const b=[];if(r.bestBoth)b.push("⭐ Best strength + CB");else{if(r.bestSV)b.push("🚀 Best strength + volume");else{if(r.bestStr)b.push("💪 Best strength");if(r.bestVol)b.push("📈 Best volume");}if(r.bestCb)b.push("📊 Best CB");}if(r.bic)b.push("🏆 Best ngành #"+r.bicRank);return b.map(x=>'<span class="srcbadge src-e">'+x+'</span>').join("<br>")+(r.bic?'<small style="display:block;white-space:normal;max-width:120px;margin-top:2px;overflow-wrap:anywhere">'+esc(r.grp)+'</small>':"");}
+  function bestPass(r,v){ensureBest();return !v||(v==="bic"&&r.bic)||(v==="str"&&r.bestStr)||(v==="cb"&&r.bestCb)||(v==="both"&&r.bestBoth)||(v==="vol"&&r.bestVol)||(v==="sv"&&r.bestSV);}
 """
 rep("  function render() {", BEST_JS + "  function render() {")
 rep("const list=document.querySelector(\"#list\").value,sort=document.querySelector(\"#sort\").value;", "ensureBest();const list=document.querySelector(\"#list\").value,sort=document.querySelector(\"#sort\").value,best=document.querySelector(\"#best\").value;")
 rep("(!list||r.lists.includes(list))).sort(", "(!list||r.lists.includes(list))&&bestPass(r,best)).sort(")
 rep("document.querySelector(\"#list\").addEventListener(\"change\",render);", "document.querySelector(\"#list\").addEventListener(\"change\",render);document.querySelector(\"#best\").addEventListener(\"change\",render);")
 rep("""r.lists.map(x=>'<span class="srcbadge src-e">'+esc(x)+'</span>').join("<br>")""", """r.lists.map(x=>'<span class="srcbadge src-e">'+esc(x)+'</span>').join("<br>")+(bestBadges(r)?"<br>"+bestBadges(r):"")""")
-rep('<label>Sắp xếp <select id="sort">', '<label>Lọc best <select id="best"><option value="">Tất cả</option><option value="bic">🏆 Best in class (top 2 mỗi ngành)</option><option value="str">💪 Best in strength (top 30 D+W)</option><option value="cb">📊 Best CB (top 30 cơ bản)</option><option value="both">⭐ Strength + CB (giao nhau)</option></select></label><label>Sắp xếp <select id="sort">')
+rep('<label>Sắp xếp <select id="sort">', '<label>Lọc best <select id="best"><option value="">Tất cả</option><option value="bic">🏆 Best in class (top 2 mỗi ngành)</option><option value="str">💪 Best in strength (top 30 D+W)</option><option value="cb">📊 Best CB (top 30 cơ bản)</option><option value="both">⭐ Strength + CB (giao nhau)</option><option value="vol">📈 Best volume (top 30 RVOL bền + D/W)</option><option value="sv">🚀 Strength + Volume (giao nhau)</option></select></label><label>Sắp xếp <select id="sort">')
 rep("<title>VN W-D-H4 — 3 danh mục 23/10/2026</title>", "<title>VN W-D-H4 — "+str(len(rows))+" mã @D0Y@</title>")
 rep("<b>Snapshot 23/10/2026 · sửa bố cục và phương pháp 24/10/2026</b>", "<b>Giá, KL/RVOL, RS vs VN30, khối ngoại chốt phiên @D0Y@ · tự doanh tới phiên @TD@ · nhóm tuần chốt @WK@ · BCTC quý: @Q@</b>")
 rep("Giá/hiệu suất và signals: 23/10. NN/TD: 09/10–22/10 giữ từ bản gốc. F: FinLens annual 5 năm, đã kiểm tra lại và khớp bản 23/10; kỳ cụ thể trong tooltip. Sector/ETF dùng snapshot TradingView đã lưu, chưa đồng bộ giờ đóng cửa giữa các thị trường.",
