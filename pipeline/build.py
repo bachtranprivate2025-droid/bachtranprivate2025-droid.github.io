@@ -495,6 +495,13 @@ _ord = sorted(rows, key=lambda x: -x["rvRank"]["score"])
 for i, x in enumerate(_ord, 1):
     x["rvRank"]["rank"] = i; x["rvolRankScore"] = x["rvRank"]["score"]
 
+_grp = {}
+for _g in json.load(open(RUN + "conf/map.json"))["groups"]:
+    for _t in _g["tickers"]:
+        _grp.setdefault(_t, _g["name"])
+for r in rows:
+    r["grp"] = _grp.get(r["t"]) or r.get("industry") or "Khác"
+
 # ---- RS vs VN30 (FinLens price history, 21 phiên gần nhất tới @D0@/2026) ----
 CLS = {t: [ST["close"][t][d] for d in SDD[:21]] for t in TICKERS + ["VN30"]}
 V30 = CLS["VN30"]
@@ -672,6 +679,34 @@ def rep(old, new, count=1):
     assert n == count, f"expected {count} got {n}: {old[:80]}"
     html = html.replace(old, new)
 
+
+BEST_JS = r"""
+  function pctOf(vals){const s=vals.filter(v=>v!=null&&isFinite(v)).sort((a,b)=>a-b);return v=>(v==null||!isFinite(v)||!s.length)?null:(s.filter(x=>x<=v).length-1)/Math.max(s.length-1,1)*100;}
+  var bestDone;
+  function ensureBest(){
+    if(bestDone)return;bestDone=true;
+    const pRS=pctOf(rows.map(r=>r.rs30_10)),pW=pctOf(rows.map(r=>r.r5)),pD=pctOf(rows.map(r=>r.r1)),pRV=pctOf(rows.map(r=>r.rvolRankScore));
+    const G={"A+":100,A:80,B:50,C:20},wavg=a=>{let w=0,s=0;a.forEach(([v,k])=>{if(v!=null){s+=v*k;w+=k}});return w?s/w:null;};
+    rows.forEach(r=>{
+      r.strScore=wavg([[pRS(r.rs30_10),.30],[pW(r.r5),.25],[pD(r.r1),.10],[pRV(r.rvolRankScore),.35]]);
+      r.cbScore=(!r.techOnly&&r.fCombo!=null&&r.f>0)?r.fCombo:null;
+      r.bicScore=wavg([[r.strScore,.5],[r.cbScore,.3],[G[(r.setup||{}).grade]??20,.2]]);
+    });
+    const by={};rows.forEach(r=>(by[r.grp]=by[r.grp]||[]).push(r));
+    Object.values(by).forEach(a=>{a.sort((x,y)=>(y.bicScore||0)-(x.bicScore||0));a.forEach((r,i)=>{r.bicRank=i+1;r.bic=i<(a.length>=4?2:1);});});
+    const top=(k,n,pred)=>{rows.filter(pred).sort((x,y)=>(y[k]||0)-(x[k]||0)).slice(0,n).forEach(r=>r["top_"+k]=true);};
+    top("strScore",30,r=>r.strScore!=null&&!(r.smart<0));top("cbScore",30,r=>r.cbScore!=null);
+    rows.forEach(r=>{r.bestStr=!!r.top_strScore;r.bestCb=!!r.top_cbScore;r.bestBoth=r.bestStr&&r.bestCb;});
+  }
+  function bestBadges(r){ensureBest();const b=[];if(r.bestBoth)b.push("⭐ Best strength + CB");else{if(r.bestStr)b.push("💪 Best strength");if(r.bestCb)b.push("📊 Best CB");}if(r.bic)b.push("🏆 Best ngành #"+r.bicRank+" · "+esc(r.grp));return b.map(x=>'<span class="srcbadge src-e">'+x+'</span>').join("<br>");}
+  function bestPass(r,v){ensureBest();return !v||(v==="bic"&&r.bic)||(v==="str"&&r.bestStr)||(v==="cb"&&r.bestCb)||(v==="both"&&r.bestBoth);}
+"""
+rep("  function render() {", BEST_JS + "  function render() {")
+rep("const list=document.querySelector(\"#list\").value,sort=document.querySelector(\"#sort\").value;", "ensureBest();const list=document.querySelector(\"#list\").value,sort=document.querySelector(\"#sort\").value,best=document.querySelector(\"#best\").value;")
+rep("(!list||r.lists.includes(list))).sort(", "(!list||r.lists.includes(list))&&bestPass(r,best)).sort(")
+rep("document.querySelector(\"#list\").addEventListener(\"change\",render);", "document.querySelector(\"#list\").addEventListener(\"change\",render);document.querySelector(\"#best\").addEventListener(\"change\",render);")
+rep("""r.lists.map(x=>'<span class="srcbadge src-e">'+esc(x)+'</span>').join("<br>")""", """r.lists.map(x=>'<span class="srcbadge src-e">'+esc(x)+'</span>').join("<br>")+(bestBadges(r)?"<br>"+bestBadges(r):"")""")
+rep('<label>Sắp xếp <select id="sort">', '<label>Lọc best <select id="best"><option value="">Tất cả</option><option value="bic">🏆 Best in class (top 2 mỗi ngành)</option><option value="str">💪 Best in strength (top 30 D+W)</option><option value="cb">📊 Best CB (top 30 cơ bản)</option><option value="both">⭐ Strength + CB (giao nhau)</option></select></label><label>Sắp xếp <select id="sort">')
 rep("<title>VN W-D-H4 — 3 danh mục 23/10/2026</title>", "<title>VN W-D-H4 — "+str(len(rows))+" mã @D0Y@</title>")
 rep("<b>Snapshot 23/10/2026 · sửa bố cục và phương pháp 24/10/2026</b>", "<b>Giá, KL/RVOL, RS vs VN30, khối ngoại chốt phiên @D0Y@ · tự doanh tới phiên @TD@ · nhóm tuần chốt @WK@ · BCTC quý: @Q@</b>")
 rep("Giá/hiệu suất và signals: 23/10. NN/TD: 09/10–22/10 giữ từ bản gốc. F: FinLens annual 5 năm, đã kiểm tra lại và khớp bản 23/10; kỳ cụ thể trong tooltip. Sector/ETF dùng snapshot TradingView đã lưu, chưa đồng bộ giờ đóng cửa giữa các thị trường.",
@@ -771,6 +806,7 @@ rep("cùng ngày 23/10/2026, so với 22/10 (Daily), 16/10 (W, 5 phiên), 24/09 
 rep("""money(r,"prop","seriesTD","TD")+'""", """money(r,"prop","seriesTD","TD")+rvolCell(r)+rvolWCell(r)+rvolRankCell(r)+rs30Cell(r)+'""")
 rep('<th class="money">Dòng tiền TD 10 phiên</th>', '<th class="money">Dòng tiền TD 10 phiên</th><th class="rvol rvsort" id="rvolHead" tabindex="0" title="Bấm để sắp xếp theo RVOL: phiên cuối → TB10 → Δ5 phiên → về mặc định">Relative RVOL 20 phiên <span id="rvolArrow">⇅</span></th><th class="rvol" title="RVOL theo tuần, kho hiện chỉ có khoảng 6 tuần">RVOL weekly</th><th class="rvol rvsort" id="rkHead" tabindex="0" title="Confluence RVOL tuần + ngày: chỉ mã mạnh cả hai khung lên đầu. Bấm để sắp xếp">Ranking RVOL W + Daily</th><th class="rs30 rvsort" id="rsHead" tabindex="0" title="Bấm để sắp xếp: RS 10 phiên → RS phiên @D0@ → số phiên thắng VN30 → về mặc định">RS vs VN30 10 phiên <span id="rsArrow">⇅</span></th>')
 rep('<option value="prop">TD mua ròng</option></select>', '<option value="prop">TD mua ròng</option><option value="smart">Smart money (NN + TD)</option><option value="rvolToday">RVOL phiên @D0@ cao → thấp</option><option value="rvolAvg10">RVOL bền 10 phiên (điểm TB10) cao → thấp</option><option value="rvolRankScore">Ranking RVOL confluence W + Daily cao → thấp</option><option value="rvolWScore">Rising RVOL W (số tuần tăng liên tiếp, tuần cuối ≥1×) cao → thấp</option><option value="rvolRise3">RVOL 3 phiên tăng liên tiếp, mạnh và đều</option><option value="rvolDelta">RVOL Δ5 phiên tăng mạnh nhất</option><option value="rvolHi15">Số phiên RVOL ≥1,5×</option><option value="rs30_10">RS vs VN30 10 phiên mạnh nhất</option><option value="rs30_1">RS vs VN30 phiên @D0@</option><option value="rs30_wins">Số phiên thắng VN30</option></select>')
+rep('<option value="rvolRankScore">Ranking', '<option value="bicScore">Điểm Best in class (ngành: sức mạnh + CB + hạng)</option><option value="strScore">Điểm sức mạnh D+W (RS, hiệu suất, RVOL)</option><option value="cbScore">Điểm cơ bản (F)</option><option value="rvolRankScore">Ranking')
 rep('document.querySelector("#sort").addEventListener("change",render);', 'document.querySelector("#sort").addEventListener("change",()=>{rvArrow();render();});\n  const RVS=["rvolToday","rvolAvg10","rvolRise3","rvolWScore","rvolRankScore","rvolDelta"],RVL={rvolToday:"↓ phiên cuối",rvolAvg10:"↓ điểm bền",rvolRise3:"↓ 3 phiên tăng đều",rvolWScore:"↓ rising W",rvolRankScore:"↓ ranking W+D",rvolDelta:"↓ Δ5"};\n  function rvArrow(){const v=document.querySelector("#sort").value,a=document.querySelector("#rvolArrow"),b=document.querySelector("#rsArrow");if(a)a.textContent=RVL[v]||(v==="rvolHi15"?"↓ số phiên ≥1,5×":"⇅");if(b)b.textContent=RSL[v]||"⇅";}\n  const RSS=["rs30_10","rs30_1","rs30_wins"],RSL={rs30_10:"↓ 10 phiên",rs30_1:"↓ @D0@",rs30_wins:"↓ số phiên thắng"};\n  function rsCycle(){const s=document.querySelector("#sort"),i=RSS.indexOf(s.value);s.value=i<0?RSS[0]:(i===RSS.length-1?"rankScore":RSS[i+1]);rvArrow();render();}\n  const rsh=document.querySelector("#rsHead");if(rsh){rsh.addEventListener("click",rsCycle);rsh.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();rsCycle();}});}\n  function rvCycle(){const s=document.querySelector("#sort"),i=RVS.indexOf(s.value);s.value=i<0?RVS[0]:(i===RVS.length-1?"rankScore":RVS[i+1]);rvArrow();render();}\n  const rvh=document.querySelector("#rvolHead");if(rvh){rvh.addEventListener("click",rvCycle);rvh.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();rvCycle();}});}')
 rep("</style>", ".rvol{min-width:190px}.rs30{min-width:190px}.rssvg{display:block;overflow:visible}.rssvg circle{cursor:help}.rs0{stroke:#bbb;stroke-dasharray:3 3;stroke-width:1}.rsUp{fill:none;stroke:var(--green);stroke-width:1.8}.rsDn{fill:none;stroke:var(--red);stroke-width:1.8}.rsUpA{fill:var(--green);opacity:.12}.rsDnA{fill:var(--red);opacity:.12}.rsW{fill:var(--green)}.rsL{fill:var(--red)}#rsArrow{color:var(--yellow);font-weight:400;margin-left:4px}.rsTagGood{background:#1d3a2a;color:#9fe3b9}.rsTagBad{background:#3a1d24;color:#f0a5b5}.rvsort{cursor:pointer;user-select:none}.rvsort:hover,.rvsort:focus{color:#fff;background:#303030}#rvolArrow{color:var(--yellow);font-weight:400;margin-left:4px}.rvsvg{display:block;overflow:visible}.rvsvg rect{cursor:help}.rv0{fill:#5a5a5a}.rv1{fill:var(--blue)}.rv2{fill:var(--yellow)}.rv3{fill:var(--green)}.ref1{stroke:#bbb;stroke-dasharray:3 3;stroke-width:1}.ref15{stroke:var(--yellow);stroke-dasharray:1 3;stroke-width:1;opacity:.7}.rv1t{color:var(--blue)}.rv2t{color:var(--yellow)}.rv3t{color:var(--green)}.rvtag{display:inline-block;margin-top:4px;font-size:11px;padding:1px 6px;border-radius:3px;background:#2a2a2a;color:#ddd}\n</style>")
 rep("Smart money = NN + TD; không cộng nhóm tổ chức trong nước của FinLens vì trùng số với TD.",
