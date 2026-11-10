@@ -698,7 +698,7 @@ BEST_JS = r"""
     top("strScore",30,r=>r.strScore!=null&&!(r.smart<0));top("cbScore",30,r=>r.cbScore!=null);
     rows.forEach(r=>{r.bestStr=!!r.top_strScore;r.bestCb=!!r.top_cbScore;r.bestBoth=r.bestStr&&r.bestCb;});
   }
-  function bestBadges(r){ensureBest();const b=[];if(r.bestBoth)b.push("⭐ Best strength + CB");else{if(r.bestStr)b.push("💪 Best strength");if(r.bestCb)b.push("📊 Best CB");}if(r.bic)b.push("🏆 Best ngành #"+r.bicRank+" · "+esc(r.grp));return b.map(x=>'<span class="srcbadge src-e">'+x+'</span>').join("<br>");}
+  function bestBadges(r){ensureBest();const b=[];if(r.bestBoth)b.push("⭐ Best strength + CB");else{if(r.bestStr)b.push("💪 Best strength");if(r.bestCb)b.push("📊 Best CB");}if(r.bic)b.push("🏆 Best ngành #"+r.bicRank);return b.map(x=>'<span class="srcbadge src-e">'+x+'</span>').join("<br>")+(r.bic?'<small style="display:block;white-space:normal;max-width:120px;margin-top:2px;overflow-wrap:anywhere">'+esc(r.grp)+'</small>':"");}
   function bestPass(r,v){ensureBest();return !v||(v==="bic"&&r.bic)||(v==="str"&&r.bestStr)||(v==="cb"&&r.bestCb)||(v==="both"&&r.bestBoth);}
 """
 rep("  function render() {", BEST_JS + "  function render() {")
