@@ -75,9 +75,11 @@ a{color:#8ebce0}
 #etf-live{margin:14px 0;border:1px solid var(--line,#353535);border-radius:8px;background:#181818}
 #etf-live summary{padding:11px 14px;cursor:pointer;color:#a5d5ff;font-size:13px;font-weight:700}
 #etf-live .etf-live-body{padding:0 14px 12px}
-#etf-live .etf-live-groups{display:flex;gap:6px;margin:8px 0}
+#etf-live .etf-live-groups{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 #etf-live .etf-live-groups button{padding:6px 10px;border:1px solid #555;border-radius:5px;background:#222;color:#ddd;cursor:pointer}
 #etf-live .etf-live-groups button[aria-pressed="true"]{border-color:#80b4e0;background:#24394b;color:#e2f1ff}
+#etf-live #etf-live-refresh{border-color:#619ac8;color:#a5d5ff}
+#etf-live #etf-live-refresh:disabled{opacity:.65;cursor:wait}
 #etf-live .tradingview-widget-container__widget{height:550px}
 #etf-live .tradingview-widget-copyright{font-size:11px;margin-top:6px}
 @media(max-width:560px){#etf-live .etf-live-body{padding-inline:8px}}
@@ -121,10 +123,11 @@ const etfLivePanel=()=>`<details id="etf-live">
   <div class="etf-live-groups" role="group" aria-label="Nhóm ETF">
    <button type="button" aria-pressed="true" aria-controls="etf-live-sector">11 ETF ngành</button>
    <button type="button" aria-pressed="false" aria-controls="etf-live-sub">14 ETF ngành con</button>
+   <button type="button" id="etf-live-refresh">Cập nhật giá ETF</button>
   </div>
+  <p class="note" id="etf-live-status" role="status"></p>
   <div id="etf-live-sector"></div>
   <div id="etf-live-sub" hidden></div>
-  <p class="note" id="etf-live-status" role="status" hidden></p>
  </div>
 </details>`;
 const sectorTable=()=>{
@@ -226,17 +229,20 @@ function render(){const term=document.querySelector("#search").value.trim().toUp
 document.querySelector("#search").addEventListener("input",render);document.querySelector("#sort").addEventListener("change",render);document.querySelector("#list").addEventListener("change",render);document.querySelector("#xl-sector").addEventListener("change",render);render();
 const etfLive = document.querySelector('#etf-live');
 const etfLiveStatus = document.querySelector('#etf-live-status');
+const etfRefresh = document.querySelector('#etf-live-refresh');
 const quoteGroups = [
  { name: '11 ETF ngành', panel: document.querySelector('#etf-live-sector'), etfs: DATA.sectors },
  { name: '14 ETF ngành con', panel: document.querySelector('#etf-live-sub'), etfs: DATA.subs }
 ];
-const quoteButtons = [...etfLive.querySelectorAll('.etf-live-groups button')];
-function showEtfQuotes(index) {
+const quoteButtons = [...etfLive.querySelectorAll('.etf-live-groups button[aria-pressed]')];
+function showEtfQuotes(index, refresh = false) {
  const {name, panel, etfs} = quoteGroups[index];
  quoteGroups.forEach((group, i) => { group.panel.hidden = i !== index; });
  quoteButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
- etfLiveStatus.hidden = true;
- if (panel.firstElementChild) return;
+ etfRefresh.disabled = panel.getAttribute('aria-busy') === 'true';
+ etfLiveStatus.textContent = etfRefresh.disabled ? 'Đang tải lại bảng giá…' : '';
+ if (etfRefresh.disabled || (!refresh && panel.firstElementChild)) return;
+
  const container = document.createElement('div');
  container.className = 'tradingview-widget-container';
  container.innerHTML = '<div class="tradingview-widget-container__widget"></div><div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/etfs/" rel="noopener nofollow" target="_blank">Dữ liệu ETF</a> từ TradingView</div>';
@@ -253,17 +259,38 @@ function showEtfQuotes(index) {
    }))
   }]
  });
+ let timeout;
+ function finishRefresh(message) {
+  clearTimeout(timeout);
+  if (panel.firstElementChild !== container) return;
+  panel.removeAttribute('aria-busy');
+  if (panel.hidden) return;
+  etfRefresh.disabled = false;
+  etfLiveStatus.textContent = message;
+ }
  widgetScript.addEventListener('error', () => {
+  finishRefresh('Chưa tải được bảng giá TradingView. Bấm Cập nhật giá ETF để thử lại.');
   container.remove();
-  if (!panel.hidden) {
-   etfLiveStatus.textContent = 'Chưa tải được bảng giá TradingView. Bấm lại tên nhóm để thử lại.';
-   etfLiveStatus.hidden = false;
-  }
  });
- panel.append(container);
+ if (refresh) {
+  panel.setAttribute('aria-busy', 'true');
+  etfRefresh.disabled = true;
+  etfLiveStatus.textContent = 'Đang tải lại bảng giá…';
+  container.addEventListener('load', function quoteFrameLoaded(event) {
+   if (event.target.tagName !== 'IFRAME') return;
+   container.removeEventListener('load', quoteFrameLoaded, true);
+   finishRefresh('Đã tải lại bảng giá.');
+  }, true);
+  timeout = setTimeout(() => finishRefresh('TradingView đang phản hồi chậm. Anh có thể bấm cập nhật lại.'), 15000);
+ }
+ panel.replaceChildren(container);
  container.append(widgetScript);
 }
 quoteButtons.forEach((button, i) => button.addEventListener('click', () => showEtfQuotes(i)));
+etfRefresh.addEventListener('click', () => {
+ const index = quoteGroups.findIndex(group => !group.panel.hidden);
+ showEtfQuotes(index, true);
+});
 etfLive.addEventListener('toggle', function openEtfQuotes() {
  if (!etfLive.open) return;
  etfLive.removeEventListener('toggle', openEtfQuotes);
