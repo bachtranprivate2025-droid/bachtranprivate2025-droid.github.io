@@ -75,7 +75,10 @@ a{color:#8ebce0}
 #etf-live{margin:14px 0;border:1px solid var(--line,#353535);border-radius:8px;background:#181818}
 #etf-live summary{padding:11px 14px;cursor:pointer;color:#a5d5ff;font-size:13px;font-weight:700}
 #etf-live .etf-live-body{padding:0 14px 12px}
-#etf-live .tradingview-widget-container__widget{height:530px}
+#etf-live .etf-live-groups{display:flex;gap:6px;margin:8px 0}
+#etf-live .etf-live-groups button{padding:6px 10px;border:1px solid #555;border-radius:5px;background:#222;color:#ddd;cursor:pointer}
+#etf-live .etf-live-groups button[aria-pressed="true"]{border-color:#80b4e0;background:#24394b;color:#e2f1ff}
+#etf-live .tradingview-widget-container__widget{height:550px}
 #etf-live .tradingview-widget-copyright{font-size:11px;margin-top:6px}
 @media(max-width:560px){#etf-live .etf-live-body{padding-inline:8px}}
 </style></head><body><main class="wrap"></main>
@@ -114,11 +117,13 @@ const etfExchange={IBB:'NASDAQ',IGV:'CBOE',ITA:'CBOE'};
 const etfLivePanel=()=>`<details id="etf-live">
  <summary>Giá ETF tự cập nhật · 25 mã</summary>
  <div class="etf-live-body">
-  <p class="note">Chọn 11 ETF ngành hoặc 14 ETF ngành con để xem giá và % thay đổi trong phiên. Nguồn TradingView có độ trễ. Các bảng bên dưới dùng dữ liệu chốt phiên Mỹ ${asofFull}.</p>
-  <div class="tradingview-widget-container">
-   <div class="tradingview-widget-container__widget" style="height:auto"></div>
-   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/etfs/" rel="noopener nofollow" target="_blank">Dữ liệu ETF</a> từ TradingView</div>
+  <p class="note">Giá và % thay đổi trong phiên từ TradingView, trễ 15 phút. Các bảng bên dưới dùng dữ liệu chốt phiên Mỹ ${asofFull}.</p>
+  <div class="etf-live-groups" role="group" aria-label="Nhóm ETF">
+   <button type="button" aria-pressed="true" aria-controls="etf-live-sector">11 ETF ngành</button>
+   <button type="button" aria-pressed="false" aria-controls="etf-live-sub">14 ETF ngành con</button>
   </div>
+  <div id="etf-live-sector"></div>
+  <div id="etf-live-sub" hidden></div>
   <p class="note" id="etf-live-status" role="status" hidden></p>
  </div>
 </details>`;
@@ -221,33 +226,48 @@ function render(){const term=document.querySelector("#search").value.trim().toUp
 document.querySelector("#search").addEventListener("input",render);document.querySelector("#sort").addEventListener("change",render);document.querySelector("#list").addEventListener("change",render);document.querySelector("#xl-sector").addEventListener("change",render);render();
 const etfLive = document.querySelector('#etf-live');
 const etfLiveStatus = document.querySelector('#etf-live-status');
-function loadEtfWidget() {
- if (!etfLive.open) return;
- etfLive.removeEventListener('toggle', loadEtfWidget);
- const container = etfLive.querySelector('.tradingview-widget-container');
- const widget = container.querySelector('.tradingview-widget-container__widget');
- widget.style.removeProperty('height');
+const quoteGroups = [
+ { name: '11 ETF ngành', panel: document.querySelector('#etf-live-sector'), etfs: DATA.sectors },
+ { name: '14 ETF ngành con', panel: document.querySelector('#etf-live-sub'), etfs: DATA.subs }
+];
+const quoteButtons = [...etfLive.querySelectorAll('.etf-live-groups button')];
+function showEtfQuotes(index) {
+ const {name, panel, etfs} = quoteGroups[index];
+ quoteGroups.forEach((group, i) => { group.panel.hidden = i !== index; });
+ quoteButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
+ etfLiveStatus.hidden = true;
+ if (panel.firstElementChild) return;
+ const container = document.createElement('div');
+ container.className = 'tradingview-widget-container';
+ container.innerHTML = '<div class="tradingview-widget-container__widget"></div><div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/etfs/" rel="noopener nofollow" target="_blank">Dữ liệu ETF</a> từ TradingView</div>';
  const widgetScript = document.createElement('script');
  widgetScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js';
  widgetScript.async = true;
  widgetScript.textContent = JSON.stringify({
-  title: 'ETF Mỹ', width: '100%', height: 530, colorTheme: 'dark', locale: 'vi',
+  title: name, width: '100%', height: 550, colorTheme: 'dark', locale: 'vi',
   showSymbolLogo: true,
-  symbolsGroups: [['11 ETF ngành', DATA.sectors], ['14 ETF ngành con', DATA.subs]].map(([name, etfs]) => ({
+  symbolsGroups: [{
    name,
    symbols: etfs.map(({sym, name}) => ({
     name: (etfExchange[sym] || 'AMEX') + ':' + sym, displayName: sym + ' · ' + name
    }))
-  }))
+  }]
  });
  widgetScript.addEventListener('error', () => {
-  widget.style.height = 'auto';
-  etfLiveStatus.textContent = 'Chưa tải được bảng giá TradingView. Tải lại trang để thử lại.';
-  etfLiveStatus.hidden = false;
+  container.remove();
+  if (!panel.hidden) {
+   etfLiveStatus.textContent = 'Chưa tải được bảng giá TradingView. Bấm lại tên nhóm để thử lại.';
+   etfLiveStatus.hidden = false;
+  }
  });
+ panel.append(container);
  container.append(widgetScript);
 }
-etfLive.addEventListener('toggle', loadEtfWidget);
-loadEtfWidget();
+quoteButtons.forEach((button, i) => button.addEventListener('click', () => showEtfQuotes(i)));
+etfLive.addEventListener('toggle', function openEtfQuotes() {
+ if (!etfLive.open) return;
+ etfLive.removeEventListener('toggle', openEtfQuotes);
+ showEtfQuotes(0);
+});
 })();
 </script></body></html>
