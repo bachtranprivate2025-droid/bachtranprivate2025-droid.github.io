@@ -937,7 +937,12 @@ rep('<option value="liqScore">', '<option value="earnScore">KQKD quý (đã ra Q
 rep("+setupSummary()+", "+setupSummary()+earnSummary()+")
 rep("</style>", ".evbox{margin-top:6px;padding-top:5px;border-top:1px dashed #444}.evh{font-size:11px;color:#aaa;margin-bottom:2px}.ev{font-size:11.5px;line-height:1.35;margin:1px 0}.evCash{color:#9fe3b9}.evStock{color:#f3d58a}.evRights{color:#f5a3a3}.evBctc{color:#bbb}th.earn,td.earn{min-width:230px;width:230px}.etag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:3px;margin-bottom:3px}.eOut{background:#1d3a2a;color:#9fe3b9}.eWait{background:#2a2a2a;color:#bbb}.elab{font-size:12px;margin:2px 0}.esvg{display:block;margin:3px 0}.eBar{fill:#5a7fa8}.eLast{fill:var(--yellow)}.eNeg{fill:var(--red)}\n</style>")
 sys.path.insert(0, RUN + "q3"); import legend as _lg
-rep("<h2>3. Bảng phân tích ", _lg.LEGEND + "<h2>3. Bảng phân tích ")
+import re as _re
+_mpp = _re.search(r"'<details><summary>Phương pháp điểm.*?</details>'\+\n", html, _re.S)
+assert _mpp, "PP block not found"
+_PP = _mpp.group(0)
+html = html[:_mpp.start()] + html[_mpp.end():]
+rep("'<div class=\"footer\">", _PP + "'" + _lg.LEGEND + "'+'<div class=\"footer\">")
 rep("</style>", _lg.LCSS + "\n</style>")
 
 dmy4 = lambda iso: iso[8:10] + "/" + iso[5:7] + "/" + iso[:4]
