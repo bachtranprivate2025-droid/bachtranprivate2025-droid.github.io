@@ -53,6 +53,9 @@ NEWINFO = {
  "TCD": ("Tracodi", "UPCOM", "2357", "Xây dựng & Hạ tầng", "CTD", "Xây dựng · hạ tầng", False),
  "TNG": ("Đầu tư & Thương mại TNG", "HNX", "3763", "May mặc", "GIL", "May mặc", False),
  "VFS": ("Chứng khoán Nhất Việt", "HNX", "8777", "Môi giới chứng khoán", "VCI", "Chứng khoán", False),
+ "FIR": ("Địa ốc First Real", "HOSE", "8633", "Bất động sản", "PDR", "BĐS dân cư", False),
+ "PGV": ("Tổng Công ty Phát điện 3", "HOSE", "7535", "Sản xuất & Phân phối Điện", "POW", "Điện · năng lượng", False),
+ "TCO": ("Janus Group", "HOSE", "3573", "Nuôi trồng nông & hải sản", "ANV", "Thủy sản · nông nghiệp", False),
 }
 NEWG = {"Ô tô · cơ khí": dict(etf=["XLY"], comm=[], note="")}
 L0 = json.load(open(H + "lists121.json"))

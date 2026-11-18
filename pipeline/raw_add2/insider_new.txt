@@ -144,3 +144,6 @@ NTL|NONE:-:chưa kéo
 KHG|NONE:-:chưa kéo
 BFC|NONE:-:chưa kéo
 BGE|NONE:-:chưa kéo
+PGV|NONE:-:chưa kéo
+FIR|NONE:-:chưa kéo
+TCO|NONE:-:chưa kéo

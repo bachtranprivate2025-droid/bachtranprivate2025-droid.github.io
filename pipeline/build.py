@@ -949,6 +949,7 @@ dmy4 = lambda iso: iso[8:10] + "/" + iso[5:7] + "/" + iso[:4]
 for k, v in {"@D0Y@": dmy4(ASOF), "@D0@": dm(SD[-1]), "@D1@": dm(SD[-2]), "@D2@": dm(SD[-3]), "@NN@": dm(NN_ASOF),
              "@TD@": dm(TD_ASOF), "@F9@": dm(FD10[-1]), "@RS0@": dm(SD[-11]), "@WK@": dm(WK["fund"]), "@Q@": WK["earn"]}.items():
     html = html.replace(k, v)
+rep("--bg:#101010;--panel:#181818;--grid:#343434;", "--bg:#0b0b0c;--panel:#131315;--grid:#26262a;")
 os.makedirs(RUN + "out", exist_ok=True)
 open(OUT, "w", encoding="utf-8").write(html)
 json.dump(data, open(RUN + "out/data.json", "w"), ensure_ascii=False)
