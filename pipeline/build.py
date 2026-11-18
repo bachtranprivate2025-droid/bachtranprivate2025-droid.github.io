@@ -708,7 +708,7 @@ rep("(!list||r.lists.includes(list))).sort(", "(!list||r.lists.includes(list))&&
 rep("document.querySelector(\"#list\").addEventListener(\"change\",render);", "document.querySelector(\"#list\").addEventListener(\"change\",render);document.querySelector(\"#best\").addEventListener(\"change\",render);")
 rep("""r.lists.map(x=>'<span class="srcbadge src-e">'+esc(x)+'</span>').join("<br>")""", """r.lists.map(x=>'<span class="srcbadge src-e">'+esc(x)+'</span>').join("<br>")+(bestBadges(r)?"<br>"+bestBadges(r):"")""")
 rep('<label>Sắp xếp <select id="sort">', '<label>Lọc best <select id="best"><option value="">Tất cả</option><option value="bic">🏆 Best in class (top 2 mỗi ngành)</option><option value="str">💪 Best in strength (top 30 D+W)</option><option value="cb">📊 Best CB (top 30 cơ bản)</option><option value="both">⭐ Strength + CB (giao nhau)</option><option value="vol">📈 Best volume (top 30 RVOL bền + D/W)</option><option value="sv">🚀 Strength + Volume (giao nhau)</option></select></label><label>Sắp xếp <select id="sort">')
-rep("<title>VN W-D-H4 — 3 danh mục 23/10/2026</title>", "<title>VN W-D-H4 — "+str(len(rows))+" mã @D0Y@</title>")
+rep("<title>VN W-D-H4 — 3 danh mục 23/10/2026</title>", "<title>Báo cáo VNI hàng tuần — "+str(len(rows))+" mã @D0Y@</title>")
 rep("<b>Snapshot 23/10/2026 · sửa bố cục và phương pháp 24/10/2026</b>", "<b>Giá, KL/RVOL, RS vs VN30, khối ngoại chốt phiên @D0Y@ · tự doanh tới phiên @TD@ · nhóm tuần chốt @WK@ · BCTC quý: @Q@</b>")
 rep("Giá/hiệu suất và signals: 23/10. NN/TD: 09/10–22/10 giữ từ bản gốc. F: FinLens annual 5 năm, đã kiểm tra lại và khớp bản 23/10; kỳ cụ thể trong tooltip. Sector/ETF dùng snapshot TradingView đã lưu, chưa đồng bộ giờ đóng cửa giữa các thị trường.",
     NOTES)
@@ -782,7 +782,7 @@ rep("</style>", ".cmp-note{margin-top:4px;font-size:12px;line-height:1.35}\n.xco
 rep('coverage+"/85"', 'coverage+"/"+rows.length')
 rep('["Quote snapshot","85/85"]', '["Quote snapshot",rows.length+"/"+rows.length]')
 rep('["F / NN-TD","85/85"]', '["F / NN-TD",rows.length+"/"+rows.length]')
-rep("Báo cáo 3 danh mục · 23/10/2026</h1>", "Báo cáo 4 watchlist · @D0Y@</h1>")
+rep("VN W-D-H4 · Báo cáo 3 danh mục · 23/10/2026</h1>", "Báo cáo VNI hàng tuần · @D0Y@</h1>")
 rep("Stage 0-1 (W-D MA10) — 85 mã unique, 19 mã giao nhau.", "Stage 0-1 (W-D MA10) · " + " · ".join(LABS) + " — "+str(len(rows))+" mã unique, "+str(data["overlap"])+" mã nằm ở từ 2 list trở lên." + (" " + str(len(TECH_ONLY)) + " mã chỉ cập nhật kỹ thuật (" + ", ".join(sorted(TECH_ONLY)) + "): F, TCBS, SSI, quỹ, nội bộ, CTCK, tin để trống." if TECH_ONLY else ""))
 rep("nếu có trong ba Stage list.", "nếu có trong 4 watchlist.")
 rep("(85-coverage)", "(rows.length-coverage)")
